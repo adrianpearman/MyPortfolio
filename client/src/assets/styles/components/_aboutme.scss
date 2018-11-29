@@ -1,0 +1,25 @@
+/* About Me */
+.about-me__title h1 {
+  text-align: center;
+}
+
+.about-me__container {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.about-me__description{
+  p{
+    font-size: 1.15rem
+  }
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    filter: grayscale(30%);
+    width: 70%;
+    border-radius: 10px;
+    margin-left: 15%;
+    margin-right: auto;
+  }

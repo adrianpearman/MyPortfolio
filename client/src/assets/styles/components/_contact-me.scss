@@ -1,0 +1,57 @@
+/* Contact Me */
+.contact__me {
+  padding: 1rem;
+  border-radius: 5px;
+  width: 80%;
+  margin: 0 10%;
+  text-align: center;
+  color: $white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.contact__me a,
+.contact__me a:visited{
+  color: $white;
+  text-decoration: none;
+}
+
+.contact__me.linkedin{
+  background: $linkedin;
+  border: 1px solid $linkedinDark;
+}
+
+.contact__me.linkedin:hover{
+  background: darken($linkedin, 10%);
+  border: 1px solid darken($linkedinDark ,30%);
+  transition: 0.5s;
+}
+
+.contact__me.github{
+  background: $github;
+  border: 1px solid $githubDark;
+}
+
+.contact__me.github:hover{
+  background: darken($github ,10%);
+  border: 1px solid darken($githubDark ,30%);
+  transition: 0.5s;
+}
+
+.contact__me.email{
+  background: $email;
+  border: 1px solid $emailDark;
+}
+
+.contact__me.email:hover{
+  background: darken($email ,10%);
+  border: 1px solid darken($emailDark ,30%);
+  transition: 0.5s;
+}
+
+.contact-container-bar {
+    width: 80%;
+    height: 0;
+    border: 2px solid $neonDark;
+    margin: 3rem 10%;
+}

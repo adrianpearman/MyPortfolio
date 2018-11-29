@@ -1,0 +1,40 @@
+/* Navigation */
+.navbar{
+  padding: 0%;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+}
+
+.navbar__desktop {
+  margin: 0;
+}
+
+.navbar__desktop li{
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  border-left: 1px solid $neon;
+  transform: skew(-20deg);
+}
+
+.navbar__desktop li:hover{
+  background-color: $neon;
+  color: $black;
+  border-left: 1px solid $grey;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.navbar__desktop li h4{
+  color: $grey;
+  transform: skew(20deg);
+}
+
+.navbar__mobile{
+  display: none;
+}
+
+.hidden{
+  display: none;
+}

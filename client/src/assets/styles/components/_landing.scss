@@ -1,0 +1,43 @@
+.landing {
+  color: $white;
+  text-align: center;
+  background-image: linear-gradient(to bottom right rgba($linkedin, 0.2), rgba($neonDark, 0.7));
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+.landing-content {
+  padding: 30vh 0;
+  height: 20vh;
+}
+
+.landing-title {
+  font-size: 9em;
+  line-height: 1.4em;
+  margin: 0;
+  color: $neonDark;
+  font-family: 'Kanit', sans-serif;
+}
+
+.landing-subtitle {
+    font-size: 3em;
+    line-height: 1em;
+    margin: 0;
+    padding-top: 5%;
+    color: $neon;
+    font-family: 'Kanit', sans-serif;
+    cursor: pointer;
+}  
+
+.landing-subtitle:hover{
+    color: $white;
+    transition: 0.5s;
+}
+
+.landing-container-bar {
+    width: 30%;
+    height: 0;
+    border: 8px solid $neonDark;
+    margin: 1.5rem 35%;
+}

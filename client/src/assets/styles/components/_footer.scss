@@ -1,0 +1,46 @@
+/* Footer */
+footer {
+    position: absolute;
+    background-color: #191919;
+    bottom: 100;
+    left: 0;
+    width: 100%;
+    h4{
+      text-align: center;
+      color: $white;
+      padding: 1.5rem;
+    }
+}
+
+
+.footer__nav{
+  background-color: $greyDark;
+  p, a { margin: 0; }
+  ul{ text-align: right }
+  li {
+    display: inline-block;
+    padding: 1rem;
+    border-left: 1px solid $neon;
+    transform: skew(-20deg);
+  }
+  a, a:visited{
+    text-decoration: none;
+    color: $grey;
+  }
+  li:hover {
+    background-color: $neon;
+    color: $black;
+    border-left: 1px solid $grey;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+}
+
+  #linkedin:hover { 
+    background-color: $linkedin; 
+    color: $white;
+  }
+  #github:hover { 
+    background-color: $github; 
+    color: $white;
+  }
