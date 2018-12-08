@@ -26,7 +26,12 @@ footer {
     padding: 1rem;
     font-weight: 600;
     font-size: 1.3rem;
+    background: transparent;
+    background: linear-gradient(to right, transparent 50%, $neonDark 50%);
     border-left: 0.1rem solid $neon;
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition:all 0.5s ease;
     transform: skew(-20deg);
   }
   a, a:visited{
@@ -34,19 +39,33 @@ footer {
     color: $grey;
   }
   li:hover {
-    background-color: $neon;
+    background-position: right bottom;
     color: $black;
     border-left: 0.1rem solid $grey;
-    transition: 0.3s;
     cursor: pointer;
   }
 }
 
-  #linkedin:hover { 
-    background-color: $linkedin; 
-    color: $white;
-  }
-  #github:hover { 
-    background-color: $github; 
-    color: $white;
-  }
+#linkedin{ 
+  background: linear-gradient(to right, transparent 50%, $linkedin 50%);
+  border-left: 0.1rem solid $neon;
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition:all 0.5s ease;  
+}
+#github{ 
+  background: linear-gradient(to right, transparent 50%, $github 50%);
+  border-left: 0.1rem solid $neon;
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition:all 0.5s ease;   
+}
+
+#linkedin:hover { 
+  background-position: right bottom; 
+  color: $white;
+}
+#github:hover { 
+  background-position: right bottom; 
+  color: $white;
+}
