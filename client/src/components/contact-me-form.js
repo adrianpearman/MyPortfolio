@@ -98,15 +98,15 @@ import axios from 'axios'
       }
 
     return (
-        <div>
+        <div className='contact-me'>
             <div className='section__title'>
                 <h1>Contact Me <span className='emphasize'>/</span></h1>
             </div>
-            <div className='row mb-4'>
+            <div className='contact-me__form row mb-4'>
                 <p className='col-md-6 offset-md-3'>
                     Thank you for taking the time to look at my portfolio<span className='emphasize'>!</span>.
                     <br />
-                    Starting a new project<span className='emphasize'>!</span>
+                    Starting a new project<span className='emphasize'>?</span>
                     <br /> 
                     Exploring options for a current project<span className='emphasize'>?</span>
                     <br /> 

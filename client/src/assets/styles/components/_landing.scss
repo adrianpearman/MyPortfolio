@@ -13,31 +13,57 @@
 }
 
 .landing-title {
-  font-size: 9em;
-  line-height: 1.4em;
+  font-size: 9rem;
+  line-height: 1.4rem;
   margin: 0;
   color: $neonDark;
   font-family: 'Kanit', sans-serif;
 }
 
 .landing-subtitle {
-    font-size: 3em;
-    line-height: 1em;
-    margin: 0;
-    padding-top: 5%;
+    font-size: 3rem;
+    line-height: 1rem;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 50%;
     color: $neon;
-    font-family: 'Kanit', sans-serif;
     cursor: pointer;
+    background: transparent;
+    background: linear-gradient(to right, transparent 50%, $neonDark 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition:all 0.5s ease;
+    transform: skew(-20deg);
+    
+    &--animated{
+      animation-name: moveInBottom;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: backwards;
+      animation-delay: 0.6s;
+    }
+    &:hover{
+        color: $black;
+        transition: 0.5s;
+        background-position: right bottom;
+    }
 }  
 
-.landing-subtitle:hover{
-    color: $white;
-    transition: 0.5s;
-}
 
 .landing-container-bar {
     width: 30%;
     height: 0;
-    border: 8px solid $neonDark;
-    margin: 1.5rem 35%;
+    border: 0.8rem solid $neonDark;
+    margin: 10rem 35% 5rem 35%;
+}
+
+@keyframes moveInBottom{
+  0%{
+    opacity: 0;
+    transform: skew(-20deg) translateY(100%);
+  }
+  100%{
+    opacity: 1;
+    transform: skew(-20deg) translateY(0);
+  }
 }

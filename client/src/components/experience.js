@@ -8,7 +8,7 @@ class Experience extends Component {
       
     return (
       <div className='experience'>
-        <div className='experience__title'>
+        <div className='experience__title section__title'>
            <h1>Professional Experience <span className='emphasize'>/</span></h1> 
         </div>
         <VerticalTimeline layout='one-column'>

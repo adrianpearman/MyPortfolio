@@ -8,28 +8,37 @@
 }
 
 .navbar__desktop {
-  margin: 0;
+  margin: 0 10%;
+  width: 70%;
+  & li{
+    display: inline-block;
+    padding: 2rem;
+    border-left: 1px solid $neon;
+    background: transparent;
+    background: linear-gradient(to right, transparent 50%, $neonDark 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    transition:all 0.5s ease;
+    transform: skew(-20deg);
+
+    &:hover{
+      background-position: right bottom;
+      // background-color: $neon;
+      border-left: 1px solid $grey;
+      transition: 0.3s;
+      cursor: pointer;
+      h4{
+        color: $black;
+      }
+    }
+
+    & h4{
+        color: $grey;
+        transform: skew(20deg);
+    }
+  }
 }
 
-.navbar__desktop li{
-  display: inline-block;
-  padding: 1.5rem 2rem;
-  border-left: 1px solid $neon;
-  transform: skew(-20deg);
-}
-
-.navbar__desktop li:hover{
-  background-color: $neon;
-  color: $black;
-  border-left: 1px solid $grey;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.navbar__desktop li h4{
-  color: $grey;
-  transform: skew(20deg);
-}
 
 .navbar__mobile{
   display: none;

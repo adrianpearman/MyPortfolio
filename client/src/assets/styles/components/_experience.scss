@@ -3,3 +3,20 @@
     padding: 2rem;
     margin: 3rem;
 }
+
+.experience-title{
+    padding: 0.1rem;
+    font-size: 1.5rem;
+
+    &-responsibility{
+        margin-bottom: 1rem;
+    }
+}
+
+.experience-list{
+    transform: translateX(1rem);
+
+    li{
+        font-size: 1.3rem;
+    }
+}

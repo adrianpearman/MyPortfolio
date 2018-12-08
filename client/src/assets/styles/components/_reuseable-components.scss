@@ -5,16 +5,17 @@
 }
 
 .emphasize-title {
-  border-bottom: 2px solid $neonDark;
+  border-bottom: 0.2rem solid $neonDark;
 }
 
 .section__title {
   text-align: center;
-  padding: 2rem;
   margin: 3rem;
-
+  h1{
+    font-size: 3rem;
+  }
 }   
 
 .section__title.first{
-  margin-top: 1rem;
+  margin-top: 5rem;
 }

@@ -16,11 +16,17 @@ footer {
 .footer__nav{
   background-color: $greyDark;
   p, a { margin: 0; }
-  ul{ text-align: right }
+  ul{ 
+    text-align: right;
+    margin-right: 1rem; 
+  }
   li {
+    text-transform: uppercase;
     display: inline-block;
     padding: 1rem;
-    border-left: 1px solid $neon;
+    font-weight: 600;
+    font-size: 1.3rem;
+    border-left: 0.1rem solid $neon;
     transform: skew(-20deg);
   }
   a, a:visited{
@@ -30,7 +36,7 @@ footer {
   li:hover {
     background-color: $neon;
     color: $black;
-    border-left: 1px solid $grey;
+    border-left: 0.1rem solid $grey;
     transition: 0.3s;
     cursor: pointer;
   }

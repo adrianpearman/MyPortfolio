@@ -27,7 +27,7 @@ const PortfolioItem = (props) => {
                             {props.overview}
                         </p>
                         <h6>Technologies Used:</h6>
-                        <ul>
+                        <ul className='technology-stack'>
                             {
                                 props.stack.map((technology, index) => {
                                     return <li key={index}>{technology}</li>

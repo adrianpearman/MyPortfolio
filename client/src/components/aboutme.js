@@ -10,9 +10,9 @@ const AboutMe = () => {
             </div>
         </div>
         <div className='row'>
-            <div className='about-me__photo col'>
-                <img src={profilePhoto} alt=''/>
-                <div className='triangle'></div>
+            <div className='about-me__photo--container'>
+                <img className='about-me__image' src={profilePhoto} alt=''/>
+                <div className='about-me__triangle'></div>
             </div>
             <div className='about-me__description col'>
                 <div className='about-me__container'>
