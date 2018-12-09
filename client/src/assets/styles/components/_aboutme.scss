@@ -14,12 +14,18 @@
   }
 }
 
-img {
-    vertical-align: middle;
-    border-style: none;
-    filter: grayscale(30%);
-    width: 70%;
-    border-radius: 1rem;
-    margin-left: 15%;
-    margin-right: auto;
+.about-me__image {
+  vertical-align: middle;
+  border-style: none;
+  filter: grayscale(30%);
+  width: 70%;
+  border-radius: 1rem;
+  margin: 0 15%;
+}
+
+@media(max-width: $tablet){
+  .about-me__image{
+    width: 50%;
+    margin: 0 25% 5rem 25%;
   }
+}

@@ -19,7 +19,9 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      showNavigation: false
+      showNavigation: false,
+      offset: -50,
+      duration: 500
     }
     this.onScroll = this.onScroll.bind(this)
   }
@@ -89,7 +91,11 @@ class App extends Component {
     return (
       <div>
         <Landing />
-        <Header showNavigation={this.state.showNavigation} />
+        <Header 
+          showNavigation={this.state.showNavigation} 
+          offset={this.state.offset}
+          duration={this.state.duration}
+        />
         <div className="container">
           <Element name='AboutMe'>
             <AboutMe />
@@ -107,7 +113,10 @@ class App extends Component {
             <ContactMeForm />
           </Element>
         </div>
-        <Footer />
+        <Footer 
+          offset={this.state.offset} 
+          duration={this.state.duration} 
+        />
       </div>
 
     );

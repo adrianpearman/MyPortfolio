@@ -6,7 +6,7 @@
 
 .experience-title{
     padding: 0.1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
     &-responsibility{
         margin-bottom: 1rem;
@@ -17,6 +17,20 @@
     transform: translateX(1rem);
 
     li{
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media(max-width: $tablet){
+    .experience-title{
+        font-size: 1rem;
+    }
+
+    .experience-list{
+        transform: translateX(0.75rem);
+
+        li{
+            font-size: 0.9rem;
+        }
     }
 }

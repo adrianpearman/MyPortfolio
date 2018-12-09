@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'react-scroll'
 
 // setting duration for the scroll speed
-const duration = 500
-const offset = -65
 const Header = (props) => {
+    const offset = props.offset
+    const duration = props.duration
     let styleClasses = props.showNavigation ? 'navbar navbar-dark bg-primary' : 'hidden'
   return (
         <nav className={styleClasses}>

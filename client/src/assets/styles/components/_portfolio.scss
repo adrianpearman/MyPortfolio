@@ -29,15 +29,22 @@
     transform: translateX(2rem)
 }
 
-@media(max-width: 90rem){
-    .portfolio-item {
+@media(max-width: $displaySmall){
+    .portfolio__item {
         width: 48%;
         margin: 1%;
     }
 }
 
-@media(max-width: 65rem){
-    .portfolio-item {
+@media(max-width: $tablet){
+    .portfolio__item {
+        width: 48%;
+        margin: 1%;
+    }
+}
+
+@media(max-width: $mobile){
+    .portfolio__item {
         width: 98%;
         margin: 1%;
     }

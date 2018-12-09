@@ -11,6 +11,8 @@ const style = {
     opacity: 0.9
 }
 
+const offset = -50
+
 const Landing = () => {
   return (
       <div className='landing'>
@@ -24,7 +26,7 @@ const Landing = () => {
                         to='AboutMe'
                         spy={true}
                         smooth={true}
-                        offset={-65}
+                        offset={offset}
                         duration={500}
                     >
                         Let's Collaborate

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 
-const duration = 500
-const offset = -75
 
-const Footer = () => {
+const Footer = (props) => {
+    const duration = props.duration
+    const offset = props.offset
   return (
     <footer className='footer'>
         <nav className='footer__nav'>
