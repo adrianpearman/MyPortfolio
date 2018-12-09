@@ -1,7 +1,10 @@
 import React from 'react'
+import { Link } from 'react-scroll'
 import profilePhoto from '../assets/images/profilePhoto.jpg'
 
-const AboutMe = () => {
+const AboutMe = (props) => {
+    const duration = props.duration
+    const offset = props.offset
   return (
     <div className='about-me'>
         <div className='row mb-3'>
@@ -23,34 +26,42 @@ const AboutMe = () => {
                     </p>
                     <div className='contact-container mt-5'>
                         <div className='row'>
-                            <div className='col'>
-                                <div className='contact__me linkedin'>
-                                    <a 
-                                        href='https://www.linkedin.com/in/adrian-pearman/' 
-                                        target='_blank' 
-                                        alt="Link to Adrian Pearman's professional LinkedIn profile"
-                                        rel="noopener noreferrer"
-                                    >
+                            <div className='col-md-12 mb-3'> 
+                                <a 
+                                    href='https://www.linkedin.com/in/adrian-pearman/' 
+                                    target='_blank' 
+                                    alt="Link to Adrian Pearman's professional LinkedIn profile"
+                                    rel="noopener noreferrer"
+                                >
+                                    <button className='contact__me contact__me--linkedin'>
                                       Linkedin
-                                    </a> 
-                                 </div>
+                                    </button>
+                                </a> 
                               </div>
-                            <div className='col'>
-                                <div className='contact__me github'>
-                                      <a 
-                                        href='https://github.com/adrianpearman' 
-                                        target='_blank' 
-                                        alt="Link to Adrian Pearman's Github profile"
-                                        rel="noopener noreferrer"
-                                      >
-                                         Github
-                                      </a>
-                                </div>
+                            <div className='col-md-12 mb-3'>
+                                <a 
+                                    href='https://github.com/adrianpearman' 
+                                    target='_blank' 
+                                    alt="Link to Adrian Pearman's Github profile"
+                                    rel="noopener noreferrer"
+                                >
+                                    <button className='contact__me contact__me--github'>
+                                        Github
+                                    </button>
+                                </a>
                               </div>
-                            <div className='col'>
-                                <div className='contact__me email'>
-                                      E-Mail
-                                </div>
+                            <div className='col-md-12 mb-3'>
+                                <Link
+                                    to='ContactMe'
+                                    spy={true}
+                                    smooth={true}
+                                    offset={offset}
+                                    duration={duration}
+                                >
+                                    <button className='contact__me contact__me--email'>
+                                        E-Mail
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                         <div className='contact-container-bar'></div>

@@ -9,7 +9,8 @@ const Footer = (props) => {
     <footer className='footer'>
         <nav className='footer__nav'>
             <ul>
-                <li id='linkedin'>
+                <li className='linkedin'>
+                {/* <li>  */}
                     <a 
                         href='https://www.linkedin.com/in/adrian-pearman/'
                         target='_blank'
@@ -19,7 +20,8 @@ const Footer = (props) => {
                         LinkedIn
                     </a>
                 </li>  
-                <li id='github'>
+                <li className='github'>
+                {/* <li>  */}
                     <a 
                         href='https://github.com/adrianpearman'
                         target='_blank'
@@ -37,7 +39,7 @@ const Footer = (props) => {
                         offset={offset}
                         duration={duration}
                     >
-                        <p>About Me</p>
+                        About Me
                     </Link>
                 </li>
                 <li>
@@ -48,7 +50,7 @@ const Footer = (props) => {
                         offset={offset}
                         duration={duration}
                     >
-                        <p>Experience</p>
+                        Experience
                     </Link>
                 </li>
                 <li>
@@ -59,7 +61,7 @@ const Footer = (props) => {
                         offset={offset}
                         duration={duration}
                     >
-                        <p>Portfolio</p>
+                        Portfolio
                     </Link>
                 </li>
                 <li>
@@ -70,7 +72,7 @@ const Footer = (props) => {
                         offset={offset}
                         duration={duration}
                     >
-                        <p>Contact-Me</p>
+                        Contact-Me
                     </Link>
                 </li>
             </ul>

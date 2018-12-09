@@ -110,7 +110,7 @@ import axios from 'axios'
                     <br /> 
                     Exploring options for a current project<span className='emphasize'>?</span>
                     <br /> 
-                    Looking to add a new member to your team<span className='emphasize'>!</span>
+                    Looking to add a new member to your team<span className='emphasize'>?</span>
                     <br /> 
                     Contact me and lets collaborate<span className='emphasize'>!</span>
                     <br />

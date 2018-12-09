@@ -98,7 +98,10 @@ class App extends Component {
         />
         <div className="container">
           <Element name='AboutMe'>
-            <AboutMe />
+            <AboutMe 
+              offset={this.state.offset}
+              duration={this.state.duration}
+            />
           </Element>
 
           <Element name='Experience'>
