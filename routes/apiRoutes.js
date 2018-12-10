@@ -1,26 +1,51 @@
 // Modules
 const path = require('path')
 const express = require('express')
-const router = express.Router()
+const MongoClient = require('mongodb').MongoClient
+const mongoose = require('mongoose')
 const sgMail = require('@sendgrid/mail')
 
 // Variables
+const router = express.Router()
 const data = require('../data.json')
-
-const sendGridEmail = process.env.EMAIL || 'adrianpearman12@gmail.com'
-// const sendGridAPIKey = process.env.SENDGRIDAPI 
-// || webVariables.email.sendGridAPI
+const sendGridEmail = process.env.EMAIL
+const mLabURI_USERNAME = process.env.MLABURI_USERNAME
+const mLabURI_PASSWORD = process.env.MLABURI_PASSWORD
+const mLabURI_CONNECTION = process.env.MLABURI_CONNECTION
+const mLabURI = `mongodb://${mLabURI_USERNAME}:${mLabURI_PASSWORD}@ds143039.mlab.com:43039/${mLabURI_CONNECTION}`
+const sendGridAPIKey = process.env.SENDGRIDAPI
 // sgMail.setApiKey(sendGridAPIKey)
+
+
+// dB Connection
+mongoose.Promise = global.Promise;
+mongoose.connect(mLabURI)
 
 // GET REQUESTS
 // Retrieving app data
 router.get('/data/experienceList', (req, res) => {
-    res.send(data)
+    MongoClient.connect(mLabURI, (err,db) => {
+        if(err) throw err
+        let database = db.db('apsp_portfolio')
+        database.collection('experience').find({}).toArray((err, data) => {
+            if (err) throw err
+            res.send(data)
+            db.close()
+        })
+    })
 })
 
 // Retrieving app data
 router.get('/data/projectList', (req, res) => {
-    res.send(data)
+    MongoClient.connect(mLabURI, (err, db) => {
+        if (err) throw err
+        let database = db.db('apsp_portfolio')
+        database.collection('projects').find({}).toArray((err, data) => {
+            if(err) throw err
+            res.send(data)
+            db.close()
+        })
+    })
 })
 
 // Serving static files 
