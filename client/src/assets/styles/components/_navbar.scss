@@ -5,45 +5,73 @@
   z-index: 100;
   width: 100%;
   top: 0;
-}
-
-.navbar__desktop {
-  margin: 0 10%;
-  width: 70%;
-  & li{
-    display: inline-block;
-    padding: 2rem;
-    border-left: 1px solid $neon;
-    background: transparent;
-    background: linear-gradient(to right, transparent 50%, $neonDark 50%);
-    background-size: 200% 100%;
-    background-position: left bottom;
-    transition:all 0.5s ease;
-    transform: skew(-20deg);
-
-    &:hover{
-      background-position: right bottom;
-      border-left: 1px solid $grey;
-      transition: 0.3s;
-      cursor: pointer;
-      h4{
-        color: $black;
+  &__desktop {
+    margin: 0 10%;
+    width: 70%;
+    & li{
+      display: inline-block;
+      padding: 2rem;
+      border-left: 1px solid $neon;
+      background: transparent;
+      background: linear-gradient(to right, transparent 50%, $neonDark 50%);
+      background-size: 200% 100%;
+      background-position: left bottom;
+      transition:all 0.5s ease;
+      transform: skew(-20deg);
+  
+      &:hover{
+        background-position: right bottom;
+        border-left: 1px solid $grey;
+        transition: 0.3s;
+        cursor: pointer;
+        h4{
+          color: $black;
+        }
       }
-    }
-
-    & h4{
-        color: $grey;
-        transform: skew(20deg);
-        font-size: 1rem;
+  
+      & h4{
+          color: $grey;
+          transform: skew(20deg);
+          font-size: 1rem;
+      }
     }
   }
 }
 
 
-.navbar__mobile{
-  display: none;
+@media(max-width: $tablet){
+  .navbar{
+    &__desktop{
+      li{
+        padding: 2rem 1rem;
+        h4{
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
 }
 
-.hidden{
-  display: none;
+
+@media(max-width: $mobile){
+  .navbar{
+    &__desktop{
+      width: 100%;
+      li{
+        padding: 2rem 0.6rem;
+        h4{
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 340px){
+   .navbar{
+    &__desktop{
+      width: 100%;
+      margin: 0 5%;
+    }
+  }
 }

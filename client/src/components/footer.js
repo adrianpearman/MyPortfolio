@@ -10,7 +10,6 @@ const Footer = (props) => {
         <nav className='footer__nav'>
             <ul>
                 <li className='linkedin'>
-                {/* <li>  */}
                     <a 
                         href='https://www.linkedin.com/in/adrian-pearman/'
                         target='_blank'
@@ -21,7 +20,6 @@ const Footer = (props) => {
                     </a>
                 </li>  
                 <li className='github'>
-                {/* <li>  */}
                     <a 
                         href='https://github.com/adrianpearman'
                         target='_blank'

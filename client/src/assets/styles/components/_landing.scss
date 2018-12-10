@@ -81,10 +81,24 @@
   }
 
   .landing-title {
-    font-size: 7rem;
+    font-size: 5rem;
   }
 
   .landing-subtitle{
     font-size: 2rem;
+  }
+}
+
+@media (max-width: $mobile){
+  .landing-subtitle {
+      font-size: 1.7rem;
+      line-height: initial;
+  }
+}
+
+@media (max-width: 325px){
+  .landing-subtitle {
+      font-size: 1.3rem;
+      line-height: initial;
   }
 }

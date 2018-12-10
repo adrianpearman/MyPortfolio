@@ -1,6 +1,5 @@
 .experience__title {
     text-align: center;
-    padding: 2rem;
     margin: 3rem;
 }
 
@@ -32,5 +31,18 @@
         li{
             font-size: 0.9rem;
         }
+    }
+}
+
+@media(max-width: $mobile){
+    .experience-title{
+        font-size: 0.5rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media(max-width: $mobileSmall){
+    .experience-title{
+        font-size: 0.5rem;
     }
 }

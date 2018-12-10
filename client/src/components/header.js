@@ -54,13 +54,6 @@ const Header = (props) => {
                     </Link>
                 </li>
             </ul>
-
-            <ul className='navbar__mobile'>
-                <li>About Me</li>
-                <li>Experience</li>
-                <li>Portfolio</li>
-                <li>Contact-Me</li>
-            </ul>
         </nav>
   )
 }

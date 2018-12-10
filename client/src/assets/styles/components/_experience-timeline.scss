@@ -430,3 +430,9 @@
         transform: translateX(0)
     }
 }
+
+@media(max-width: $mobileSmall){
+    .vertical-timeline-element-content {
+        margin-left: 2rem;
+    }
+}

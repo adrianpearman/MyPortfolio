@@ -75,3 +75,13 @@ footer {
     color: $grey;
   }
 }
+
+@media(max-width: $mobileSmall){
+  .footer__nav{
+    li{
+      display: block;
+      transform: skew(0deg);
+      width: 100%;
+    }
+  }
+}
