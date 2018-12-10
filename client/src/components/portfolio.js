@@ -1,9 +1,42 @@
 import React, { Component } from 'react'
+import axios from 'axios'
+
+import LoadingComponent from './loading'
 import PortfolioItem from './portfolio-item'
-import data from '../data.json'
 
 class Portfolio extends Component {
+    state = {
+        projectList: []
+    }
+
+    fetchPortfolioHandler = () => {
+        axios.get('/api/data/projectList')
+            .then((res) => {
+                let projects = res.data.projects
+                this.setState({ projectList: projects })
+            })
+            .catch(err => console.error(err))
+    }
+
+    componentWillMount(){
+        this.fetchPortfolioHandler()
+    }
+
   render() {
+
+      const portfolioList = this.state.projectList.map((project, index) => {
+          return (
+              <PortfolioItem
+                  key={index}
+                  title={project.title}
+                  overview={project.overview}
+                  stack={project.stack}
+                  liveLink={project.liveLink}
+                  repoLink={project.repoLink}
+              />
+          )
+      })
+
     return (
       <div className='portfolio'>
             <div className='row mb-3'>
@@ -12,19 +45,7 @@ class Portfolio extends Component {
                 </div>
             </div>
             <div className='portfolio__container row'>
-                { data.projects.map((project, index) => {
-                    return (
-                        <PortfolioItem 
-                            key={index}
-                            title={project.title}
-                            overview={project.overview}
-                            stack={project.stack}
-                            liveLink={project.liveLink}
-                            repoLink={project.repoLink}
-                        />
-                        )
-                    })
-                }
+                {this.state.projectList.length > 0 ? portfolioList : <LoadingComponent />}
             </div> 
             <hr/>  
       </div>

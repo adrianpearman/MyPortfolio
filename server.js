@@ -13,10 +13,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-
-// app.get('/', (req, res) => {
-//     res.send('YOOOO')
-// })
+app.use(express.static('public'))
 
 // Routes
 const apiRoutes = require('./routes/apiRoutes')

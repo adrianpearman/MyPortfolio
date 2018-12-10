@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-      "start": "",
+      "start": "node server.js",
       "client": "cd client; yarn start",
       "server": "nodemon server.js",
       "dev": "concurrently \"yarn run client\" \"yarn run server\"  ",

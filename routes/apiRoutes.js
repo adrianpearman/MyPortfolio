@@ -1,13 +1,32 @@
 // Modules
+const path = require('path')
 const express = require('express')
 const router = express.Router()
 const sgMail = require('@sendgrid/mail')
 
 // Variables
+const data = require('../data.json')
 const webVariables = require('../config.json')
 const sendGridEmail = webVariables.email.email
 const sendGridAPIKey = webVariables.email.sendGridAPI
 sgMail.setApiKey(sendGridAPIKey)
+
+// GET REQUESTS
+// Retrieving app data
+router.get('/api/data/experienceList', (req, res) => {
+    res.send(data)
+})
+
+// Retrieving app data
+router.get('/api/data/projectList', (req, res) => {
+    res.send(data)
+})
+
+// Serving static files 
+router.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+})
+
 
 // Send Email from form
 router.post('/api/contact-me', (req, res) => {
@@ -35,13 +54,6 @@ router.post('/api/contact-me', (req, res) => {
 
     console.log(req.body)
     res.sendStatus(200)
-})
-
-
-// Send
-
-router.get('/api', (req, res) => {
-    console.log(webVariables)
 })
 
 module.exports = router
