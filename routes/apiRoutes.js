@@ -7,7 +7,6 @@ const sgMail = require('@sendgrid/mail')
 
 // Variables
 const router = express.Router()
-const data = require('../data.json')
 const sendGridEmail = process.env.EMAIL
 const mLabURI_USERNAME = process.env.MLABURI_USERNAME
 const mLabURI_PASSWORD = process.env.MLABURI_PASSWORD
