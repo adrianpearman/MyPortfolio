@@ -6,17 +6,11 @@ const sgMail = require('@sendgrid/mail')
 
 // Variables
 const data = require('../data.json')
-// let webVariables
-// if (process.env.NODE_ENV === 'production'){
-//     return
-// }else{
-//     webVariables = require('../config.json')
-// }
-const sendGridEmail = process.env.EMAIL 
-// || webVariables.email.email
-const sendGridAPIKey = process.env.SENDGRIDAPI 
+
+const sendGridEmail = process.env.EMAIL || 'adrianpearman12@gmail.com'
+// const sendGridAPIKey = process.env.SENDGRIDAPI 
 // || webVariables.email.sendGridAPI
-sgMail.setApiKey(sendGridAPIKey)
+// sgMail.setApiKey(sendGridAPIKey)
 
 // GET REQUESTS
 // Retrieving app data
@@ -35,6 +29,7 @@ router.get('*', (req, res) => {
 })
 
 
+// POST REQUESTS
 // Send Email from form
 router.post('/api/contact-me', (req, res) => {
     let emailContent = `

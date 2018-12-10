@@ -17,7 +17,7 @@ app.use(express.static('public'))
 
 // Routes
 const apiRoutes = require('./routes/apiRoutes')
-app.use(apiRoutes)
+app.use('', apiRoutes)
 
 // Server Startup
 app.listen(PORT, () => {
