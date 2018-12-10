@@ -7,8 +7,8 @@ const sgMail = require('@sendgrid/mail')
 // Variables
 const data = require('../data.json')
 const webVariables = require('../config.json')
-const sendGridEmail = webVariables.email.email
-const sendGridAPIKey = webVariables.email.sendGridAPI
+const sendGridEmail = process.env.EMAIL || webVariables.email.email
+const sendGridAPIKey = process.env.SENDGRIDAPI || webVariables.email.sendGridAPI
 sgMail.setApiKey(sendGridAPIKey)
 
 // GET REQUESTS
