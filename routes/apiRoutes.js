@@ -14,24 +14,24 @@ const sendGridEmail = process.env.EMAIL || 'adrianpearman12@gmail.com'
 
 // GET REQUESTS
 // Retrieving app data
-router.get('/api/data/experienceList', (req, res) => {
+router.get('/data/experienceList', (req, res) => {
     res.send(data)
 })
 
 // Retrieving app data
-router.get('/api/data/projectList', (req, res) => {
+router.get('/data/projectList', (req, res) => {
     res.send(data)
 })
 
 // Serving static files 
-router.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
-})
+// router.get('*', (req, res) => {
+//     res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+// })
 
 
 // POST REQUESTS
 // Send Email from form
-router.post('/api/contact-me', (req, res) => {
+router.post('/contact-me', (req, res) => {
     let emailContent = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
