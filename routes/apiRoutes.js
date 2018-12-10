@@ -23,7 +23,7 @@ mongoose.connect(mLabURI)
 // GET REQUESTS
 // Retrieving app data
 router.get('/data/experienceList', (req, res) => {
-    MongoClient.connect(mLabURI, (err,db) => {
+    MongoClient.connect(mLabURI, { useNewUrlParser: true }, (err,db) => {
         if(err) throw err
         let database = db.db('apsp_portfolio')
         database.collection('experience').find({}).toArray((err, data) => {
@@ -36,7 +36,7 @@ router.get('/data/experienceList', (req, res) => {
 
 // Retrieving app data
 router.get('/data/projectList', (req, res) => {
-    MongoClient.connect(mLabURI, (err, db) => {
+    MongoClient.connect(mLabURI, { useNewUrlParser: true }, (err, db) => {
         if (err) throw err
         let database = db.db('apsp_portfolio')
         database.collection('projects').find({}).toArray((err, data) => {
