@@ -12,7 +12,8 @@ class Portfolio extends Component {
     fetchPortfolioHandler = () => {
         axios.get('/api/data/projectList')
             .then((res) => {
-                let projects = res.data.projects
+                let projects = res.data
+                // console.log(projects)
                 this.setState({ projectList: projects })
             })
             .catch(err => console.error(err))

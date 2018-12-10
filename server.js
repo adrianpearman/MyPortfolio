@@ -1,3 +1,8 @@
+// 
+if (process.env.NODE_ENV !== 'production') {
+    require('dotenv').load()
+}
+
 // Modules
 const path = require('path')
 const express = require('express')

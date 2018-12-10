@@ -12,7 +12,7 @@ class Experience extends Component {
     fetchExperienceHandler = () => {
         axios.get('/api/data/experienceList')
             .then((res) => {
-                const experienceData = res.data.experience
+                const experienceData = res.data
                 // console.log(experienceData)
                 this.setState({ experienceList: experienceData })
             })
