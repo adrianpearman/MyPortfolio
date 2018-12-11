@@ -11,12 +11,22 @@ const PortfolioItem = (props) => {
                     <Fragment>
                         <div className='portfolio__item-link-container'>
                             <p className='col'>
-                                <a href={props.liveLink} className="card-link">
+                                <a 
+                                    href={props.liveLink} 
+                                    className="card-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Live Site
                                 </a>
                             </p>
                             <p className='col'>
-                                <a href={props.repoLink} className="card-link">
+                                <a 
+                                    href={props.repoLink} 
+                                    className="card-link"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
                                     Repository
                                 </a>
                             </p>
