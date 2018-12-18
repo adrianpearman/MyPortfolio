@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import axios from 'axios'
-
+import validator from 'validator'
  class ContactMeForm extends Component {
     state = {
         emailName: '',
@@ -29,9 +29,13 @@ import axios from 'axios'
     }
 
     emailContactHandler = (e) => {
-        this.setState({ 
-            emailContact: e.target.value, 
-            emailContactValidate: true 
+        let email = e.target.value
+        if(!validator.isEmail(email)){
+            return this.setState({ emailContactValidate: false })
+        } 
+        this.setState({
+            emailContact: email,
+            emailContactValidate: true
         })
     }
 
@@ -67,13 +71,13 @@ import axios from 'axios'
         
         // Sending email
         if(formFilled){
-            axios.post('http://localhost:3001/api/contact-me', emailObject)
+            axios.post('/api/contact-me', emailObject)
             .then(result => {
+                console.log(emailObject)
                 this.setState({ messageSuccess: true })
                 console.log(result)
             })
             .catch(err => console.log(err))
-            console.log(emailObject)
         } else {
             console.log('please check the input values...')
         }
