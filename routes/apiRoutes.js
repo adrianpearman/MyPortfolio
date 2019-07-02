@@ -30,7 +30,7 @@ router.get('/data/experienceList', (req, res) => {
         let database = db.db('apsp_portfolio')
         database.collection('experience').find({}).toArray((err, data) => {
             if (err) throw err
-            res.send(data)
+            res.send(data.reverse())
             db.close()
         })
     })

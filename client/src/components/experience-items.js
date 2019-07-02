@@ -8,6 +8,9 @@ const ExperienceItems = (props) => {
         iconStyle={{ background: '#a8ce00' }}
     >
         <h5 className="vertical-timeline-element-title mb-3 experience-title">
+            <span className='emphasize-title'>Company:</span> {props.employer} 
+        </h5>
+        <h5 className="vertical-timeline-element-title mb-3 experience-title">
             <span className='emphasize-title'>Title:</span> {props.title} 
         </h5>
         <h5 className="vertical-timeline-element-subtitle mb-3 experience-title">

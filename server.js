@@ -17,14 +17,13 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'client', 'build')))
 
 // Routes
 const apiRoutes = require('./routes/apiRoutes')
 app.use('/api', apiRoutes)
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'public', 'index.html'))
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
 })
 
 // Server Startup
