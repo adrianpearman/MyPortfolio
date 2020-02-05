@@ -1,102 +1,99 @@
 // Modules
-const path = require('path')
-const express = require('express')
-const MongoClient = require('mongodb').MongoClient
-const mongoose = require('mongoose')
-const sgMail = require('@sendgrid/mail')
-const nodemailer = require('nodemailer')
-const { google } = require('googleapis')
-const OAuth2 = google.auth.OAuth2
+const path = require("path");
+const express = require("express");
+const mongoose = require("mongoose");
+const sgMail = require("@sendgrid/mail");
 
 // Variables
-const router = express.Router()
-const MYEMAIL = process.env.EMAIL
-const EMAIL_P = process.env.EMAIL_P
+const router = express.Router();
+const validateTime = require("../services/validateTime");
+const emailTemplate = require("../services/templates/emailTemplate");
+const keys = require("../config/keys");
 
-const mLabURI_USERNAME = process.env.MLABURI_USERNAME
-const mLabURI_PASSWORD = process.env.MLABURI_PASSWORD
-const mLabURI_CONNECTION = process.env.MLABURI_CONNECTION
-const mLabURI = `mongodb://${mLabURI_USERNAME}:${mLabURI_PASSWORD}@ds143039.mlab.com:43039/${mLabURI_CONNECTION}`
-
-// dB Connection
-mongoose.Promise = global.Promise;
-mongoose.connect(mLabURI, { useNewUrlParser: true })
+// DB Models
+const Contact = mongoose.model("contact");
+const Experience = mongoose.model("experience");
+const Projects = mongoose.model("projects");
 
 // GET REQUESTS
 // Retrieving app data
-router.get('/data/experienceList', (req, res) => {
-    MongoClient.connect(mLabURI, (err,db) => {
-        if(err) throw err
-        let database = db.db('apsp_portfolio')
-        database.collection('experience').find({}).toArray((err, data) => {
-            if (err) throw err
-            res.send(data.reverse())
-            db.close()
-        })
-    })
-})
+router.get("/data/experienceList", async (req, res) => {
+  const experience = await Experience.find();
+  try {
+    res.send(experience.reverse());
+  } catch (err) {
+    throw err;
+  }
+});
 
 // Retrieving app data
-router.get('/data/projectList', (req, res) => {
-    MongoClient.connect(mLabURI, (err, db) => {
-        if (err) throw err
-        let database = db.db('apsp_portfolio')
-        database.collection('projects').find({}).toArray((err, data) => {
-            if(err) throw err
-            res.send(data)
-            db.close()
-        })
-    })
-})
-
+router.get("/data/projectList", async (req, res) => {
+  const projects = await Projects.find();
+  try {
+    res.send(projects.reverse());
+  } catch (err) {
+    throw err;
+  }
+});
 
 // POST REQUESTS
 // Send Email from form
-router.post('/contact-me', (req, res) => {
-    let name = req.body.name
-    let company = req.body.company
-    let email = req.body.email
-    let description = req.body.description
+router.post("/contact-me", async (req, res) => {
+  let { name, company, email, description } = req.body;
+  // Return error if body values are missing
+  if (!name || !company || !email || !description) {
+    res.status(400);
+    return;
+  }
+  //Initialize sendgrid
+  sgMail.setApiKey(keys.sendGridAPIKey);
 
-//     let emailContent = `
-//     <p>You have a new contact request</p>
-//     <h3>Contact Details</h3>
-//     <ul>
-//       <li> Name: ${name}</li>
-//       <li> Company: ${company}</li>
-//       <li> Email: ${email}</li>
-//     </ul>
-//     <h3>Message</h3>
-//     <p>${description}</p>
-//   `
-
-//     let mailOptions = {
-//         from: "Adrian's website",
-//         to: MYEMAIL,
-//         subject: "A new message request from my portfolio",
-//         // text: "info",
-//         generateTextFromHTML: true,
-//         html: emailContent
-//     }
-
-    let contactInformation = {
-        name,
-        company,
-        email,
-        description
-    }
-
-    MongoClient.connect(mLabURI, (err, db) => {
-        if (err) throw err
-        let database = db.db('apsp_portfolio')
-        database.collection('contact').insertOne(contactInformation, (err, dbResponse) => {
-            if (err) {
-                throw err
-            } else {
-                res.sendStatus(200)
-            }
-        })
+  // Email Object
+  const msg = {
+    to: keys.myEmail,
+    from: email,
+    subject: `${name} would like to connect with you!`,
+    html: emailTemplate({
+      name,
+      company,
+      email,
+      description
     })
-})
+  };
 
-module.exports = router
+  // Return value from the DB
+  Contact.findOne({ email: email })
+    .sort({
+      date_added: -1
+    })
+    .then(contact => {
+      if (contact === null) {
+        // Contact Object
+        let contactInformation = new Contact({
+          name,
+          company,
+          email,
+          description,
+          dateSent: new Date().getTime()
+        });
+        // send the email
+        sgMail.send(msg);
+        // save email to db
+        contactInformation.save();
+        return res.send(contactInformation);
+      } else if (
+        validateTime(contact.dateSent, new Date().getTime()) === false
+      ) {
+        // respond with server
+        throw new Error(
+          "Unable to send contact form. Last request was within an hour. Try again later"
+        );
+      }
+    })
+    .catch(err => {
+      console.log(err);
+      return res.status(500).send(err);
+    });
+});
+
+module.exports = router;
