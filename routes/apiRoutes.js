@@ -1,5 +1,4 @@
 // Modules
-const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
 const sgMail = require("@sendgrid/mail");
@@ -28,7 +27,7 @@ router.get("/data/experienceList", async (req, res) => {
 
 // Retrieving app data
 router.get("/data/projectList", async (req, res) => {
-  const projects = await Projects.find();
+  const projects = await Projects.find({});
   try {
     res.send(projects.reverse());
   } catch (err) {
