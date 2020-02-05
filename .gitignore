@@ -3,5 +3,3 @@ config.json
 .env
 testServer.js
 text.txt
-
-dev.js
