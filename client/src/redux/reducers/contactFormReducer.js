@@ -16,7 +16,8 @@ const INITIAL_STATE = {
   emailAddressValidate: null,
   emailMessage: "",
   emailMessageValidate: null,
-  messageSuccess: false
+  messageSuccess: null,
+  messageSuccessSend: null
 };
 
 export const contactFormReducer = (state = INITIAL_STATE, action) => {

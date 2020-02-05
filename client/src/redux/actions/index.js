@@ -142,7 +142,8 @@ export const clearContactForm = () => dispatch => {
     emailAddressValidate: null,
     emailMessage: "",
     emailMessageValidate: null,
-    messageSuccess: null
+    messageSuccess: null,
+    messageSuccessSend: null
   };
 
   dispatch({
@@ -151,11 +152,12 @@ export const clearContactForm = () => dispatch => {
   });
 };
 
-export const updateMessageStatus = value => dispatch => {
+export const updateMessageStatus = (value, msg) => dispatch => {
   dispatch({
     type: UPDATE_MESSAGE_STATUS,
     payload: {
-      messageSuccess: value
+      messageSuccess: value,
+      messageSuccessSend: msg
     }
   });
 };
@@ -165,16 +167,26 @@ export const submitContactForm = (formFilled, contactInfo) => dispatch => {
     axios
       .post("/api/contact-me", contactInfo)
       .then(() => {
-        dispatch(updateMessageStatus(true));
+        dispatch(
+          updateMessageStatus(
+            true,
+            `Message sent, I'll be in touch with you soon!`
+          )
+        );
         setTimeout(() => {
           dispatch(clearContactForm());
         }, 2000);
       })
       .catch(err => {
-        dispatch(updateMessageStatus(false));
-        console.log(err);
+        dispatch(
+          updateMessageStatus(
+            false,
+            "Unable to send contact form. Last request was within an hour. Try again later"
+          )
+        );
+        setTimeout(() => {
+          dispatch(clearContactForm());
+        }, 2000);
       });
-  } else {
-    console.log("please check the input values...");
   }
 };

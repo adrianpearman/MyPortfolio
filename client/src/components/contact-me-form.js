@@ -47,10 +47,6 @@ const ContactMeForm = props => {
 
   let color = { color: "red" };
 
-  let buttonClass = props.messageSuccess
-    ? "btn btn-success"
-    : "btn btn-primary";
-
   const validateInputFunction = (stateValue, text) => {
     if (stateValue === null) {
       return <></>;
@@ -58,6 +54,65 @@ const ContactMeForm = props => {
       return <div style={color}>{text}</div>;
     } else {
       return <></>;
+    }
+  };
+
+  const validateContactForm = () => {
+    if (
+      props.emailName === "" ||
+      props.emailCompany === "" ||
+      props.emailAddress === "" ||
+      props.emailMessage === ""
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  const renderSendButton = () => {
+    switch (props.messageSuccess) {
+      case true:
+        return (
+          <button className="btn btn-success" onClick={emailSubmitHandler}>
+            Sent
+          </button>
+        );
+      case false:
+        return (
+          <button className="btn btn-danger" onClick={emailSubmitHandler}>
+            Fail
+          </button>
+        );
+      default:
+        return (
+          <button
+            className="btn btn-primary"
+            onClick={emailSubmitHandler}
+            disabled={validateContactForm()}
+          >
+            Send
+          </button>
+        );
+    }
+  };
+
+  const renderSuccessMessage = () => {
+    switch (props.messageSuccess) {
+      case true:
+        return (
+          <div className="alert alert-success">
+            <strong>{props.messageSuccessSend}</strong>
+          </div>
+        );
+      case false:
+        return (
+          <div className="alert alert-danger">
+            <strong>{props.messageSuccessSend}</strong>
+          </div>
+        );
+      default:
+        return <></>;
     }
   };
 
@@ -90,7 +145,7 @@ const ContactMeForm = props => {
       <form className="form-input">
         <fieldset>
           <div className="form-group">
-            <div className="mb-3 has-danger">
+            <div className="mb-3">
               <label htmlFor="exampleInputEmail1">Name</label>
               <input
                 type="email"
@@ -135,7 +190,7 @@ const ContactMeForm = props => {
                 "Please enter a valid contact method"
               )}
             </div>
-            <div className="mb-3">
+            <div className="mb-3 form-group">
               <label htmlFor="exampleTextarea">Message</label>
               <textarea
                 className="form-control"
@@ -149,9 +204,8 @@ const ContactMeForm = props => {
                 "Please enter a message"
               )}
             </div>
-            <button className={buttonClass} onClick={emailSubmitHandler}>
-              {props.messageSuccess ? "Sent!" : "Send"}
-            </button>
+            {renderSuccessMessage()}
+            {renderSendButton()}
           </div>
         </fieldset>
       </form>

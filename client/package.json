@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.1",
+    "http-proxy-middleware": "^0.20.0",
     "node-sass": "^4.10.0",
     "react": "^0.0.0-b53ea6ca0",
     "react-dom": "^0.0.0-b53ea6ca0",
@@ -30,6 +31,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "proxy": "http://localhost:3001"
+  ]
 }
