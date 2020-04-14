@@ -56,43 +56,40 @@ router.post("/contact-me", async (req, res) => {
       name,
       company,
       email,
-      description
-    })
+      description,
+    }),
   };
 
-  // Return value from the DB
-  Contact.findOne({ email: email })
-    .sort({
-      date_added: -1
-    })
-    .then(contact => {
-      if (contact === null) {
-        // Contact Object
-        let contactInformation = new Contact({
-          name,
-          company,
-          email,
-          description,
-          dateSent: new Date().getTime()
-        });
-        // send the email
-        sgMail.send(msg);
-        // save email to db
-        contactInformation.save();
-        return res.send(contactInformation);
-      } else if (
-        validateTime(contact.dateSent, new Date().getTime()) === false
-      ) {
-        // respond with server
-        throw new Error(
-          "Unable to send contact form. Last request was within an hour. Try again later"
-        );
-      }
-    })
-    .catch(err => {
-      console.log(err);
-      return res.status(500).send(err);
+  try {
+    // Return value from the DB
+    let contact = await Contact.findOne({ email: email }).sort({
+      date_added: -1,
     });
+
+    if (contact === null) {
+      // Contact Object
+      let contactInformation = new Contact({
+        name,
+        company,
+        email,
+        description,
+        dateSent: new Date().getTime(),
+      });
+      // send the email
+      sgMail.send(msg);
+      // save email to db
+      contactInformation.save();
+      return res.send(contactInformation);
+    } else if (validateTime(contact.dateSent, new Date().getTime()) === false) {
+      // respond with server
+      throw new Error(
+        "Unable to send contact form. Last request was within an hour. Try again later"
+      );
+    }
+  } catch (err) {
+    console.log(err);
+    return res.status(500).send(err);
+  }
 });
 
 module.exports = router;
