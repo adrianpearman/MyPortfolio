@@ -1,16 +1,12 @@
 import { combineReducers } from "redux";
+import { fetchDataReducer } from "./fetchDataReducer";
 import { contactFormReducer } from "./contactFormReducer";
-import { educationReducer } from "./educationReducer";
-import { experienceReducer } from "./experienceReducer";
-import { projectsReducer } from "./projectsReducer";
 import { uiReducer } from "./uiReducer";
 
 const reducers = combineReducers({
-  contactForm: contactFormReducer,
-  education: educationReducer,
-  experience: experienceReducer,
-  projects: projectsReducer,
-  uiReducer: uiReducer
+  contactFormReducer,
+  fetchDataReducer,
+  uiReducer
 });
 
 export default reducers;

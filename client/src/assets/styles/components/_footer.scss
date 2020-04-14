@@ -1,24 +1,26 @@
 /* Footer */
 footer {
-    position: absolute;
-    background-color: #191919;
-    bottom: 100;
-    left: 0;
-    width: 100%;
-    h4{
-      text-align: center;
-      color: $white;
-      padding: 1.5rem;
-    }
+  position: absolute;
+  background-color: #191919;
+  bottom: 100;
+  left: 0;
+  width: 100%;
+  h4 {
+    text-align: center;
+    color: $white;
+    padding: 1.5rem;
+  }
 }
 
-
-.footer__nav{
+.footer__nav {
   background-color: $greyDark;
-  p, a { margin: 0; }
-  ul{ 
+  p,
+  a {
+    margin: 0;
+  }
+  ul {
     text-align: right;
-    margin-right: 1rem; 
+    margin-right: 1rem;
   }
   li {
     text-transform: uppercase;
@@ -31,54 +33,57 @@ footer {
     border-left: 0.1rem solid $neon;
     background-size: 200% 100%;
     background-position: left bottom;
-    transition:all 0.5s ease;
+    transition: all 0.5s ease;
     transform: skew(-20deg);
+    color: $white;
 
-    &:hover{
+    &:hover {
       background-position: right bottom;
-      color: $black;
+      color: $white;
       border-left: 0.1rem solid $grey;
       cursor: pointer;
     }
   }
-
-  & .linkedin{
-      background: linear-gradient(to right, transparent 50%, $linkedin 50%);
-      border-left: 0.1rem solid $neon;
-      background-size: 200% 100%;
-      background-position: left bottom;
-      transition:all 0.5s ease;  
-    &:hover{
-      background-position: right bottom;
-      a{
-        color: $white;      
-      } 
-    }
+  a,
+  a:visited {
+    color: $white;
+    text-decoration: none;
   }
 
-  & .github{
-      background: linear-gradient(to right, transparent 50%, $github 50%);
-      border-left: 0.1rem solid $neon;
-      background-size: 200% 100%;
-      background-position: left bottom;
-      transition:all 0.5s ease; 
-    &:hover{
-      background-position: right bottom; 
-      a{
+  & .linkedin {
+    background: linear-gradient(to right, transparent 50%, $linkedin 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    border-left: 0.1rem solid $neon;
+    transition: all 0.5s ease;
+    &:hover {
+      background-position: right bottom;
+      border-left: 0.1rem solid $linkedin;
+      a {
         color: $white;
       }
     }
   }
 
-  a, a:visited{
-    text-decoration: none;
-    color: $grey;
+  & .github {
+    background: linear-gradient(to right, transparent 50%, $github 50%);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    border-left: 0.1rem solid $neon;
+    transition: all 0.5s ease;
+    &:hover {
+      background-position: right bottom;
+      border-left: 0.1rem solid $github;
+      a {
+        color: $white;
+      }
+    }
   }
 }
 
-@media(max-width: $mobileSmall){
-  .footer__nav{
-    li{
+@media (max-width: $mobileSmall) {
+  .footer__nav {
+    li {
       display: block;
       transform: skew(0deg);
       width: 100%;

@@ -8,18 +8,18 @@ const AboutMe = props => {
   return (
     <div className="about-me">
       <div className="row mb-3">
-        <div className="section__title first col">
+        <div className="section__title first col-12">
           <h1>
             About Me <span className="emphasize">/</span>
           </h1>
         </div>
       </div>
       <div className="row">
-        <div className="about-me__photo--container">
+        <div className="about-me__photo--container col-md-6 col-sm-12">
           <img className="about-me__image" src={profilePhoto} alt="" />
           <div className="about-me__triangle"></div>
         </div>
-        <div className="about-me__description col">
+        <div className="about-me__description col-md-6 col-sm-12">
           <div className="about-me__container">
             <p>
               I’m a Full-Stack Web Developer based in Toronto, Ontario, Canada.
@@ -34,7 +34,7 @@ const AboutMe = props => {
             </p>
             <div className="contact-container mt-5">
               <div className="row">
-                <div className="col-md-12 mb-3">
+                <div className="col-4 mb-3">
                   <a
                     href="https://www.linkedin.com/in/adrian-pearman/"
                     target="_blank"
@@ -46,7 +46,7 @@ const AboutMe = props => {
                     </button>
                   </a>
                 </div>
-                <div className="col-md-12 mb-3">
+                <div className="col-4 mb-3">
                   <a
                     href="https://github.com/adrianpearman"
                     target="_blank"
@@ -58,7 +58,7 @@ const AboutMe = props => {
                     </button>
                   </a>
                 </div>
-                <div className="col-md-12 mb-3">
+                <div className="col-4 mb-3">
                   <Link
                     to="ContactMe"
                     spy={true}

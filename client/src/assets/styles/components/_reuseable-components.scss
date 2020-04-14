@@ -5,40 +5,40 @@
 //   text-decoration: none;
 // }
 
-.emphasize{
+.emphasize {
   font-weight: 600;
-  color: $neonDark
+  color: $neonDark;
 }
 
 .emphasize-title {
   border-bottom: 0.2rem solid $neonDark;
 }
 
-.center{
+.center {
   margin: 0 auto;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
 .section__title {
   text-align: center;
-  margin: 3rem;
-  h1{
+  margin: 1.5rem;
+  h1 {
     font-size: 3rem;
-    padding: 3rem 0;
+    padding: 1.5rem 0;
   }
-}   
-
-.section__title.first{
-  margin-top: 5rem;
 }
 
-@media(max-width: $mobileLarge){
-    .section__title{
-      h1 {
-        font-size: 1.5rem;
-      }
+.section__title.first {
+  margin-top: 1rem;
+}
+
+@media (max-width: $mobileLarge) {
+  .section__title {
+    h1 {
+      font-size: 1.5rem;
     }
+  }
 }

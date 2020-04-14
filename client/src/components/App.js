@@ -1,16 +1,9 @@
 // React Modules
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { Element } from "react-scroll";
-
 // Redux
 import { connect } from "react-redux";
-import {
-  fetchEducation,
-  fetchExperience,
-  fetchPortfolio,
-  toggleNavigation
-} from "../redux/actions";
-
+import ACTIONS from "../redux/actions";
 // Imported Components / Styling
 import Header from "./header";
 import Landing from "./landing";
@@ -21,8 +14,15 @@ import Footer from "./footer";
 import Portfolio from "./portfolio";
 import "../assets/styles/styles.scss";
 
-class App extends Component {
-  componentDidMount() {
+const App = ({
+  duration,
+  fetchExperience,
+  fetchPortfolio,
+  offset,
+  showNavigation,
+  toggleNavigation
+}) => {
+  useEffect(() => {
     const onScroll = () => {
       // records the height of where the setState will change
       const headerHeight = window.innerHeight - 75;
@@ -30,61 +30,53 @@ class App extends Component {
       let userWindow = window.pageYOffset;
       // triggers function to change navigation bar
       userWindow > headerHeight
-        ? this.props.toggleNavigation(true)
-        : this.props.toggleNavigation(false);
+        ? toggleNavigation(true)
+        : toggleNavigation(false);
     };
-
     window.addEventListener("scroll", onScroll);
+    fetchExperience();
+    fetchPortfolio();
+  }, []);
 
-    this.props.fetchExperience();
-    this.props.fetchPortfolio();
-  }
+  return (
+    <div>
+      <Landing />
+      <Header
+        showNavigation={showNavigation}
+        offset={offset}
+        duration={duration}
+      />
+      <div className="container">
+        <Element name="AboutMe">
+          <AboutMe offset={offset} duration={duration} />
+        </Element>
 
-  render() {
-    return (
-      <div>
-        <Landing />
-        <Header
-          showNavigation={this.props.showNavigation}
-          offset={this.props.offset}
-          duration={this.props.duration}
-        />
-        <div className="container">
-          <Element name="AboutMe">
-            <AboutMe
-              offset={this.props.offset}
-              duration={this.props.duration}
-            />
-          </Element>
+        <Element name="Experience">
+          <Experience />
+        </Element>
 
-          <Element name="Experience">
-            <Experience />
-          </Element>
+        <Element name="Portfolio">
+          <Portfolio />
+        </Element>
 
-          <Element name="Portfolio">
-            <Portfolio />
-          </Element>
-
-          <Element name="ContactMe">
-            <ContactMeForm />
-          </Element>
-        </div>
-        <Footer offset={this.props.offset} duration={this.props.duration} />
+        <Element name="ContactMe">
+          <ContactMeForm />
+        </Element>
       </div>
-    );
-  }
-}
+      <Footer offset={offset} duration={duration} />
+    </div>
+  );
+};
 
-const mapStateToProps = state => {
-  const { uiReducer } = state;
+const mapStateToProps = ({ uiReducer }) => {
   return uiReducer;
 };
 
 const mapDispatchToProps = {
-  fetchEducation,
-  fetchExperience,
-  fetchPortfolio,
-  toggleNavigation
+  fetchEducation: ACTIONS.fetchEducation,
+  fetchExperience: ACTIONS.fetchExperience,
+  fetchPortfolio: ACTIONS.fetchPortfolio,
+  toggleNavigation: ACTIONS.toggleNavigation
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -34,9 +34,9 @@ const Experience = ({ experience }) => {
   );
 };
 
-const mapStatetoDispatch = state => {
-  const { experience } = state;
-  return experience;
+const mapStateToProps = ({ fetchDataReducer }) => {
+  const { experience } = fetchDataReducer;
+  return { experience };
 };
 
-export default connect(mapStatetoDispatch)(Experience);
+export default connect(mapStateToProps)(Experience);

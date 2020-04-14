@@ -1,57 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-import {
-  submitContactForm,
-  updateCompanyNameInput,
-  updateEmailInput,
-  updateMessageInput,
-  updateNameInput
-} from "../redux/actions";
+import ACTIONS from "../redux/actions";
 
 const ContactMeForm = props => {
-  const emailNameHandler = e => {
-    props.updateNameInput(e.target.value);
-  };
-  const emailCompanyHandler = e => {
-    props.updateCompanyNameInput(e.target.value);
-  };
-  const emailAddressHandler = e => {
-    props.updateEmailInput(e.target.value);
-  };
-  const emailMessageHandler = e => {
-    props.updateMessageInput(e.target.value);
-  };
-  const emailSubmitHandler = e => {
-    e.preventDefault();
-    // Setting Email Object
-    const emailObject = {
-      name: props.emailName,
-      company: props.emailCompany,
-      email: props.emailAddress,
-      description: props.emailMessage
-    };
-
-    // Setting condition for email to be sent off
-    let formFilled;
-    if (
-      props.emailNameValidate &&
-      props.emailCompanyValidate &&
-      props.emailAddressValidate &&
-      props.emailMessageValidate
-    ) {
-      formFilled = true;
-    }
-    // Sending email
-    props.submitContactForm(formFilled, emailObject);
-  };
-
-  let color = { color: "red" };
-
   const validateInputFunction = (stateValue, text) => {
     if (stateValue === null) {
       return <></>;
     } else if (stateValue === false) {
-      return <div style={color}>{text}</div>;
+      return <div style={{ color: "red" }}>{text}</div>;
     } else {
       return <></>;
     }
@@ -74,13 +30,19 @@ const ContactMeForm = props => {
     switch (props.messageSuccess) {
       case true:
         return (
-          <button className="btn btn-success" onClick={emailSubmitHandler}>
+          <button
+            className="btn btn-success"
+            onClick={e => props.submitContactForm(e)}
+          >
             Sent
           </button>
         );
       case false:
         return (
-          <button className="btn btn-danger" onClick={emailSubmitHandler}>
+          <button
+            className="btn btn-danger"
+            onClick={e => props.submitContactForm(e)}
+          >
             Fail
           </button>
         );
@@ -88,7 +50,7 @@ const ContactMeForm = props => {
         return (
           <button
             className="btn btn-primary"
-            onClick={emailSubmitHandler}
+            onClick={e => props.submitContactForm(e)}
             disabled={validateContactForm()}
           >
             Send
@@ -124,35 +86,42 @@ const ContactMeForm = props => {
         </h1>
       </div>
       <div className="contact-me__form row mb-4">
-        <p className="col-md-6 offset-md-3">
-          Thank you for taking the time to look at my portfolio
-          <span className="emphasize">!</span>.
+        <div className="col-12">
+          <p>
+            Thank you for taking the time to look at my portfolio
+            <span className="emphasize">!</span>
+          </p>
+          <p>
+            Starting a new project<span className="emphasize">?</span>
+          </p>
+          <p>
+            Exploring options for a current project
+            <span className="emphasize">?</span>
+          </p>
+          <p>
+            Looking to add a new member to your team
+            <span className="emphasize">?</span>
+          </p>
+          <p>
+            Contact me and lets collaborate<span className="emphasize">!</span>
+          </p>
           <br />
-          Starting a new project<span className="emphasize">?</span>
-          <br />
-          Exploring options for a current project
-          <span className="emphasize">?</span>
-          <br />
-          Looking to add a new member to your team
-          <span className="emphasize">?</span>
-          <br />
-          Contact me and lets collaborate<span className="emphasize">!</span>
-          <br />
-          <br />I look forward to hearing from you
-          <span className="emphasize">!</span>
-        </p>
+          <p>
+            I look forward to hearing from you
+            <span className="emphasize">!</span>
+          </p>
+        </div>
       </div>
       <form className="form-input">
         <fieldset>
           <div className="form-group">
             <div className="mb-3">
-              <label htmlFor="exampleInputEmail1">Name</label>
+              <label htmlFor="emailName">Name</label>
               <input
                 type="email"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                onChange={emailNameHandler}
+                id="emailName"
+                onChange={e => props.updateNameInput(e.target.value)}
                 value={props.emailName}
               />
               {validateInputFunction(
@@ -161,13 +130,12 @@ const ContactMeForm = props => {
               )}
             </div>
             <div className="mb-3">
-              <label htmlFor="exampleInputEmail2">Company Name</label>
+              <label htmlFor="emailCompany">Company Name</label>
               <input
                 type="email"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                onChange={emailCompanyHandler}
+                id="emailCompany"
+                onChange={e => props.updateCompanyNameInput(e.target.value)}
                 value={props.emailCompany}
               />
               {validateInputFunction(
@@ -176,13 +144,12 @@ const ContactMeForm = props => {
               )}
             </div>
             <div className="mb-3">
-              <label htmlFor="exampleInputEmail3">Email Address</label>
+              <label htmlFor="emailAddress">Email Address</label>
               <input
                 type="email"
                 className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                onChange={emailAddressHandler}
+                id="emailAddress"
+                onChange={e => props.updateEmailInput(e.target.value)}
                 value={props.emailAddress}
               />
               {validateInputFunction(
@@ -191,12 +158,12 @@ const ContactMeForm = props => {
               )}
             </div>
             <div className="mb-3 form-group">
-              <label htmlFor="exampleTextarea">Message</label>
+              <label htmlFor="emailMessage">Message</label>
               <textarea
                 className="form-control"
-                id="exampleTextarea"
+                id="emailMessage"
                 rows="3"
-                onChange={emailMessageHandler}
+                onChange={e => props.updateMessageInput(e.target.value)}
                 value={props.emailMessage}
               ></textarea>
               {validateInputFunction(
@@ -213,17 +180,16 @@ const ContactMeForm = props => {
   );
 };
 
-const mapStateToProps = state => {
-  const { contactForm } = state;
-  return contactForm;
+const mapStateToProps = ({ contactFormReducer }) => {
+  return contactFormReducer;
 };
 
 const mapDispatchToProps = {
-  submitContactForm,
-  updateCompanyNameInput,
-  updateEmailInput,
-  updateMessageInput,
-  updateNameInput
+  submitContactForm: ACTIONS.submitContactForm,
+  updateCompanyNameInput: ACTIONS.updateCompanyNameInput,
+  updateEmailInput: ACTIONS.updateEmailInput,
+  updateMessageInput: ACTIONS.updateMessageInput,
+  updateNameInput: ACTIONS.updateNameInput
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ContactMeForm);

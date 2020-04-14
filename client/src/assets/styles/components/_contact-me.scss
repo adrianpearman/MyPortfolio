@@ -2,8 +2,8 @@
 .contact__me {
   padding: 1rem;
   border-radius: 0.5rem;
-  width: 80%;
-  margin: 0 10%;
+  width: 95%;
+  margin: 0 auto;
   text-align: center;
   color: $white;
   cursor: pointer;
@@ -11,87 +11,87 @@
 
   &--github,
   &--linkedin,
-  &--email{
+  &--email {
     font-size: 1rem;
-    font-weight: 600
+    font-weight: 600;
   }
-  
-  &--github{
+
+  &--github {
     background: $github;
     border: 0.1rem solid $githubDark;
-    &:hover{
-      background: darken($github ,10%);
-      border: 0.1rem solid darken($githubDark ,30%);
+    &:hover {
+      background: darken($github, 10%);
+      border: 0.1rem solid darken($githubDark, 30%);
       transform: translateY(-0.3rem);
       box-shadow: 2px 5px 10px $lightGrey;
       transition: all 0.3s;
     }
-    &:active{
-      transform: translateY(-0.1rem)
+    &:active {
+      transform: translateY(-0.1rem);
     }
   }
-  
-  &--linkedin{
+
+  &--linkedin {
     background: $linkedin;
     border: 1px solid $linkedinDark;
-    &:hover{
+    &:hover {
       background: darken($linkedin, 10%);
-      border: 0.1rem solid darken($linkedinDark ,30%);
+      border: 0.1rem solid darken($linkedinDark, 30%);
       transform: translateY(-0.3rem);
       box-shadow: 2px 5px 10px $lightGrey;
       transition: all 0.3s;
     }
-    &:active{
-      transform: translateY(-0.1rem)
+    &:active {
+      transform: translateY(-0.1rem);
     }
   }
-  
-  &--email{
+
+  &--email {
     background: $email;
     border: 0.1rem solid $emailDark;
-    &:hover{
-      background: darken($email ,10%);
-      border: 0.1rem solid darken($emailDark ,30%);
+    &:hover {
+      background: darken($email, 10%);
+      border: 0.1rem solid darken($emailDark, 30%);
       transform: translateY(-0.3rem);
       box-shadow: 2px 5px 10px $lightGrey;
       transition: all 0.3s;
     }
-    &:active{
-      transform: translateY(-0.1rem)
+    &:active {
+      transform: translateY(-0.1rem);
     }
   }
 }
 
-
 .contact-container-bar {
-    width: 80%;
-    height: 0;
-    border: 0.2rem solid $neonDark;
-    margin: 3rem 10%;
+  width: 80%;
+  height: 0;
+  border: 0.2rem solid $neonDark;
+  margin: 3rem 10%;
 }
 
-.contact-me__form{
+.contact-me__form {
   text-align: center;
-  
-  p{
-    font-size: 1.5rem;
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
   }
 }
 
-@media(max-width: $tablet){
-  .contact-me__form{
-    p{
+@media (max-width: $tablet) {
+  .contact-me__form {
+    p {
       font-size: 1.2rem;
     }
   }
 }
 
-@media(max-width: $mobileLarge){
-  .contact-me__form{
+@media (max-width: $mobileLarge) {
+  .contact-me__form {
     text-align: center;
     width: 80%;
     margin: 0 auto;
-    p{
+    p {
       font-size: 0.8rem;
     }
   }

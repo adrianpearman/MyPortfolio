@@ -1,56 +1,57 @@
 /* About Me */
-.about-me{
+.about-me {
   &__title h1 {
     text-align: center;
   }
-  
+
   &__container {
     width: 90%;
     margin: 0 5%;
   }
-  
+
   &__photo--container {
-      margin: 0 auto;
+    margin: 0 auto;
   }
-  
-  &__description{
+
+  &__description {
     p {
       font-size: 1.3rem;
-      font-weight: 600;
-      width: 80%;
+      width: 90%;
       margin: 0 auto;
+      line-height: 2rem;
     }
   }
-  
+
   &__image {
     vertical-align: middle;
     border-style: none;
     filter: grayscale(30%);
-    width: 70%;
+    width: 80%;
     border-radius: 1rem;
-    margin: 0 15%;
+    margin: 0 10%;
   }
 }
 
-@media(max-width: 995px){
-  .about-me{
-    &__description{
-      & p{
+@media (max-width: 995px) {
+  .about-me {
+    &__description {
+      & p {
         width: 100%;
-        font-size: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
       }
     }
   }
 }
 
-@media(max-width: $tablet){
-  .about-me{
-    &__image{
+@media (max-width: $tablet) {
+  .about-me {
+    &__image {
       width: 50%;
       margin: 0 25% 5rem 25%;
     }
-    &__description{
-      & p{
+    &__description {
+      & p {
         width: 80%;
         font-size: 1rem;
       }

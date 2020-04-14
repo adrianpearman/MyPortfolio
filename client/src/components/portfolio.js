@@ -35,9 +35,9 @@ const Portfolio = ({ projects }) => {
   );
 };
 
-const mapStateToProps = state => {
-  const { projects } = state;
-  return projects;
+const mapStateToProps = ({ fetchDataReducer }) => {
+  const { projects } = fetchDataReducer;
+  return { projects };
 };
 
 export default connect(mapStateToProps)(Portfolio);
