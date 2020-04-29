@@ -1,13 +1,13 @@
 {
-  "name": "My-Website-v4",
+  "name": "my-website-v4",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node ./backend/server.js",
     "client": "cd client; yarn start",
     "client:build": "cd client; yarn run build",
-    "server": "nodemon server.js",
+    "server": "nodemon ./backend/server.js",
     "dev": "concurrently \"yarn run client\" \"yarn run server\"  ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,7 +27,9 @@
     "body-parser": "^1.18.3",
     "concurrently": "^4.1.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.16.4",
+    "heroku-ssl-redirect": "^0.0.4",
     "moment": "^2.24.0",
     "mongodb": "^3.1.10",
     "mongoose": "^5.7.5",

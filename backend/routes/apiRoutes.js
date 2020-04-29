@@ -2,18 +2,15 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const sgMail = require("@sendgrid/mail");
-
 // Variables
 const router = express.Router();
 const validateTime = require("../services/validateTime");
 const emailTemplate = require("../services/templates/emailTemplate");
 const keys = require("../config/keys");
-
 // DB Models
 const Contact = mongoose.model("contact");
 const Experience = mongoose.model("experience");
 const Projects = mongoose.model("projects");
-
 // GET REQUESTS
 // Retrieving app data
 router.get("/data/experienceList", async (req, res) => {
@@ -24,7 +21,6 @@ router.get("/data/experienceList", async (req, res) => {
     throw err;
   }
 });
-
 // Retrieving app data
 router.get("/data/projectList", async (req, res) => {
   const projects = await Projects.find({});
@@ -34,7 +30,6 @@ router.get("/data/projectList", async (req, res) => {
     throw err;
   }
 });
-
 // POST REQUESTS
 // Send Email from form
 router.post("/contact-me", async (req, res) => {
@@ -59,7 +54,6 @@ router.post("/contact-me", async (req, res) => {
       description,
     }),
   };
-
   try {
     // Return value from the DB
     let contact = await Contact.findOne({ email: email }).sort({
