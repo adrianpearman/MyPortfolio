@@ -10,7 +10,7 @@ const keys = require("../config/keys");
 // DB Models
 const Contact = mongoose.model("contact");
 const Experience = mongoose.model("experience");
-const Projects = mongoose.model("projects");
+const Project = mongoose.model("project");
 // GET REQUESTS
 // Retrieving app data
 router.get("/data/experienceList", async (req, res) => {
@@ -23,7 +23,7 @@ router.get("/data/experienceList", async (req, res) => {
 });
 // Retrieving app data
 router.get("/data/projectList", async (req, res) => {
-  const projects = await Projects.find({});
+  const projects = await Project.find({});
   try {
     res.send(projects.reverse());
   } catch (err) {
@@ -31,6 +31,32 @@ router.get("/data/projectList", async (req, res) => {
   }
 });
 // POST REQUESTS
+// add new project to db
+router.post("/data/projectList", async (req, res) => {
+  let newProject = new Project({ ...req.body }).save();
+
+  await newProject;
+  try {
+    res.send({ msg: `Successfully added ${req.body.title} to the database` });
+  } catch (error) {
+    throw error;
+  }
+});
+// add new experience to db
+router.post("/data/experienceList", async (req, res) => {
+  let newExperience = new Experience({
+    ...req.body,
+  }).save();
+
+  await newExperience;
+  try {
+    res.send({
+      msg: `Successfully added ${req.body.title} at ${req.body.employer}, to the database`,
+    });
+  } catch (error) {
+    throw error;
+  }
+});
 // Send Email from form
 router.post("/contact-me", async (req, res) => {
   let { name, company, email, description } = req.body;
