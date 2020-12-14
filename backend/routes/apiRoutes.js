@@ -31,32 +31,32 @@ router.get("/data/projectList", async (req, res) => {
   }
 });
 // POST REQUESTS
-// // add new project to db
-// router.post("/data/projectList", async (req, res) => {
-//   let newProject = new Project({ ...req.body }).save();
+// add new project to db
+router.post("/data/projectList", async (req, res) => {
+  let newProject = new Project({ ...req.body }).save();
 
-//   await newProject;
-//   try {
-//     res.send({ msg: `Successfully added ${req.body.title} to the database` });
-//   } catch (error) {
-//     throw error;
-//   }
-// });
-// // add new experience to db
-// router.post("/data/experienceList", async (req, res) => {
-//   let newExperience = new Experience({
-//     ...req.body,
-//   }).save();
+  await newProject;
+  try {
+    res.send({ msg: `Successfully added ${req.body.title} to the database` });
+  } catch (error) {
+    throw error;
+  }
+});
+// add new experience to db
+router.post("/data/experienceList", async (req, res) => {
+  let newExperience = new Experience({
+    ...req.body,
+  }).save();
 
-//   await newExperience;
-//   try {
-//     res.send({
-//       msg: `Successfully added ${req.body.title} at ${req.body.employer}, to the database`,
-//     });
-//   } catch (error) {
-//     throw error;
-//   }
-// });
+  await newExperience;
+  try {
+    res.send({
+      msg: `Successfully added ${req.body.title} at ${req.body.employer}, to the database`,
+    });
+  } catch (error) {
+    throw error;
+  }
+});
 // Send Email from form
 router.post("/contact-me", async (req, res) => {
   let { name, company, email, description } = req.body;
