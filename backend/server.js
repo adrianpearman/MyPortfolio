@@ -28,12 +28,14 @@ mongoose.Promise = global.Promise;
 // Environment Variables
 if (process.env.NODE_ENV === "production") {
   mongoose.connect(keys.mongoDBURI_PROD, { useNewUrlParser: true });
+  console.log("Connected to Production Database");
   app.use(express.static(path.join(__dirname, "../client", "build")));
   app.get("/*", (req, res) => {
     res.sendFile(path.join(__dirname, "../client", "build", "index.html"));
   });
 } else {
   mongoose.connect(keys.mongoDBURI_DEV, { useNewUrlParser: true });
+  console.log("Connected to Development Database");
   //ngrok
   // (async function() {
   //   const url = await ngrok.connect(PORT);
