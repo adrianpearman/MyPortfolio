@@ -46,4 +46,5 @@ app.listen(PORT, () => {
     console.clear();
   }
   console.log(`Server running on PORT: ${PORT}`);
+  console.log(process.env.NODE_ENV);
 });
