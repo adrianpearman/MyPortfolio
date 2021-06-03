@@ -46,7 +46,7 @@ const App = ({
         offset={offset}
         duration={duration}
       />
-      <div className="container">
+      <div className="container" role="main">
         <Element name="AboutMe">
           <AboutMe offset={offset} duration={duration} />
         </Element>

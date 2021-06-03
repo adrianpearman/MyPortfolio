@@ -20,7 +20,7 @@ const Landing = () => {
         <div className="landing-content">
           <h1 className="landing-title">Welcome</h1>
           <div className="landing-container-bar"></div>
-          <h2 className="landing-subtitle landing-subtitle--animated">
+          <p className="landing-subtitle landing-subtitle--animated">
             <Link
               activeClass="active"
               to="AboutMe"
@@ -31,7 +31,7 @@ const Landing = () => {
             >
               Let's Collaborate
             </Link>
-          </h2>
+          </p>
         </div>
       </div>
     </div>

@@ -9,9 +9,9 @@ const AboutMe = props => {
     <div className="about-me">
       <div className="row mb-3">
         <div className="section__title first col-12">
-          <h1>
+          <h2>
             About Me <span className="emphasize">/</span>
-          </h1>
+          </h2>
         </div>
       </div>
       <div className="row">

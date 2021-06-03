@@ -81,9 +81,9 @@ const ContactMeForm = props => {
   return (
     <div className="contact-me">
       <div className="section__title">
-        <h1>
+        <h2>
           Contact Me <span className="emphasize">/</span>
-        </h1>
+        </h2>
       </div>
       <div className="contact-me__form row mb-4">
         <div className="col-12">
@@ -115,7 +115,7 @@ const ContactMeForm = props => {
       <form className="form-input">
         <fieldset>
           <div className="form-group">
-            <div className="mb-3">
+            <div className="input-container">
               <label htmlFor="emailName">Name</label>
               <input
                 type="email"
@@ -129,7 +129,7 @@ const ContactMeForm = props => {
                 "Please enter a name"
               )}
             </div>
-            <div className="mb-3">
+            <div className="input-container">
               <label htmlFor="emailCompany">Company Name</label>
               <input
                 type="email"
@@ -143,7 +143,7 @@ const ContactMeForm = props => {
                 "Please enter a company name"
               )}
             </div>
-            <div className="mb-3">
+            <div className="input-container">
               <label htmlFor="emailAddress">Email Address</label>
               <input
                 type="email"
@@ -157,7 +157,7 @@ const ContactMeForm = props => {
                 "Please enter a valid contact method"
               )}
             </div>
-            <div className="mb-3 form-group">
+            <div className="input-container form-group">
               <label htmlFor="emailMessage">Message</label>
               <textarea
                 className="form-control"
