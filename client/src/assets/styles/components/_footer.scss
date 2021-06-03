@@ -12,74 +12,83 @@ footer {
   }
 }
 
-.footer__nav {
-  background-color: $greyDark;
-  p,
-  a {
-    margin: 0;
-  }
-  ul {
-    text-align: right;
-    margin-right: 1rem;
-  }
-  li {
-    text-transform: uppercase;
-    display: inline-block;
-    padding: 1rem;
-    font-weight: 400;
-    font-size: 1rem;
-    background: transparent;
-    background: linear-gradient(to right, transparent 50%, $neonDark 50%);
-    border-left: 0.1rem solid $neon;
-    background-size: 200% 100%;
-    background-position: left bottom;
-    transition: all 0.5s ease;
-    transform: skew(-20deg);
+.footer{
+  &__copyright{
+    text-align: center;
     color: $white;
+    padding: 1.5rem;
+  }
 
-    &:hover {
-      background-position: right bottom;
-      color: $white;
-      border-left: 0.1rem solid $grey;
-      cursor: pointer;
+  &__nav {
+    background-color: $greyDark;
+    p,
+    a {
+      margin: 0;
     }
-  }
-  a,
-  a:visited {
-    color: $white;
-    text-decoration: none;
-  }
-
-  & .linkedin {
-    background: linear-gradient(to right, transparent 50%, $linkedin 50%);
-    background-size: 200% 100%;
-    background-position: left bottom;
-    border-left: 0.1rem solid $neon;
-    transition: all 0.5s ease;
-    &:hover {
-      background-position: right bottom;
-      border-left: 0.1rem solid $linkedin;
-      a {
+    ul {
+      text-align: right;
+      margin-right: 1rem;
+    }
+    li {
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 1rem;
+      font-weight: 400;
+      font-size: 1rem;
+      background: transparent;
+      background: linear-gradient(to right, transparent 50%, $neonDark 50%);
+      border-left: 0.1rem solid $neon;
+      background-size: 200% 100%;
+      background-position: left bottom;
+      transition: all 0.5s ease;
+      transform: skew(-20deg);
+      color: $white;
+  
+      &:hover {
+        background-position: right bottom;
         color: $white;
+        border-left: 0.1rem solid $grey;
+        cursor: pointer;
       }
     }
-  }
-
-  & .github {
-    background: linear-gradient(to right, transparent 50%, $github 50%);
-    background-size: 200% 100%;
-    background-position: left bottom;
-    border-left: 0.1rem solid $neon;
-    transition: all 0.5s ease;
-    &:hover {
-      background-position: right bottom;
-      border-left: 0.1rem solid $github;
-      a {
-        color: $white;
+    a,
+    a:visited {
+      color: $white;
+      text-decoration: none;
+    }
+  
+    & .linkedin {
+      background: linear-gradient(to right, transparent 50%, $linkedin 50%);
+      background-size: 200% 100%;
+      background-position: left bottom;
+      border-left: 0.1rem solid $neon;
+      transition: all 0.5s ease;
+      &:hover {
+        background-position: right bottom;
+        border-left: 0.1rem solid $linkedin;
+        a {
+          color: $white;
+        }
+      }
+    }
+  
+    & .github {
+      background: linear-gradient(to right, transparent 50%, $github 50%);
+      background-size: 200% 100%;
+      background-position: left bottom;
+      border-left: 0.1rem solid $neon;
+      transition: all 0.5s ease;
+      &:hover {
+        background-position: right bottom;
+        border-left: 0.1rem solid $github;
+        a {
+          color: $white;
+        }
       }
     }
   }
 }
+
 
 @media (max-width: $mobileSmall) {
   .footer__nav {

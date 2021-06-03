@@ -27,7 +27,7 @@
         cursor: pointer;
       }
 
-      & h4 {
+      & p {
         color: $white;
         transform: skew(20deg);
         font-size: 1rem;
@@ -41,7 +41,7 @@
     &__desktop {
       li {
         padding: 2rem 1rem;
-        h4 {
+        p {
           letter-spacing: 0;
         }
       }
@@ -55,7 +55,7 @@
       width: 100%;
       li {
         padding: 2rem 0.6rem;
-        h4 {
+        p {
           font-size: 0.8rem;
         }
       }

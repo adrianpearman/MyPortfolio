@@ -73,8 +73,27 @@
   text-align: center;
 
   p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
+  }
+}
+
+.form {
+  &-group {
+    font-size: 1.6rem;
+
+    button {
+      font-size: 1.6rem;
+      padding: 1.5rem 2.5rem;
+    }
+
+    .input-container {
+      margin-bottom: 2rem;
+    }
+  }
+  &-control {
+    font-size: 1.6rem;
+    padding: 2rem;
   }
 }
 

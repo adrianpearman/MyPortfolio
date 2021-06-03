@@ -34,6 +34,8 @@
   background: linear-gradient(to right, transparent 50%, $neonDark 50%);
   background-size: 200% 100%;
   background-position: left bottom;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   transition: all 0.5s ease;
   transform: skew(-20deg);
 
@@ -50,6 +52,10 @@
     background-position: right bottom;
     box-shadow: 1rem solid $black;
   }
+
+  a{
+    font-weight: 600;
+  }  
 }
 
 .landing-container-bar {
