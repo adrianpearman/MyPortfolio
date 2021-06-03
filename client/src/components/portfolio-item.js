@@ -5,7 +5,7 @@ const PortfolioItem = props => {
     <div className="portfolio__item">
       <div className="card portfolio__item-card">
         <div className="card-body">
-          <h5 className="card-title emphasize-title">Project: {props.title}</h5>
+          <h3 className="card-title emphasize-title">Project: {props.title}</h3>
           <Fragment>
             <div className="portfolio__item-link-container">
               <p className="col">
@@ -29,9 +29,9 @@ const PortfolioItem = props => {
                 </a>
               </p>
             </div>
-            <h6>Project Overview:</h6>
+            <h4>Project Overview:</h4>
             <p className="card-text">{props.overview}</p>
-            <h6>Technologies Used:</h6>
+            <h4>Technologies Used:</h4>
             <ul className="technology-stack">
               {props.stack.map((technology, index) => {
                 return <li key={index}>{technology}</li>;

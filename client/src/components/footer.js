@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-scroll";
 
-const Footer = props => {
-  const duration = props.duration;
-  const offset = props.offset;
+const Footer = ({ duration, offset }) => {
   return (
     <footer className="footer">
-      <nav className="footer__nav">
+      <nav className="footer__nav" role="">
         <ul>
           <li className="linkedin">
             <a
@@ -74,9 +72,9 @@ const Footer = props => {
           </li>
         </ul>
       </nav>
-      <h4 className="footer__copyright">
+      <h3 className="footer__copyright">
         &copy; Adrian Pearman {new Date().getFullYear()}
-      </h4>
+      </h3>
     </footer>
   );
 };
