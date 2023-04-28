@@ -1,0 +1,117 @@
+/* Contact Me */
+.contact__me {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+  color: $white;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &--github,
+  &--linkedin,
+  &--email {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &--github {
+    background: $github;
+    border: 0.1rem solid $githubDark;
+    &:hover {
+      background: darken($github, 10%);
+      border: 0.1rem solid darken($githubDark, 30%);
+      transform: translateY(-0.3rem);
+      box-shadow: 2px 5px 10px $lightGrey;
+      transition: all 0.3s;
+    }
+    &:active {
+      transform: translateY(-0.1rem);
+    }
+  }
+
+  &--linkedin {
+    background: $linkedin;
+    border: 1px solid $linkedinDark;
+    &:hover {
+      background: darken($linkedin, 10%);
+      border: 0.1rem solid darken($linkedinDark, 30%);
+      transform: translateY(-0.3rem);
+      box-shadow: 2px 5px 10px $lightGrey;
+      transition: all 0.3s;
+    }
+    &:active {
+      transform: translateY(-0.1rem);
+    }
+  }
+
+  &--email {
+    background: $email;
+    border: 0.1rem solid $emailDark;
+    &:hover {
+      background: darken($email, 10%);
+      border: 0.1rem solid darken($emailDark, 30%);
+      transform: translateY(-0.3rem);
+      box-shadow: 2px 5px 10px $lightGrey;
+      transition: all 0.3s;
+    }
+    &:active {
+      transform: translateY(-0.1rem);
+    }
+  }
+}
+
+.contact-container-bar {
+  width: 80%;
+  height: 0;
+  border: 0.2rem solid $neonDark;
+  margin: 3rem 10%;
+}
+
+.contact-me__form {
+  text-align: center;
+
+  p {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.form {
+  &-group {
+    font-size: 1.6rem;
+
+    button {
+      font-size: 1.6rem;
+      padding: 1.5rem 2.5rem;
+    }
+
+    .input-container {
+      margin-bottom: 2rem;
+    }
+  }
+  &-control {
+    font-size: 1.6rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: $tablet) {
+  .contact-me__form {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: $mobileLarge) {
+  .contact-me__form {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
