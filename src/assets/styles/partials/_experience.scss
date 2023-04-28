@@ -1,0 +1,81 @@
+@use './variables' as *;
+
+.experience {
+  background: $lightPeach;
+  background: linear-gradient(180deg, $lightPeach 0%, $darkPeach 100%);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h2 {
+    font-size: 7rem;
+    font-family: $headingFont;
+    padding-top: 20px;
+
+    span {
+      background-color: $darkPeach;
+      display: block;
+      height: 10px;
+      margin: 0 auto;
+      transform: skew(-20deg);
+      width: 50%;
+    }
+  }
+  
+  .wrapper {
+    background-color: rgba($cream, 0.5);
+    height: 85%;
+    text-align: center;
+  }
+
+  .jobTitleContainer {
+    margin-top: 20px;
+  }
+
+  .jobTitleList {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100px;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 99%;
+    
+    li {
+      background-color: $darkPeach;
+      align-items: center;
+      border: 2px solid $cream;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 10px 0;
+      width: 25%;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .jobTitleDescription {
+    padding-top: 40px;
+    margin: 0 auto;
+    text-align: left;
+    width: 90%;
+
+    p {
+      font-size: 2rem;
+      padding-bottom: 10px;
+
+      span {
+        font-size: 3rem;
+        font-family: $primaryFontBold;
+      }
+    }
+
+    ul {
+      padding-left: 10px;
+    }
+  }
+}

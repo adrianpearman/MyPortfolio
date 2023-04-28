@@ -1,0 +1,31 @@
+@use './variables' as *;
+
+
+.projects {
+  align-items: center;
+  background: $darkPeach;
+  background: linear-gradient(180deg, $darkPeach 0%, $lightGreen 100%);
+  display: flex;
+  justify-content: center;
+
+  h2 {
+    font-size: 7rem;
+    font-family: $headingFont;
+    padding-top: 20px;
+
+    span {
+      background-color: $lightGreen;
+      display: block;
+      height: 10px;
+      margin: 0 auto;
+      transform: skew(-20deg);
+      width: 50%;
+    }
+  }
+
+  .wrapper {
+    background-color: rgba($cream, 0.5);
+    height: 85%;
+    text-align: center;
+  }
+}

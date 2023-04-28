@@ -1,0 +1,59 @@
+@use './variables' as *;
+
+.aboutMe {
+  align-items: center;
+  background: $cream;
+  background: linear-gradient(180deg, $cream 0%, $lightPeach 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    font-size: 7rem;
+    font-family: $headingFont;
+
+    span {
+      background-color: $lightPeach;
+      display: block;
+      height: 10px;
+      margin: 0 auto;
+      transform: skew(-20deg);
+      width: 50%;
+    }
+  }
+
+  .wrapper {
+    background-color: rgba($cream, 0.5);
+    height: 85%;
+    text-align: center;
+  }
+  
+  .aboutMeContainer{
+    display: flex;
+    height: 80%;
+    padding-top: 40px;
+  }
+  
+  .imageContainer {
+    width: 45%;
+    margin: 30px 50px;
+  }
+  
+  .textContainer{
+    width: 55%;
+    position: relative;
+    margin-top: 30px;
+    text-align: left;
+    
+    p {
+      margin: 50px;
+      font-size: 2rem;
+    }
+
+    .introTop,
+    .introBottom{
+      font-family: $headingFont;
+      font-size: 4rem;
+    }
+  }
+}

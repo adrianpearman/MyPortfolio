@@ -1,0 +1,30 @@
+@use './variables' as *;
+
+.contactForm {
+  align-items: center;
+  background: $lightGreen;
+  background: linear-gradient(180deg, $lightGreen 0%, $darkGreen 100%);
+  display: flex;
+  justify-content: center;
+
+  h2 {
+    font-size: 7rem;
+    font-family: $headingFont;
+    padding-top: 20px;
+
+    span {
+      background-color: $darkGreen;
+      display: block;
+      height: 10px;
+      margin: 0 auto;
+      transform: skew(-20deg);
+      width: 50%;
+    }
+  }
+
+  .wrapper {
+    background-color: rgba($cream, 0.5);
+    height: 85%;
+    text-align: center;
+  }
+}
