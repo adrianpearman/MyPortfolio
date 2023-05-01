@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6, p, ul, li, nav {
   padding: 0;
 }
 
+h1, h2, h3 {
+  letter-spacing: 2px;
+}
+
 p, a { font-size: 1.8rem; }
 
 .wrapper {
@@ -24,9 +28,8 @@ p, a { font-size: 1.8rem; }
 .experience,
 .projects, 
 .contactForm {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;  
   min-height: 700px;
+  padding-bottom: 50px;
 }

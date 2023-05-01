@@ -69,6 +69,11 @@
 
       &:hover { cursor: pointer; }
     }
+
+    .active {
+      background-color: $primaryColorDark;
+      border-color: $cream;
+    }
   }
 
   .jobTitleDescription {
