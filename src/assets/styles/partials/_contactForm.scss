@@ -33,12 +33,23 @@
     button {
       background-color: $primaryColorLight;
       border: 2px solid $primaryColorDark;
+      box-shadow: 3px 3px 0px $primaryColorDark;
       border-radius: 5px;
       color: $cream;
       font-family: $primaryFont;
+      font-size: 1.8rem;
       margin: 20px ;
       padding: 20px 40px;
+      position: relative;
       text-decoration: none;
+
+      &:focus,
+      &:hover {
+        background-color: $primaryColorDark;
+        box-shadow: 3px 0px 0px $primaryColorDark;
+        cursor: pointer;
+        top: 3px;
+      }
     }
     
     form {
@@ -89,10 +100,6 @@
     justify-content: space-between;
   }
 
-  .emailContainer { }
-  
-  .messageContainer { }
-
   .firstName, 
   .lastName {
     display: flex;
@@ -110,11 +117,20 @@
     a {
       border: 2px solid $black;
       border-radius: 5px;
+      box-shadow: 3px 3px 0px $primaryColorDark;
       color: $cream;
       padding: 20px 40px;
+      position: relative;
       text-decoration: none;
+      transition: all 250ms;
 
-      &:hover { cursor: pointer; }
+      &:focus, 
+      &:hover { 
+        background-color: $primaryColorDark;
+        box-shadow: 3px 0px 0px $primaryColorDark;
+        cursor: pointer;
+        top: 3px;
+      }
     }
 
     i { padding-right: 10px; }
@@ -122,16 +138,37 @@
     #linkedin {
       background-color: $linkedin;
       border-color: $linkedinDark;
+      box-shadow: 3px 3px 0px $linkedinDark;
+
+      &:focus,
+      &:hover {
+        background-color: $linkedinDark;
+        box-shadow: 3px 3px 0px $linkedinDark;
+      }
     }
 
     #github {
       background-color: $github;
       border-color: $githubDark;
+      box-shadow: 3px 3px 0px $githubDark;
+
+      &:focus,
+      &:hover {
+        background-color: $githubDark;
+        box-shadow: 3px 3px 0px $githubDark;
+      }
     }
 
     #calendy {
       background-color: $neon;
       border-color: $neonDark;
+      box-shadow: 3px 3px 0px $neonDark;
+
+      &:focus,
+      &:hover {
+        background-color: $neonDark;
+        box-shadow: 3px 3px 0px $neonDark;
+      }
     }
   }
 }
