@@ -4,9 +4,7 @@ import { forwardRef } from "react";
 import HelperLinkScroll from "./HelperComponents/HelperLinkScroll";
 
 const Navigation = forwardRef(({ offsetHeight, showNav }, ref) => {
-  const hidden = { opacity: 0 }
-  const show = { opacity: 100 }
-  const showStyle = showNav === true ? show : hidden
+  const showStyle = showNav === true ? { opacity: 1 } : { opacity: 0 }
 
   return (
       <nav style={showStyle} ref={ref}>
@@ -22,21 +20,21 @@ const Navigation = forwardRef(({ offsetHeight, showNav }, ref) => {
             <HelperLinkScroll 
               scrollToElement="Experience"
               linkName="Experience"
-              height={offsetHeight + 40}
+              height={offsetHeight}
             />
           </li>
           <li>
             <HelperLinkScroll 
               scrollToElement="Projects"
               linkName="Projects"
-              height={offsetHeight - 40}
+              height={offsetHeight}
             />
           </li>
           <li>
             <HelperLinkScroll 
               scrollToElement="ContactForm"
               linkName="Contact Me"
-              height={offsetHeight - 40}
+              height={offsetHeight}
             />
           </li>
         </ul>

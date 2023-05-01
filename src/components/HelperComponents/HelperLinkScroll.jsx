@@ -1,14 +1,22 @@
 // NPM Modules
 import { Link } from "react-scroll"
 
-const HelperLinkScroll = ({ scrollToElement, linkName, height }) => {
+const HelperLinkScroll = ({ 
+  className,
+  height, 
+  id,
+  linkName, 
+  scrollToElement, 
+}) => {
   return(
     <Link
-      to={ scrollToElement }
-      spy={ true }
-      smooth={ true }
-      offset={ height ? -height : -50 }
-      duration={ 50 }
+      className = { className }
+      duration = { 50 }
+      id = { id }
+      offset = { height ? -height : -50 }
+      smooth = { true }
+      spy = { true }
+      to = { scrollToElement }
     >
       { linkName }
     </Link>

@@ -1,7 +1,9 @@
 // NPM Modules
 import { useEffect, useRef, useState } from "react";
 import { Element } from "react-scroll"
+import { HelmetProvider } from "react-helmet-async"
 // Components
+import SEOComponent from "./HelperComponents/SEOComponent";
 import AboutMe from "./AboutMe"
 import ContactForm from "./ContactForm"
 import Experience from "./Experience"
@@ -29,31 +31,31 @@ const App = () => {
     condition && setOffsetHeight(navBar.current.offsetHeight)
   }, [ navBar ])
   
-
   return (
-    <main>
-      <Navigation 
-        offsetHeight={offsetHeight}
-        ref={navBar}
-        showNav={showNavigation} 
-      />
-      <Header 
-        offsetHeight={offsetHeight}
-      />
-      <Element name="AboutMe">
-        <AboutMe />
-      </Element>
-      <Element name="Experience"> 
-        <Experience />
-      </Element>
-      <Element name="Projects"> 
-        <Projects /> 
-      </Element>
-      <Element name="ContactForm"> 
-        <ContactForm />
-      </Element>
-      <Footer />
-    </main>
+    <HelmetProvider>
+      <SEOComponent />
+      <main>
+        <Navigation 
+          offsetHeight={offsetHeight}
+          ref={navBar}
+          showNav={showNavigation} 
+        />
+        <Header offsetHeight={offsetHeight} />
+        <Element name="AboutMe">
+          <AboutMe />
+        </Element>
+        <Element name="Experience"> 
+          <Experience />
+        </Element>
+        <Element name="Projects"> 
+          <Projects /> 
+        </Element>
+        <Element name="ContactForm"> 
+          <ContactForm />
+        </Element>
+        <Footer />
+      </main>
+    </HelmetProvider>
   )
 }
 

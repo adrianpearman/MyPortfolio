@@ -7,18 +7,18 @@ const ExperienceCarousel = ({ data }) => {
   return (
     <>
       { data.length > 0 ? (
-        <div className="carousel">
+        <div className="jobContainer">
           <div className="jobTitleContainer">
+            <h3>
+              Roles 
+              <span></span>
+            </h3>
             <ul className="jobTitleList">
               {
                 data.map((value, key) => {
                   return (
-                    <li 
-                      key={key}
-                      onClick={() => { setJob(key) }}
-                    >
-                      <p>{value.title}</p>
-                      <p>{value.employer}</p>
+                    <li key={key} onClick={() => { setJob(key) }}>
+                      <p>{value.title} - {value.employer}</p>
                     </li>
                   )
                 })
@@ -26,11 +26,11 @@ const ExperienceCarousel = ({ data }) => {
             </ul>
           </div>
           <div className="jobTitleDescription">
-            <p><span>COMPANY: </span>{data[job].employer}</p>
-            <p><span>TITLE: </span>{data[job].title}</p>
-            <p><span>LOCATION: </span>{data[job].location}</p>
-            <p><span>DATES: </span>{data[job].dates}</p>
-            <p><span>RESPONSIBILITIES:</span></p>
+            <p><span>Company: </span>{data[job].employer}</p>
+            <p><span>Title: </span>{data[job].title}</p>
+            <p><span>Location: </span>{data[job].location}</p>
+            <p><span>Dates: </span>{data[job].dates}</p>
+            <p><span>Responsibilities:</span></p>
             {
               data[job].responsibilities.length > 0 ? (
                 <ul>
