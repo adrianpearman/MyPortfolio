@@ -1,11 +1,8 @@
 @use './variables' as *;
 
 .contactForm {
-  align-items: center;
-  background: $lightGreen;
-  background: linear-gradient(180deg, $lightGreen 0%, $darkGreen 100%);
-  display: flex;
-  justify-content: center;
+  background: $primaryColorLight;
+  background: linear-gradient(180deg, $primaryColorLight 0%, $primaryColorDark 100%);
 
   h2 {
     font-size: 7rem;
@@ -13,7 +10,7 @@
     padding-top: 20px;
 
     span {
-      background-color: $darkGreen;
+      background-color: $primaryColorDark;
       display: block;
       height: 10px;
       margin: 0 auto;
@@ -26,5 +23,115 @@
     background-color: rgba($cream, 0.5);
     height: 85%;
     text-align: center;
+  }
+
+  .formContainer {
+    font-size: 2rem;
+    margin: 50px auto;
+    width: 90%;
+
+    button {
+      background-color: $primaryColorLight;
+      border: 2px solid $primaryColorDark;
+      border-radius: 5px;
+      color: $cream;
+      font-family: $primaryFont;
+      margin: 20px ;
+      padding: 20px 40px;
+      text-decoration: none;
+    }
+    
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      width: 70%;
+    }
+
+    label {
+      font-family: $primaryFont;
+      font-size: 2rem;
+    }
+    
+    textarea { height: 200px; }
+
+    input, textarea {
+      border-color: transparent;
+      border-radius: 5px;
+      box-shadow: 3px 3px 10px $black;
+      margin-top: 10px;
+      padding: 20px;
+    }
+
+    .line {
+      background-color: $primaryColorDark;
+      display: block;
+      height: 10px;
+      margin: 20px auto;
+      transform: skew(-20deg);
+      width: 60%;
+    }
+  }
+
+  .emailContainer,
+  .messageContainer,
+  .nameContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    text-align: left;
+    width: 100%;
+  }
+
+
+  .nameContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .emailContainer { }
+  
+  .messageContainer { }
+
+  .firstName, 
+  .lastName {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+  }
+  
+  .buttonContainer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 65%;
+
+    a {
+      border: 2px solid $black;
+      border-radius: 5px;
+      color: $cream;
+      padding: 20px 40px;
+      text-decoration: none;
+
+      &:hover { cursor: pointer; }
+    }
+
+    i { padding-right: 10px; }
+
+    #linkedin {
+      background-color: $linkedin;
+      border-color: $linkedinDark;
+    }
+
+    #github {
+      background-color: $github;
+      border-color: $githubDark;
+    }
+
+    #calendy {
+      background-color: $neon;
+      border-color: $neonDark;
+    }
   }
 }

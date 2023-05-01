@@ -1,35 +1,41 @@
 // Colors
-$lightGreen: #52B19A; // light green
-$darkGreen: #047F67;
-$lightPeach: #FFC9B9;
-$darkPeach: #FFA58B;
-$linkedin: #0077B5;
-$linkedinDark: #004367;
-$github: #6E5494;
-$githubDark: #39156F;
+$black: #242424;
+$cream: #FCFAF2;
 $email: #BD2C00;
 $emailDark: #721B00;
-$neon: #4823E1;
-$neonDark: #2400B6;
 $experienceActive: #368F8B;
 $experienceBase: #246A73;
-$cream: #FCFAF2;
+$github: #6E5494;
+$githubDark: #39156F;
+$linkedin: #0077B5;
+$linkedinDark: #004367;
+$neon: #4823E1;
+$neonDark: #2400B6;
+$primaryColorDark: #047F67;
+$primaryColorLight: #52B19A;
+$secondaryColorDark: #3084b8;
+$secondaryColorLight: #9DB3C1;
+
 $lightGrey: #696969;
 $grey: #848C93;
 $greyDark: #343a40;
-$black: #242424;
+
 // Fonts
-$rootFontSize: 10px;
 $headingFont: "Recia Serif", serif;
-$primaryFont: "Butler Black", serif;
-$primaryFontBold: "Butler Extra Bold", serif;
-$primaryFontMedium: "Butler Medium", serif;
+$rootFontSize: 10px;
+// $primaryFont: "Butler Black", serif;
+// $primaryFontBold: "Butler Extra Bold", serif;
+// $primaryFontMedium: "Butler Medium", serif;
+// $primaryFont: "Titillium Light", sans-serif;
+// $primaryFontBold: "Titillium Bold", sans-serif;
+$primaryFont: "Garet Book", sans-serif;
+$primaryFontBold: "Garet Bold", sans-serif;
 // Display widths
-$mobileSmall: 425px;
-$mobile: 500px;
-$mobileLarge: 600px;
-$tablet: 768px;
 $displaySmallLaptop: 900px;
 $displayLargeLaptop: 1440px;
 $displaySmallDesktop: 1920px;
 $displaySmallDesktop: 2400px;
+$mobileSmall: 425px;
+$mobile: 500px;
+$mobileLarge: 600px;
+$tablet: 768px;

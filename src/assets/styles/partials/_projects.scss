@@ -2,11 +2,8 @@
 
 
 .projects {
-  align-items: center;
-  background: $darkPeach;
-  background: linear-gradient(180deg, $darkPeach 0%, $lightGreen 100%);
-  display: flex;
-  justify-content: center;
+  background: $secondaryColorDark;
+  background: linear-gradient(180deg, $secondaryColorDark 0%, $primaryColorLight 100%);
 
   h2 {
     font-size: 7rem;
@@ -14,7 +11,7 @@
     padding-top: 20px;
 
     span {
-      background-color: $lightGreen;
+      background-color: $primaryColorLight;
       display: block;
       height: 10px;
       margin: 0 auto;

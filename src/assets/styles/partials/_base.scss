@@ -2,7 +2,7 @@
 
 html {
   background-color: $cream;
-  font-family: $primaryFontMedium;
+  font-family: $primaryFont;
   font-size: $rootFontSize;
   scroll-behavior: smooth;
 } 
@@ -15,18 +15,18 @@ h1, h2, h3, h4, h5, h6, p, ul, li, nav {
 p, a { font-size: 1.8rem; }
 
 .wrapper {
-  width: 90%;
-  max-width: 1440px;
   margin: 0 auto;
+  max-width: 1200px;
+  width: 90%;
 }
 
 .aboutMe,
 .experience,
 .projects, 
 .contactForm {
-  height: 100vh;
-}
-
-footer {
-  background-color: $darkGreen;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  min-height: 700px;
 }

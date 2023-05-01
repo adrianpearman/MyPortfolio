@@ -22,8 +22,8 @@ nav {
     }
     
     a {
-      border-left: 1px solid $darkGreen;
-      background: linear-gradient(to right, transparent 50%, $lightGreen 50%);
+      border-left: 1px solid $primaryColorDark;
+      background: linear-gradient(to right, transparent 50%, $primaryColorLight 50%);
       background-size: 200% 100%;
       background-position: left bottom;
       display: block;
@@ -35,9 +35,9 @@ nav {
       width: 100%;
       
       &:hover {
-        background-color: $lightGreen;
+        background-color: $primaryColorLight;
         background-position: right bottom;
-        border-left: 1px solid $darkGreen;
+        border-left: 1px solid $primaryColorDark;
         color: $cream;
         cursor: pointer;
       }

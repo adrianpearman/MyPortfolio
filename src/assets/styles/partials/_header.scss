@@ -1,4 +1,4 @@
-@use '../partials/variables' as *;
+@use './variables' as *;
 
 header {
   align-items: center;
@@ -9,35 +9,34 @@ header {
   position: relative;
   width: 100%;
 
+  h1, h2 { font-family: $headingFont; }
+
   h1{
-    font-family: $headingFont;
     font-size: calc(13rem + 5vw);
     text-transform: uppercase;
   }
 
   h2{
-    background: linear-gradient(to right, transparent 50%, $darkGreen 50%);
+    background: linear-gradient(to right, transparent 50%, $primaryColorDark 50%);
     background-size: 200% 100%;
     background-position: left bottom;
-    padding: 5px 25px;
+    letter-spacing: 2px;
+    padding: 15px 25px 5px;
     transition: all 0.5s ease;
     text-transform: uppercase;
     transform: skew(-20deg);
     
     &:hover{
-      background-color: $darkGreen;
+      background-color: $primaryColorDark;
       background-position: right bottom;
-      font-family: $primaryFontBold;
       cursor: pointer;
     }
     
-    a {
-      font-size: 5rem;
-    }
+    a { font-size: 5rem; }
   }
 
   span {
-    background-color: $darkGreen;
+    background-color: $primaryColorDark;
     display: inline-block;
     height: 15px;
     margin: 0 auto;
@@ -45,13 +44,12 @@ header {
   }
 
   .backgroundBlend {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 20%;
-    background: rgb(82, 177, 154);
     background: linear-gradient(180deg, transparent 0%, $cream 100%);
+    bottom: 0;
+    height: 20%;
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
 
   .wrapper {
@@ -63,5 +61,4 @@ header {
     justify-content: space-evenly;
     margin: auto 0;
   }
-
 }
