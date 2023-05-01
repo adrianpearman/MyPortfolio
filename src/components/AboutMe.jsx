@@ -1,4 +1,5 @@
 // Components
+import HelperFlipCard from './HelperComponents/HelperFlipCard'
 import HelperLinkScroll from './HelperComponents/HelperLinkScroll'
 // Images
 import pdf from "../assets/pdfs/Adrian_Pearman_Resume-2023.pdf"
@@ -9,31 +10,19 @@ const AboutMe = () => {
   return (
     <div className="aboutMe">
       <div className="wrapper">
-        <h2>
-          About Me
-          <span></span>
-        </h2>
-
+        <h2>About Me<span></span></h2>
         <div className="aboutMeContainer">
           <div className="imageContainer">
-            <div className="flip-card">
-              <div className="flip-card-inner">
-                <div className="flip-card-front">
-                  <img
-                    src={profilePhoto1} 
-                    alt="Adrian Pearman's profile photo" 
-                  />
-                  <p>Hello! I'm Adrian 😃</p>
-                </div>
-                <div className="flip-card-back">
-                  <img 
-                    src={profilePhoto2}
-                    alt="Adrian Pearma's cooler profile photo" 
-                  />
-                  <p>Hello! I'm the cooler Adrian 😎</p>
-                </div>
+            <HelperFlipCard>
+              <div className='flipImgContainerFront'>
+                <img src={profilePhoto1} />
+                <p>Hello! I'm Adrian 😃</p>
               </div>
-            </div>
+              <div className='flipImgContainerBack'>
+                <img src={profilePhoto2} />
+                <p>Hello I'm the <span>cooler</span> Adrian 😎</p>
+              </div>
+            </HelperFlipCard>
           </div>
           <div className="textContainer">
             <div aria-hidden className="introTop">
