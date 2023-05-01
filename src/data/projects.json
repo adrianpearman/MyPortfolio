@@ -1,7 +1,6 @@
 [
   {
     "stack": ["HTML5", "CSS3", "JavaScript", "jQuery"],
-    "_id": "5fd6ca86d6214ac1a81062f7",
     "title": "Trillo",
     "overview": "",
     "liveLink": "https://adrianpearman.github.io/Trillo/",
@@ -19,7 +18,6 @@
       "MongoDB",
       "Helmet"
     ],
-    "_id": "5fd6ca86d6214ac1a81062f6",
     "title": "Travel Log App",
     "overview": "",
     "liveLink": "https://vast-temple-60193.herokuapp.com/",
@@ -27,7 +25,6 @@
   },
   {
     "stack": ["HTML5", "JavaScript", "Sass", "Vue.js", "Nuxt", "Node"],
-    "_id": "5fd6ca86d6214ac1a81062f5",
     "title": "New Seaton Landing Page",
     "overview": "",
     "liveLink": "https://newseaton.com/",
@@ -45,7 +42,6 @@
       "NoSQL",
       "GoogleOAuth"
     ],
-    "_id": "5fd6ca86d6214ac1a81062f4",
     "title": "MERN Email Response App",
     "overview": "",
     "liveLink": "https://warm-journey-33149.herokuapp.com/",
@@ -53,7 +49,6 @@
   },
   {
     "stack": ["HTML5", "CSS3", "JavaScript", "jQuery"],
-    "_id": "5fd6ca86d6214ac1a81062f3",
     "title": "Omnifood",
     "overview": "",
     "liveLink": "https://adrianpearman.github.io/Omnifood/",
@@ -61,7 +56,6 @@
   },
   {
     "stack": ["HTML5", "CSS3", "SASS"],
-    "_id": "5fd6ca86d6214ac1a81062f2",
     "title": "Ventours",
     "overview": "",
     "liveLink": "https://adrianpearman.github.io/Ventours/",
@@ -77,7 +71,6 @@
       "GraphQL",
       "Node"
     ],
-    "_id": "5fd6ca86d6214ac1a81062f1",
     "title": "SpaceX Rocket Tracker",
     "overview": "",
     "liveLink": "https://spacextracker.herokuapp.com/ ",
@@ -94,7 +87,6 @@
       "Express.js",
       "Firebase"
     ],
-    "_id": "5fd6ca86d6214ac1a81062f0",
     "title": "React Expense Tracker",
     "overview": "",
     "liveLink": "https://protected-beyond-22981.herokuapp.com/",
@@ -102,7 +94,6 @@
   },
   {
     "stack": ["HTML5", "CSS3", "JavaScript", "React", "Node"],
-    "_id": "5fd6ca86d6214ac1a81062ef",
     "title": "Indecision App",
     "overview": "",
     "liveLink": "https://safe-reef-13947.herokuapp.com/",
@@ -110,7 +101,6 @@
   },
   {
     "stack": ["HTML5", "CSS3", "JavaScript"],
-    "_id": "5fd6ca86d6214ac1a81062ee",
     "title": "Dice Game",
     "overview": "",
     "liveLink": "https://adrianpearman.github.io/DiceGame/",
@@ -118,7 +108,6 @@
   },
   {
     "stack": ["HTML5", "CSS3", "JavaScript"],
-    "_id": "5fd6ca86d6214ac1a81062ed",
     "title": "Budget Application",
     "overview": "",
     "liveLink": "https://adrianpearman.github.io/Budget-App/",
@@ -126,7 +115,6 @@
   },
   {
     "stack": ["HTML5", "CSS3", "JavaScript", "Node"],
-    "_id": "5fd6ca86d6214ac1a81062ec",
     "title": "Hackernews Clone",
     "overview": "",
     "liveLink": "https://shielded-tor-87839.herokuapp.com/",
@@ -141,7 +129,6 @@
       "Ruby on Rails",
       "PostgreSQL"
     ],
-    "_id": "5fd6ca86d6214ac1a81062eb",
     "title": "Hoptimal",
     "overview": "",
     "liveLink": "https://hoptimal.herokuapp.com/",
