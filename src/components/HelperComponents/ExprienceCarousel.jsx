@@ -1,8 +1,18 @@
 // Modules
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const ExperienceCarousel = ({ data }) => {
-  const [ job, setJob ] = useState(0)
+  const ulElement = useRef(null)
+  const [ job, setJob ] = useState(0);
+
+  const handleJobClick = (e, index) => {
+    const siblingJobElements = ulElement.current.children
+    for (let i = 0; i < siblingJobElements.length; i++) {
+      const element = siblingJobElements[i];
+      element.classList.remove("active")
+    }
+    setJob(index)
+  }
 
   return (
     <>
@@ -13,11 +23,15 @@ const ExperienceCarousel = ({ data }) => {
               Roles 
               <span></span>
             </h3>
-            <ul className="jobTitleList">
+            <ul className="jobTitleList" ref={ulElement}>
               {
                 data.map((value, key) => {
                   return (
-                    <li key={key} onClick={() => { setJob(key) }}>
+                    <li 
+                      className={key === job ? "active" : ""}
+                      key={key} 
+                      onClick={(e) => { handleJobClick(e, key) }}
+                    >
                       <p>{value.title} - {value.employer}</p>
                     </li>
                   )
