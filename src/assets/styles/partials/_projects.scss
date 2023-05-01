@@ -4,6 +4,7 @@
 .projects {
   background: $secondaryColorDark;
   background: linear-gradient(180deg, $secondaryColorDark 0%, $primaryColorLight 100%);
+  height: 700px;
 
   h2 {
     font-size: 7rem;
@@ -24,5 +25,19 @@
     background-color: rgba($cream, 0.5);
     height: 85%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectsContainer {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-size: 3rem;
+      font-family: $primaryFontBold;
+    }
   }
 }

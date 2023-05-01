@@ -1,4 +1,4 @@
-//
+// Components
 import ProjectCarousel from "./HelperComponents/ProjectCarousel"
 // Data
 import projectData from '../data/projects.json';
@@ -13,7 +13,14 @@ const Projects = () => {
         </h2>
 
         <div className="projectsContainer">
-          <ProjectCarousel data={projectData}/>
+          <p>
+            👷🏾‍♂️ 🚧 🏗 
+            <br />
+            Under Construction! New Stuff Coming Soon! 
+            <br />
+            🏗 🚧 👷🏾‍♂️
+          </p>
+          {/* <ProjectCarousel data={projectData}/> */}
         </div>
       </div>
     </div>
