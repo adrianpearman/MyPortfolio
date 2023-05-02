@@ -1,8 +1,14 @@
-import { Helmet } from "react-helmet-async"
+// NPM Modules
+import { Helmet } from "react-helmet-async";
+// FavIcon Values
+import favicon16x16 from "../../assets/images/favicon/favicon-16x16.png"
+import favicon32x32 from "../../assets/images/favicon/favicon-32x32.png"
+import faviconAppleTouch from "../../assets/images/favicon/apple-touch-icon.png"
+import faviconManifest from "../../assets/images/favicon/site.webmanifest"
 
 const SEOComponent = () => {
   return (
-        <Helmet>
+    <Helmet>
       <meta charset="utf-8" />
       <meta
         name="viewport"
@@ -29,11 +35,12 @@ const SEOComponent = () => {
       <meta name="author" content="Adrian Pearman" />
 
       <title>Adrian Pearman - Full Stack Web Developer</title>
+      <link rel="apple-touch-icon" sizes="180x180" href={faviconAppleTouch} />
+      <link rel="icon" type="image/png" sizes="32x32" href={favicon32x32} />
+      <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16} />
+      <link rel="manifest" href={faviconManifest} />
       {/* Font Awesome */}
-      <script
-        src="https://kit.fontawesome.com/29fab573a0.js"
-        crossOrigin="anonymous"
-      ></script>
+      <script src="https://kit.fontawesome.com/29fab573a0.js" crossOrigin="anonymous"></script>
     </Helmet>
   )
 }
