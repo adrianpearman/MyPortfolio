@@ -37,7 +37,7 @@
       border-radius: 5px;
       color: $cream;
       font-family: $primaryFont;
-      font-size: 1.8rem;
+      font-size: 2rem;
       margin: 20px ;
       padding: 20px 40px;
       position: relative;
@@ -50,12 +50,21 @@
         cursor: pointer;
         top: 3px;
       }
+
+      &:disabled,
+      &[disabled] {
+        border: 2px solid $grey;
+        background-color: $lightGrey;
+        box-shadow: 3px 0px 0px $grey;
+        color: $grey;
+        pointer-events: none;
+      }
     }
     
     form {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 auto;
+      margin: 30px auto 0;
       width: 70%;
     }
 
@@ -70,6 +79,7 @@
       border-color: transparent;
       border-radius: 5px;
       box-shadow: 3px 3px 10px $black;
+      font-family: $primaryFont;
       margin-top: 10px;
       padding: 20px;
     }
@@ -81,6 +91,30 @@
       margin: 20px auto;
       transform: skew(-20deg);
       width: 60%;
+    }
+
+    .textContainer {
+      text-align: left;
+      width: 70%;
+      margin: 20px auto 50px;
+      padding: 0 20px;
+
+      p { 
+        font-size: 2rem;
+        margin: 10px 50px; 
+      }
+
+      .introTop,
+      .introBottom {
+        font-family: $secondaryFont;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+      }
+
+      .submittedForm {
+        font-size: 2.5rem;
+        font-family: $primaryFontBold;
+      }
     }
   }
 
@@ -119,6 +153,7 @@
       border-radius: 5px;
       box-shadow: 3px 3px 0px $primaryColorDark;
       color: $cream;
+      font-size: 2rem;
       padding: 20px 40px;
       position: relative;
       text-decoration: none;

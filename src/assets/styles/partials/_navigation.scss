@@ -12,7 +12,6 @@ nav {
   ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
     padding: 0;
     
     li {
@@ -22,12 +21,12 @@ nav {
     }
     
     a {
-      border-left: 1px solid $primaryColorDark;
+      border: 1px solid $primaryColorDark;
       background: linear-gradient(to right, transparent 50%, $primaryColorLight 50%);
       background-size: 200% 100%;
       background-position: left bottom;
       display: block;
-      font-family: $primaryFontBold;
+      font-family: $primaryFont;
       font-size: 2.5rem;
       letter-spacing: 1px;
       padding: 20px;
@@ -36,6 +35,7 @@ nav {
       transition: all 0.5s ease;
       width: 100%;
       
+      &:focus,
       &:hover {
         background-color: $primaryColorLight;
         background-position: right bottom;

@@ -67,12 +67,19 @@
       padding: 10px 0;
       width: 100%;
 
-      &:hover { cursor: pointer; }
+      &:focus, 
+      &:hover { 
+        background-color: $cream;
+        border-color: $secondaryColorDark;
+        color: $secondaryColorDark;
+        cursor: pointer;
+       }
     }
 
     .active {
-      background-color: $primaryColorDark;
-      border-color: $cream;
+      background-color: $cream;
+      border-color: $secondaryColorDark;
+      color: $secondaryColorDark;
     }
   }
 
