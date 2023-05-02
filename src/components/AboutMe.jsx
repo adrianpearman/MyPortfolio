@@ -15,11 +15,11 @@ const AboutMe = () => {
           <div className="imageContainer">
             <HelperFlipCard>
               <div className='flipImgContainerFront'>
-                <img src={profilePhoto1} />
+                <img src={profilePhoto1} alt="A profile picture for Adrian Pearman"/>
                 <p>Hello! I'm Adrian 😃</p>
               </div>
               <div className='flipImgContainerBack'>
-                <img src={profilePhoto2} />
+                <img src={profilePhoto2} alt="A cooler profile picture for Adrian Pearman"/>
                 <p>And I'm the <span>cooler</span> Adrian 😎</p>
               </div>
             </HelperFlipCard>
