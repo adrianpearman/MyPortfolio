@@ -20,7 +20,7 @@ const AboutMe = () => {
               </div>
               <div className='flipImgContainerBack'>
                 <img src={profilePhoto2} />
-                <p>Hello I'm the <span>cooler</span> Adrian 😎</p>
+                <p>And I'm the <span>cooler</span> Adrian 😎</p>
               </div>
             </HelperFlipCard>
           </div>

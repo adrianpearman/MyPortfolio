@@ -17,8 +17,8 @@ const Header = ({ offsetHeight }) => {
         <span></span>
         <h2>
           <HelperLinkScroll 
-            linkName="Let's Collaborate"
             height={offsetHeight}
+            linkName="Let's Collaborate"
             scrollToElement="AboutMe"
           />
         </h2>

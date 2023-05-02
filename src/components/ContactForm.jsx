@@ -1,11 +1,40 @@
-// Make sure to run npm install @formspree/react
-// For more help visit https://formspr.ee/react-help
+// NPM Modules
+import { useEffect, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+// Components
+import HelperFormSubmittted from './HelperComponents/HelperFormSubmitted';
 
 const ContactForm = () => {
-  const [state, handleSubmit] = useForm("xyyakzjd");
+  const [state, handleSubmit] = useForm("xlekzgyk");
+  const [ firstName, setFirstName ] = useState("")
+  const [ lastName, setLastName ] = useState("")
+  const [ email, setEmail ] = useState("")
+  const [ message, setMessage ] = useState("")
+  const [ disableSubmitButton, setDisableSubmitButton ] = useState(true)
+
+  const handleInputChange = (e, property) => {
+    const value = e.target.value.trim()
+    if(property === "firstName"){
+      setFirstName(value)
+    }else if(property === "lastName"){
+      setLastName(value)
+    }else if(property === "email"){
+      setEmail(value)
+    }else if(property === "message"){
+      setMessage(value)
+    }
+  }
+
+  useEffect(() => {
+    if(firstName.length > 0 && lastName.length > 0 && email.length > 0 && message.length > 0){
+      setDisableSubmitButton(false)
+    }else{
+      setDisableSubmitButton(true)
+    }
+  })
+  
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return <HelperFormSubmittted />;
   }
   
   return (
@@ -17,19 +46,25 @@ const ContactForm = () => {
         </h2>
 
         <div className="formContainer">
-          {/* <div className="textContainer">
+          <div className="textContainer">
             <div aria-hidden className="introTop">
               {`<Closing>`}
             </div>
             <p>
-                Thank you soo much for looking through my website! 
+                Thank you for taking the time to look at my portfolio!
                 <br/>
-                Feel free to contact me below through my contact form, view my LinkedIn profile, look through my repository or schedule a meeting with me through the Calendy link! 
+                Starting a new project? 
+                <br/>
+                Looking to add a new member to your team? 
+                <br/>
+                Contact me and lets collaborate!
             </p>
             <div aria-hidden className="introBottom">
               {`</Closing>`}
             </div>
-          </div> */}
+          </div>
+
+          <span className='line'></span>
 
           <form onSubmit={handleSubmit}>
             <div className='nameContainer'>
@@ -39,6 +74,8 @@ const ContactForm = () => {
                   id="firstName"
                   name="firstName"
                   type="text" 
+                  value={firstName}
+                  onChange={(e) => { handleInputChange(e, "firstName") }}
                 />
                 <ValidationError 
                   errors={state.errors}
@@ -52,6 +89,8 @@ const ContactForm = () => {
                     id="lastName"
                     name="lastName"
                     type="text" 
+                    value={lastName}
+                    onChange={(e) => { handleInputChange(e, "lastName") }}
                   />
                   <ValidationError 
                     errors={state.errors}
@@ -67,6 +106,8 @@ const ContactForm = () => {
                 id="email"
                 name="email"
                 type="email" 
+                value={email}
+                onChange={(e) => { handleInputChange(e, "email") }}
               />
               <ValidationError 
                 errors={state.errors}
@@ -79,6 +120,8 @@ const ContactForm = () => {
               <textarea 
                 id="message" 
                 name="message" 
+                value={message}
+                onChange={(e) => { handleInputChange(e, "message") }}
               />
               <ValidationError 
                 errors={state.errors}
@@ -87,7 +130,7 @@ const ContactForm = () => {
               />
             </div>
             <button 
-              disabled={state.submitting}
+              disabled={disableSubmitButton}
               type="submit" 
             >
               Submit

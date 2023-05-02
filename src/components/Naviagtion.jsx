@@ -11,30 +11,30 @@ const Navigation = forwardRef(({ offsetHeight, showNav }, ref) => {
         <ul>
           <li>
             <HelperLinkScroll 
-              scrollToElement="AboutMe"
+              height={offsetHeight}
               linkName="About Me"
-              height={offsetHeight}
+              scrollToElement="AboutMe"
             />
           </li>
           <li>
             <HelperLinkScroll 
-              scrollToElement="Experience"
+              height={offsetHeight}
               linkName="Experience"
-              height={offsetHeight}
+              scrollToElement="Experience"
             />
           </li>
           <li>
             <HelperLinkScroll 
-              scrollToElement="Projects"
+              height={offsetHeight}
               linkName="Projects"
-              height={offsetHeight}
+              scrollToElement="Projects"
             />
           </li>
           <li>
             <HelperLinkScroll 
-              scrollToElement="ContactForm"
-              linkName="Contact Me"
               height={offsetHeight}
+              linkName="Contact Me"
+              scrollToElement="ContactForm"
             />
           </li>
         </ul>

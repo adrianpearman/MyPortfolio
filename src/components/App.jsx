@@ -1,6 +1,6 @@
 // NPM Modules
 import { useEffect, useRef, useState } from "react";
-import { Element } from "react-scroll"
+import { Element, scroller } from "react-scroll"
 import { HelmetProvider } from "react-helmet-async"
 // Components
 import SEOComponent from "./HelperComponents/SEOComponent";
@@ -29,7 +29,7 @@ const App = () => {
   useEffect(() => {
     const condition = navBar !== undefined && navBar.current !== null
     condition && setOffsetHeight(navBar.current.offsetHeight)
-  }, [ navBar ])
+  }, [ navBar ]) 
   
   return (
     <HelmetProvider>

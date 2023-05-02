@@ -6,12 +6,14 @@ const ExperienceCarousel = ({ data }) => {
   const [ job, setJob ] = useState(0);
 
   const handleJobClick = (e, index) => {
-    const siblingJobElements = ulElement.current.children
-    for (let i = 0; i < siblingJobElements.length; i++) {
-      const element = siblingJobElements[i];
-      element.classList.remove("active")
+    if(e.type === "click" || e.key === "Enter"){
+      const siblingJobElements = ulElement.current.children
+      for (let i = 0; i < siblingJobElements.length; i++) {
+        const element = siblingJobElements[i];
+        element.classList.remove("active")
+      }
+      setJob(index)
     }
-    setJob(index)
   }
 
   return (
@@ -31,8 +33,10 @@ const ExperienceCarousel = ({ data }) => {
                       className={key === job ? "active" : ""}
                       key={key} 
                       onClick={(e) => { handleJobClick(e, key) }}
+                      onKeyDown={(e) => { handleJobClick(e, key) }}
+                      tabIndex={0}
                     >
-                      <p>{value.title} - {value.employer}</p>
+                      <p><span>{value.title}:</span> {value.employer}</p>
                     </li>
                   )
                 })
