@@ -1,10 +1,10 @@
 // NPM Modules
 import { Helmet } from "react-helmet-async";
 // FavIcon Values
-import favicon16x16 from "../../assets/images/favicon/favicon-16x16.png"
-import favicon32x32 from "../../assets/images/favicon/favicon-32x32.png"
-import faviconAppleTouch from "../../assets/images/favicon/apple-touch-icon.png"
-import faviconManifest from "../../assets/images/favicon/site.webmanifest"
+import favicon16x16 from "../../assets/images/favicon/favicon-16x16.png";
+import favicon32x32 from "../../assets/images/favicon/favicon-32x32.png";
+import faviconAppleTouch from "../../assets/images/favicon/apple-touch-icon.png";
+import faviconManifest from "../../assets/images/favicon/site.webmanifest";
 
 const SEOComponent = () => {
   return (
@@ -40,9 +40,12 @@ const SEOComponent = () => {
       <link rel="icon" type="image/png" sizes="16x16" href={favicon16x16} />
       <link rel="manifest" href={faviconManifest} />
       {/* Font Awesome */}
-      <script src="https://kit.fontawesome.com/29fab573a0.js" crossOrigin="anonymous"></script>
+      <script
+        src="https://kit.fontawesome.com/29fab573a0.js"
+        crossOrigin="anonymous"
+      ></script>
     </Helmet>
-  )
-}
+  );
+};
 
 export default SEOComponent;

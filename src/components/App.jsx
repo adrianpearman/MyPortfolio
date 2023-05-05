@@ -1,6 +1,5 @@
 // NPM Modules
 import { useEffect, useRef, useState } from "react";
-import { Element, scroller } from "react-scroll";
 import { HelmetProvider } from "react-helmet-async";
 // Context Component
 import MainContext from "./context/MainContext";
@@ -45,18 +44,10 @@ const App = () => {
           showNav={showNavigation}
         />
         <Header offsetHeight={offsetHeight} />
-        <Element name="AboutMe">
-          <AboutMe offsetHeight={offsetHeight} />
-        </Element>
-        <Element name="Experience">
-          <Experience />
-        </Element>
-        <Element name="Projects">
-          <Projects />
-        </Element>
-        <Element name="ContactForm">
-          <ContactForm />
-        </Element>
+        <AboutMe offsetHeight={offsetHeight} />
+        <Experience />
+        <Projects />
+        <ContactForm />
         <Footer />
       </MainContext>
     </HelmetProvider>

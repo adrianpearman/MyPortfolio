@@ -11,10 +11,10 @@ const Experience = () => {
           Experience
           <span></span>
         </h2>
-        <ExperienceCarousel data={experienceData}/>
+        <ExperienceCarousel data={experienceData} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

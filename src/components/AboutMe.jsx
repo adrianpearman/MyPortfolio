@@ -56,7 +56,7 @@ const AboutMe = ({ offsetHeight }) => {
                 height={offsetHeight}
                 id={""}
                 linkName={"Let's work together!"}
-                scrollToElement={"ContactForm"}
+                scrollToElement={"contactForm"}
               />
 
               <a

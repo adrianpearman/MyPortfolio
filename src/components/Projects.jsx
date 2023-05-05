@@ -1,7 +1,7 @@
 // Components
-import ProjectCarousel from "./HelperComponents/ProjectCarousel"
+import ProjectCarousel from "./HelperComponents/ProjectCarousel";
 // Data
-import projectData from '../data/projects.json';
+import projectData from "../data/projects.json";
 
 const Projects = () => {
   return (
@@ -14,9 +14,9 @@ const Projects = () => {
 
         <div className="projectsContainer">
           <p>
-            👷🏾‍♂️ 🚧 🏗 
+            👷🏾‍♂️ 🚧 🏗
             <br />
-            Under Construction! New Stuff Coming Soon! 
+            Under Construction! New Stuff Coming Soon!
             <br />
             🏗 🚧 👷🏾‍♂️
           </p>
@@ -24,7 +24,7 @@ const Projects = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
