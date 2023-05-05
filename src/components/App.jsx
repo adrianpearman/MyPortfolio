@@ -38,12 +38,12 @@ const App = () => {
     <HelmetProvider>
       <SEOComponent />
       <MainContext>
+        <Header offsetHeight={offsetHeight} />
         <Navigation
           offsetHeight={offsetHeight}
           ref={navBar}
           showNav={showNavigation}
         />
-        <Header offsetHeight={offsetHeight} />
         <AboutMe offsetHeight={offsetHeight} />
         <Experience />
         <Projects />

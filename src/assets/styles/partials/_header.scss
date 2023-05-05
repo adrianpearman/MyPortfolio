@@ -17,22 +17,25 @@ header {
   }
 
   h2{
-    background: linear-gradient(to right, transparent 50%, $primaryColorDark 50%);
-    background-size: 200% 100%;
-    background-position: left bottom;
-    letter-spacing: 2px;
-    padding: 15px 25px 5px;
-    transition: all 0.5s ease;
-    text-transform: uppercase;
     transform: skew(-20deg);
-    
-    &:hover{
-      background-color: $primaryColorDark;
-      background-position: right bottom;
-      cursor: pointer;
+
+    a{
+      background: linear-gradient(to right, transparent 50%, $primaryColorDark 50%);
+      background-size: 200% 100%;
+      background-position: left bottom;
+      font-size: 5rem;
+      letter-spacing: 2px;
+      padding: 15px 25px 5px;
+      transition: all 0.5s ease;
+      text-transform: uppercase;
+      
+      &:focus,
+      &:hover{
+        background-color: $primaryColorDark;
+        background-position: right bottom;
+        cursor: pointer;
+      }
     }
-    
-    a { font-size: 5rem; }
   }
 
   span {
