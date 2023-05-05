@@ -1,32 +1,36 @@
-@use './variables' as *;
+@use "./variables" as *;
 // 945px
-@media(max-width: calc($displaySmallLaptop + 45px)){
+@media (max-width: calc($displaySmallLaptop + 45px)) {
   .buttonContainer a {
-      text-align: center;
-    }
+    text-align: center;
+  }
 }
 // 900px
-@media(max-width: $displaySmallLaptop){
+@media (max-width: $displaySmallLaptop) {
   nav {
     ul {
-      a { font-size: 2rem; }      
+      a {
+        font-size: 2rem;
+      }
     }
   }
 }
 // 768px
-@media(max-width: $tablet){
+@media (max-width: $tablet) {
   // Navigation Section
   nav {
     ul {
       a {
         font-size: 2rem;
         padding: 10px 5px;
-      } 
+      }
     }
   }
   // About Me Section
   .aboutMe {
-    .aboutMeContainer { flex-direction: column; }
+    .aboutMeContainer {
+      flex-direction: column;
+    }
 
     .imageContainer {
       margin: 30px auto 0;
@@ -38,7 +42,9 @@
       margin: 30px auto 0;
       width: 90%;
 
-      .buttonContainer { margin: 30px auto; }
+      .buttonContainer {
+        margin: 30px auto;
+      }
     }
   }
   //
@@ -58,9 +64,9 @@
   }
 }
 // 650px
-@media(max-width: calc($mobileLarge + 50px)){
+@media (max-width: calc($mobileLarge + 50px)) {
   nav {
-    ul{
+    ul {
       flex-wrap: wrap;
       li {
         width: 50%;
@@ -69,47 +75,51 @@
   }
 }
 // 600px
-@media(max-width: $mobileLarge){
+@media (max-width: $mobileLarge) {
   // Header
-  header h1 { font-size: calc(10rem + 5vw); }
+  header h1 {
+    font-size: calc(10rem + 5vw);
+  }
   // Experience
-    .experience{
-      .jobContainer {
-        display: flex;
-        flex-direction: column;
+  .experience {
+    .jobContainer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .jobTitleContainer {
+      margin: 20px 0;
+      width: 100%;
+
+      h3 {
+        display: none;
       }
+    }
 
-      .jobTitleContainer {
-        margin: 20px 0;
-        width: 100%;
+    .jobTitleDescription {
+      margin: 0;
+      padding: 10px 40px;
+      text-align: left;
+      width: 100%;
 
-        h3 { display: none }
-      }
-
-      .jobTitleDescription {
-        margin: 0;
-        padding: 10px 40px;
-        text-align: left;
-        width: 100%;
-
-        span {
-          display: block;
-        }
-      }
-
-      .jobTitleList span {
+      span {
         display: block;
       }
-    }   
+    }
+
+    .jobTitleList span {
+      display: block;
+    }
+  }
   // Projects
-    .projects{
-      .projectsContainer{
-        p {
-          font-size: 2.5rem;
-          font-family: "Garet Bold", sans-serif;
-        }
-      } 
-    } 
+  .projects {
+    .projectsContainer {
+      p {
+        font-size: 2.5rem;
+        font-family: "Garet Bold", sans-serif;
+      }
+    }
+  }
   // Contact Form
   .contactForm {
     .buttonContainer {
@@ -120,7 +130,7 @@
       margin: 30px auto;
       width: 95%;
     }
-    .formContainer{
+    .formContainer {
       form {
         display: flex;
         flex-wrap: wrap;
@@ -138,16 +148,31 @@
   }
 }
 // 500px
-@media(max-width: $mobile){
+@media (max-width: $mobile) {
   // Header
   header {
-    h1 { font-size: calc(8rem + 5vw); }
+    h1 {
+      font-size: calc(8rem + 5vw);
+    }
 
-    h2 a {font-size: 4rem; }
+    h2 a {
+      font-size: 3.5rem;
+    }
+  }
+  // About Me
+  .aboutMe {
+    .textContainer {
+      p {
+        margin: 10px;
+        font-size: 2rem;
+      }
+    }
   }
   // Contact Form
   .contactForm {
-    .firstName{ margin-bottom: 20px; }
+    .firstName {
+      margin-bottom: 20px;
+    }
 
     & .firstName,
     & .lastName {
@@ -156,12 +181,22 @@
       width: 100%;
     }
 
-    .nameContainer { flex-direction: column; }
-  }
+    .formContainer {
+      .textContainer {
+        p {
+          font-size: 2rem;
+          margin: 10px 50px;
+        }
+      }
+    }
 
+    .nameContainer {
+      flex-direction: column;
+    }
+  }
 }
 // 390px
-@media(max-width: calc($mobileSmall - 35px)){
+@media (max-width: calc($mobileSmall - 35px)) {
   .aboutMe {
     .imageContainer {
       margin: 30px auto 0;
@@ -170,9 +205,22 @@
     .flipImgContainerFront p {
       font-size: 2rem;
       padding: 20px;
-      position:initial;
+      position: initial;
       text-align: center;
       width: 100%;
+    }
+  }
+}
+// 360px
+@media (max-width: calc($mobileSmall - 65px)) {
+  // Header
+  header {
+    h1 {
+      font-size: calc(8rem);
+    }
+
+    h2 a {
+      font-size: 3rem;
     }
   }
 }
