@@ -14,15 +14,17 @@ const HelperLinkScroll = ({
 
   const handleMoveOnKeyPress = (e) => {
     const scrollOffsetHeight = height !== undefined ? -height : -50;
-    const elementToScrollTo =
-      main.current.children[scrollToElement].offsetTop + scrollOffsetHeight;
 
-    if (e.type === "click" || e.key === "Enter") {
-      window.scroll({
-        top: elementToScrollTo,
-        left: 0,
-        behavior: "smooth",
-      });
+    for (const iterator of main.current.children) {
+      if (iterator.className === scrollToElement) {
+        if (e.type === "click" || e.key === "Enter") {
+          window.scroll({
+            top: iterator.offsetTop + scrollOffsetHeight,
+            left: 0,
+            behavior: "smooth",
+          });
+        }
+      }
     }
   };
 
