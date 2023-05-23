@@ -1,20 +1,32 @@
-// Modules
-import { useRef, useState } from "react";
+// NPM Modules
+import { useEffect, useRef, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+// Components
+import ExperienceItem from "./ExperienceItem";
 
 const ExperienceCarousel = ({ data }) => {
   const ulElement = useRef(null);
+  const [showJob, setShowJob] = useState(false);
   const [job, setJob] = useState(0);
 
   const handleJobClick = (e, index) => {
     if (e.type === "click" || e.key === "Enter") {
+      setShowJob(false);
       const siblingJobElements = ulElement.current.children;
       for (let i = 0; i < siblingJobElements.length; i++) {
         const element = siblingJobElements[i];
         element.classList.remove("active");
       }
       setJob(index);
+      setTimeout(() => {
+        setShowJob(true);
+      }, 100);
     }
   };
+
+  useEffect(() => {
+    setShowJob(true);
+  }, []);
 
   return (
     <>
@@ -48,38 +60,10 @@ const ExperienceCarousel = ({ data }) => {
             </ul>
           </div>
           <div className="jobTitleDescription">
-            <p>
-              <span>Company: </span>
-              {data[job].employer}
-            </p>
-            <p>
-              <span>Title: </span>
-              {data[job].title}
-            </p>
-            <p>
-              <span>Location: </span>
-              {data[job].location}
-            </p>
-            <p>
-              <span>Dates: </span>
-              {data[job].dates}
-            </p>
-            <p>
-              <span>Responsibilities:</span>
-            </p>
-            {data[job].responsibilities.length > 0 ? (
-              <ul>
-                {data[job].responsibilities.map((task, key) => {
-                  return (
-                    <li key={key}>
-                      <p>{task}</p>
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : (
-              <p>Responsibilities coming soon!</p>
-            )}
+            {/* todo - need to figure out how animate properly */}
+            <AnimatePresence initial={false} mode="wait">
+              {showJob ? <ExperienceItem experience={data[job]} /> : null}
+            </AnimatePresence>
           </div>
         </div>
       ) : null}
