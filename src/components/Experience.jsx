@@ -1,7 +1,7 @@
 // Components
 import ExperienceCarousel from "./HelperComponents/ExprienceCarousel";
 // Data
-import experienceData from "../data/experience.json";
+import { experienceData } from "../data";
 
 const Experience = () => {
   return (

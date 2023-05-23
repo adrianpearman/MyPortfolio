@@ -46,7 +46,7 @@ const App = () => {
         />
         <AboutMe offsetHeight={offsetHeight} />
         <Experience />
-        <Projects />
+        <Projects offsetHeight={offsetHeight} />
         <ContactForm />
         <Footer />
       </MainContext>
