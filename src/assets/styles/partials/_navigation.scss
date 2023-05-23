@@ -7,22 +7,26 @@ nav {
   top: 0;
   left: 0;
   transition: all 150ms linear 0ms;
-  z-index: 1;
+  z-index: 2;
 
   ul {
     display: flex;
     flex-direction: row;
     padding: 0;
-    
+
     li {
       list-style: none;
       text-align: center;
       width: 100%;
     }
-    
+
     a {
       border: 1px solid $primaryColorDark;
-      background: linear-gradient(to right, transparent 50%, $primaryColorLight 50%);
+      background: linear-gradient(
+        to right,
+        transparent 50%,
+        $primaryColorLight 50%
+      );
       background-size: 200% 100%;
       background-position: left bottom;
       display: block;
@@ -30,11 +34,11 @@ nav {
       font-size: 2.5rem;
       letter-spacing: 1px;
       padding: 20px;
-      text-decoration: none;   
-      text-transform: uppercase;   
+      text-decoration: none;
+      text-transform: uppercase;
       transition: all 0.5s ease;
       width: 100%;
-      
+
       &:focus,
       &:hover {
         background-color: $primaryColorLight;

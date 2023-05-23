@@ -1,10 +1,14 @@
-@use './variables' as *;
-
+@use "./variables" as *;
 
 .projects {
   background: $secondaryColorDark;
-  background: linear-gradient(180deg, $secondaryColorDark 0%, $primaryColorLight 100%);
-  height: 700px;
+  background: linear-gradient(
+    180deg,
+    $secondaryColorDark 0%,
+    $primaryColorLight 100%
+  );
+  min-height: 100vh;
+  position: relative;
 
   h2 {
     font-size: 7rem;
@@ -29,17 +33,89 @@
     flex-direction: column;
   }
 
+  .languagesContainer {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      border: 1px solid black;
+      font-size: 2rem;
+      list-style: none;
+      margin: 5px;
+      padding: 10px 0;
+      width: calc((100% / 3) - 10px);
+
+      i {
+        display: block;
+      }
+    }
+  }
+
   .projectsContainer {
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 
-    p {
+    h3 {
       font-size: 3rem;
       font-family: $primaryFontBold;
-      width: 75%;
-      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-family: $primaryFont;
+    }
+  }
+
+  .projectDisplayContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+    .projectItem {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 3px;
+      height: 250px;
+      list-style: none;
+      margin: 5px 0;
+      overflow: hidden;
+      position: relative;
+      width: calc((100% / 3) - 5px);
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus .projectTitleContainer,
+      &:hover .projectTitleContainer {
+        opacity: 1;
+      }
+
+      img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+
+      .projectTitleContainer {
+        align-items: center;
+        background: rgba($black, 1);
+        color: $cream;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        transition: all 0.3s;
+        width: 100%;
+      }
     }
   }
 }

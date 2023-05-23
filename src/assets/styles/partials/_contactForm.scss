@@ -1,8 +1,12 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 .contactForm {
   background: $primaryColorLight;
-  background: linear-gradient(180deg, $primaryColorLight 0%, $primaryColorDark 100%);
+  background: linear-gradient(
+    180deg,
+    $primaryColorLight 0%,
+    $primaryColorDark 100%
+  );
 
   h2 {
     font-size: 7rem;
@@ -38,7 +42,7 @@
       color: $cream;
       font-family: $primaryFont;
       font-size: 2rem;
-      margin: 20px ;
+      margin: 20px;
       padding: 20px 40px;
       position: relative;
       text-decoration: none;
@@ -60,22 +64,25 @@
         pointer-events: none;
       }
     }
-    
+
     form {
       display: flex;
       flex-wrap: wrap;
       margin: 30px auto 0;
-      width: 70%;
+      width: 80%;
     }
 
     label {
       font-family: $primaryFont;
       font-size: 2rem;
     }
-    
-    textarea { height: 200px; }
 
-    input, textarea {
+    textarea {
+      height: 200px;
+    }
+
+    input,
+    textarea {
       border-color: transparent;
       border-radius: 5px;
       box-shadow: 3px 3px 10px $black;
@@ -95,13 +102,13 @@
 
     .textContainer {
       text-align: left;
-      width: 70%;
+      width: 80%;
       margin: 20px auto 50px;
       padding: 0 20px;
 
-      p { 
+      p {
         font-size: 2rem;
-        margin: 10px 50px; 
+        margin: 10px 50px;
       }
 
       .introTop,
@@ -128,25 +135,24 @@
     width: 100%;
   }
 
-
   .nameContainer {
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .firstName, 
+  .firstName,
   .lastName {
     display: flex;
     flex-direction: column;
     width: 49%;
   }
-  
+
   .buttonContainer {
     align-items: center;
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
-    width: 65%;
+    width: 75%;
 
     a {
       border: 2px solid $black;
@@ -159,8 +165,8 @@
       text-decoration: none;
       transition: all 250ms;
 
-      &:focus, 
-      &:hover { 
+      &:focus,
+      &:hover {
         background-color: $primaryColorDark;
         box-shadow: 3px 0px 0px $primaryColorDark;
         cursor: pointer;
@@ -168,7 +174,9 @@
       }
     }
 
-    i { padding-right: 10px; }
+    i {
+      padding-right: 10px;
+    }
 
     #linkedin {
       background-color: $linkedin;
