@@ -1,18 +1,19 @@
 // Fonts
-@use './fonts/fontFamily';
+@use "./fonts/fontFamily";
 // Vendor Files
-@use './vendors/normalize';
+@use "./vendors/normalize";
 // Base Partials
-@use './partials/variables';
-@use './partials/setup';
-@use './partials/base';
+@use "./partials/variables";
+@use "./partials/setup";
+@use "./partials/base";
 // Component Partials
-@use './partials/navigation';
-@use './partials/header';
-@use './partials/aboutMe';
-@use './partials/experience';
-@use './partials/projects';
-@use './partials/contactForm';
-@use './partials/footer';
+@use "./partials/navigation";
+@use "./partials/header";
+@use "./partials/aboutMe";
+@use "./partials/experience";
+@use "./partials/projects";
+@use "./partials/modal";
+@use "./partials/contactForm";
+@use "./partials/footer";
 // Media Queries
-@use './partials/mediaQueries'
+@use "./partials/mediaQueries";
