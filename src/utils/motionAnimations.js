@@ -1,4 +1,8 @@
 export const dropIn = {
+  exit: {
+    y: "100vh",
+    opacity: 0,
+  },
   hidden: {
     y: "-100vh",
     opacity: 0,
@@ -13,15 +17,15 @@ export const dropIn = {
       stiffness: 500,
     },
   },
-  exit: {
-    y: "100vh",
-    opacity: 0,
-  },
 };
 
 export const dropOver = {
+  exit: {
+    x: "-40vw",
+    opacity: 0,
+  },
   hidden: {
-    x: "-100vw",
+    x: "-40vw",
     opacity: 0,
   },
   visible: {
@@ -34,8 +38,25 @@ export const dropOver = {
       stiffness: 500,
     },
   },
+};
+
+export const carouselSlideOver = {
   exit: {
     x: "-100vw",
     opacity: 0,
+  },
+  hidden: {
+    x: "100vw",
+    opacity: 0,
+  },
+  visible: {
+    x: "0",
+    opacity: 1,
+    transition: {
+      duration: 0.3,
+      type: "string",
+      damping: 25,
+      stiffness: 500,
+    },
   },
 };
