@@ -1,8 +1,3 @@
-// Components
-import ProjectCarousel from "./HelperComponents/ProjectCarousel";
-// Data
-import projectData from "../data/projects.json";
-
 const Projects = () => {
   return (
     <div className="projects">
@@ -20,7 +15,6 @@ const Projects = () => {
             <br />
             🏗 🚧 👷🏾‍♂️
           </p>
-          {/* <ProjectCarousel data={projectData}/> */}
         </div>
       </div>
     </div>
