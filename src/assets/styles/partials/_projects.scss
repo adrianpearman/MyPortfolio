@@ -7,7 +7,8 @@
     $secondaryColorDark 0%,
     $primaryColorLight 100%
   );
-  min-height: 100vh;
+  height: 100vh;
+  // min-height: 100vh;
   position: relative;
 
   h2 {
@@ -33,31 +34,12 @@
     flex-direction: column;
   }
 
-  .languagesContainer {
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
-    li {
-      border: 1px solid black;
-      font-size: 2rem;
-      list-style: none;
-      margin: 5px;
-      padding: 10px 0;
-      width: calc((100% / 3) - 10px);
-
-      i {
-        display: block;
-      }
-    }
-  }
-
   .projectsContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100%;
 
     h3 {
       font-size: 3rem;
@@ -65,28 +47,63 @@
       margin-bottom: 20px;
     }
 
+    // p {
+    //   font-family: $primaryFont;
+    // }
+
     p {
-      font-family: $primaryFont;
+      font-size: 3rem;
+      font-family: $primaryFontBold;
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .buttonContainer {
+      display: flex;
+      margin: 0 auto 30px;
+      width: 80%;
+      justify-content: space-around;
+
+      button {
+        background-color: $primaryColorLight;
+        border: 2px solid $primaryColorDark;
+        border-radius: 5px;
+        box-shadow: 3px 3px 0px $primaryColorDark;
+        color: $cream;
+        font-size: 2rem;
+        padding: 20px;
+        position: relative;
+        text-decoration: none;
+        transition: all 250ms;
+
+        &:focus,
+        &:hover {
+          background-color: $primaryColorDark;
+          box-shadow: 3px 0px 0px $primaryColorDark;
+          cursor: pointer;
+          top: 3px;
+        }
+      }
     }
   }
 
   .projectDisplayContainer {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 100%;
+    margin: 20px auto;
+    width: 80%;
 
     .projectItem {
-      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       border-radius: 3px;
-      height: 250px;
+      height: 350px;
       list-style: none;
       margin: 5px 0;
       overflow: hidden;
       position: relative;
-      width: calc((100% / 3) - 5px);
 
       &:hover {
         cursor: pointer;
@@ -105,7 +122,7 @@
 
       .projectTitleContainer {
         align-items: center;
-        background: rgba($black, 1);
+        background: rgba($primaryColorLight, 0.95);
         color: $cream;
         display: flex;
         flex-direction: column;
