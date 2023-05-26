@@ -1,6 +1,11 @@
+// NPM Modules
+import { v4 as uuidv4 } from "uuid";
 // Components
 import HelperFlipCard from "./HelperComponents/HelperFlipCard";
 import HelperLinkScroll from "./HelperComponents/HelperLinkScroll";
+import HelperLanguageIcon from "./HelperComponents/HelperLanguageIcon";
+//
+import { languageData } from "../data";
 // Images
 import pdf from "../assets/pdfs/Adrian_Pearman_Resume-2023.pdf";
 import profilePhoto1 from "../assets/images/profilePhoto_1_2023.jpg";
@@ -71,6 +76,20 @@ const AboutMe = ({ offsetHeight }) => {
               </a>
             </div>
           </div>
+        </div>
+        <div className="skillsContainer">
+          <h3>
+            Langauages<span></span>
+          </h3>
+          <ul>
+            {languageData.map((lang) => {
+              return (
+                <li key={uuidv4()}>
+                  <HelperLanguageIcon langugage={lang} />
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     </div>

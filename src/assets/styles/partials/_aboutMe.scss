@@ -1,11 +1,11 @@
-@use './variables' as *;
+@use "./variables" as *;
 
 .aboutMe {
   background: $cream;
   background: linear-gradient(180deg, $cream 0%, $secondaryColorLight 100%);
 
-  h2 {
-    font-size: 7rem;
+  h2,
+  h3 {
     font-family: $headingFont;
 
     span {
@@ -18,19 +18,27 @@
     }
   }
 
+  h2 {
+    font-size: 7rem;
+  }
+  h3 {
+    font-size: 4rem;
+    margin: 5px 0 15px;
+  }
+
   .wrapper {
     background-color: rgba($cream, 0.5);
     height: 85%;
     padding: 20px;
     text-align: center;
   }
-  
-  .aboutMeContainer{
+
+  .aboutMeContainer {
     display: flex;
     height: 80%;
     padding-top: 40px;
   }
-  
+
   .imageContainer {
     margin: 30px 50px;
     min-height: 550px;
@@ -40,9 +48,9 @@
     .flipImgContainerFront {
       border-radius: 10px;
 
-      img { 
+      img {
         border-radius: inherit;
-        width: 100%; 
+        width: 100%;
       }
 
       p {
@@ -58,29 +66,29 @@
         width: 100%;
       }
 
-      span { 
+      span {
         font-family: $primaryFontBold;
         letter-spacing: 1.5px;
       }
     }
   }
-  
-  .textContainer{
+
+  .textContainer {
     display: flex;
     flex-direction: column;
     justify-content: start;
     margin-top: 30px;
     position: relative;
-    text-align: left; 
+    text-align: left;
     width: 55%;
-    
+
     p {
       margin: 10px 50px;
       font-size: 2rem;
     }
 
     .introTop,
-    .introBottom{
+    .introBottom {
       font-family: $secondaryFont;
       font-size: 2.5rem;
       letter-spacing: 1px;
@@ -101,18 +109,44 @@
         text-decoration: none;
         transition: all 250ms;
 
-        &:first-child { margin-right: 20px; }
-      
-        &:focus, 
-        &:hover { 
+        &:first-child {
+          margin-right: 20px;
+        }
+
+        &:focus,
+        &:hover {
           background-color: $primaryColorDark;
           box-shadow: 3px 0px 0px $primaryColorDark;
           cursor: pointer;
           top: 3px;
         }
 
-        i { padding-right: 10px; }
+        i {
+          padding-right: 10px;
+        }
       }
+    }
+  }
+
+  .skillsContainer {
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    li {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      list-style: none;
+      margin: 10px;
+      width: calc(20% - 20px);
+    }
+
+    p {
+      margin-top: 10px;
     }
   }
 }
