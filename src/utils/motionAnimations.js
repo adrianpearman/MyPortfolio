@@ -21,11 +21,11 @@ export const dropIn = {
 
 export const dropOver = {
   exit: {
-    x: "-40vw",
+    x: "-60%",
     opacity: 0,
   },
   hidden: {
-    x: "-40vw",
+    x: "-60%",
     opacity: 0,
   },
   visible: {
