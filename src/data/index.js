@@ -277,3 +277,16 @@ export const experienceData = [
     location: "Halifax, NS",
   },
 ];
+
+export const languageData = [
+  "HTML5",
+  "CSS3",
+  "SCSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MySQL",
+  "NoSQL",
+  "Github",
+];
