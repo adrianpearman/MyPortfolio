@@ -14,6 +14,12 @@
       }
     }
   }
+  // About Me
+  .experience {
+    .wrapper {
+      min-height: 100vh;
+    }
+  }
 }
 // 768px
 @media (max-width: $tablet) {
@@ -73,6 +79,17 @@
       }
     }
   }
+
+  .aboutMe {
+    .skillsContainer {
+      ul {
+        justify-content: center;
+      }
+      li {
+        width: calc(25% - 20px);
+      }
+    }
+  }
 }
 // 600px
 @media (max-width: $mobileLarge) {
@@ -82,6 +99,10 @@
   }
   // Experience
   .experience {
+    .wrapper {
+      min-height: 130vh;
+    }
+
     .jobContainer {
       display: flex;
       flex-direction: column;
@@ -165,6 +186,11 @@
       p {
         margin: 10px;
         font-size: 2rem;
+      }
+    }
+    .skillsContainer {
+      li {
+        width: calc((100% / 3) - 20px);
       }
     }
   }
