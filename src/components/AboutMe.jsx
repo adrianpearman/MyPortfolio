@@ -79,7 +79,7 @@ const AboutMe = ({ offsetHeight }) => {
         </div>
         <div className="skillsContainer">
           <h3>
-            Langauages<span></span>
+            Languages<span></span>
           </h3>
           <ul>
             {languageData.map((lang) => {

@@ -178,7 +178,7 @@ const ContactForm = () => {
               target="_blank"
             >
               <i className="fa-solid fa-calendar-days"></i>
-              Calendy
+              Calendly
             </a>
           </div>
         </div>
