@@ -6,8 +6,6 @@ import landingImage from "../assets/images/HeaderBackground2.png";
 const Header = ({ offsetHeight }) => {
   const style = {
     backgroundImage: `url(${landingImage})`,
-    backgroundAttachment: "fixed",
-    backgroundSize: "cover",
   };
 
   return (
