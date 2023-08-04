@@ -1,4 +1,11 @@
 @use "./variables" as *;
+
+// 1024px
+@media (max-width: calc($displaySmallLaptop + 124px)) {
+  .selectedProject .selectedProjectImage a {
+    width: 90%;
+  }
+}
 // 945px
 @media (max-width: calc($displaySmallLaptop + 45px)) {
   .buttonContainer a {
@@ -19,6 +26,33 @@
     .wrapper {
       min-height: 100vh;
     }
+  }
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    margin-bottom: 20px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      width: calc(25% - 20px);
+    }
+  }
+}
+// 800px
+@media (max-width: calc($displaySmallLaptop - 100px)) {
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    li {
+      min-height: 160px;
+      width: calc(25% - 20px);
+    }
+  }
+
+  .projects .projectDisplayContainer .projectItem {
+    width: 100%;
   }
 }
 // 768px
@@ -53,7 +87,6 @@
       }
     }
   }
-  //
   // Contact Me
   .contactForm .buttonContainer {
     align-items: center;
@@ -68,6 +101,18 @@
       width: 100%;
     }
   }
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    li {
+      min-height: 145px;
+    }
+  }
+}
+// 700px
+@media (max-width: calc($mobileLarge + 100px)) {
+  .selectedProject .selectedProjectContent .linkContainer {
+    width: 70%;
+  }
 }
 // 650px
 @media (max-width: calc($mobileLarge + 50px)) {
@@ -79,7 +124,7 @@
       }
     }
   }
-
+  // About Me
   .aboutMe {
     .skillsContainer {
       ul {
@@ -88,6 +133,12 @@
       li {
         width: calc(25% - 20px);
       }
+    }
+  }
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    li {
+      width: calc((100% / 3) - 20px);
     }
   }
 }
@@ -137,7 +188,12 @@
     .projectsContainer {
       p {
         font-size: 2.5rem;
-        font-family: "Garet Bold", sans-serif;
+        font-family: $primaryFontBold;
+      }
+    }
+    .projectTitleContainer {
+      p {
+        font-family: $primaryFont;
       }
     }
   }
@@ -219,6 +275,17 @@
     .nameContainer {
       flex-direction: column;
     }
+  }
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    li {
+      min-height: 135px;
+      width: calc(25% - 20px);
+    }
+  }
+
+  .selectedProject .selectedProjectContent .linkContainer {
+    width: 100%;
   }
 }
 // 390px

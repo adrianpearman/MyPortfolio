@@ -18,8 +18,10 @@
       display: block;
       height: 10px;
       margin: 0 auto;
+      position: relative;
       transform: skew(-20deg);
       width: 50%;
+      z-index: 0;
     }
   }
 
