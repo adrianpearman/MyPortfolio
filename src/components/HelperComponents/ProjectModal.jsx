@@ -1,14 +1,18 @@
 // NPM Modules
 import { motion } from "framer-motion";
 import { v4 as uuidv4 } from "uuid";
+import { useLockBodyScroll } from "@uidotdev/usehooks";
 // Components
 import ModalBackground from "./ModalBackground";
+import HelperLanguageIcon from "./HelperLanguageIcon";
 // Util function
 import { dropIn } from "../../utils/motionAnimations";
 
 const ProjectModal = ({ handleClose, selectedProject }) => {
-  const { liveLink, overview, projectImage, repoLink, stack, title } =
-    selectedProject;
+  const { liveLink, projectImage, repoLink, stack, title } = selectedProject;
+
+  // stops the body from scrolling while modal is open
+  useLockBodyScroll();
   return (
     <ModalBackground onClick={handleClose}>
       <motion.div
@@ -20,7 +24,7 @@ const ProjectModal = ({ handleClose, selectedProject }) => {
         variants={dropIn}
         tabIndex={1}
       >
-        <div className="selectedProjectContent">
+        <div className="selectedProject">
           <i
             className="close-modal fa-regular fa-rectangle-xmark"
             onClick={handleClose}
@@ -30,27 +34,39 @@ const ProjectModal = ({ handleClose, selectedProject }) => {
             <span></span>
           </h2>
           <div className="selectedProjectImage">
-            <a href={liveLink} target="_blank">
+            <a href={liveLink} target="_blank" rel="noreferrer">
               <img alt={`${title}`} src={projectImage}></img>
             </a>
           </div>
           <div className="selectedProjectContent">
-            <h3>Project Overview</h3>
-            <p>{overview}</p>
-            <h3>Tech Stack</h3>
-            <ul>
-              {stack.map((language) => {
-                return <li key={uuidv4()}>{language}</li>;
-              })}
-            </ul>
-            <div>
+            <div className="techContainer">
+              <h3>
+                Tech Stack
+                <span></span>
+              </h3>
+              <ul>
+                {stack.map((language) => {
+                  return (
+                    <li key={uuidv4()}>
+                      <HelperLanguageIcon langugage={language} />
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+
+            <div className="linkContainer">
+              <h3>
+                Links
+                <span></span>
+              </h3>
               {liveLink ? (
-                <a className="" href={liveLink} target="_blank">
+                <a href={liveLink} target="_blank" rel="noreferrer">
                   Live Link
                 </a>
               ) : null}
               {repoLink ? (
-                <a className="" href={repoLink} target="_blank">
+                <a href={repoLink} target="_blank" rel="noreferrer">
                   Github
                 </a>
               ) : null}
