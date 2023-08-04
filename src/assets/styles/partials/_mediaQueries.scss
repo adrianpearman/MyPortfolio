@@ -34,6 +34,7 @@
     ul {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     li {
@@ -138,7 +139,7 @@
   // Project Modal
   .selectedProject .selectedProjectContent .techContainer {
     li {
-      width: calc((100% / 3) - 20px);
+      width: calc((100% / 3) - 10px);
     }
   }
 }
@@ -280,7 +281,10 @@
   .selectedProject .selectedProjectContent .techContainer {
     li {
       min-height: 135px;
-      width: calc(25% - 20px);
+    }
+
+    p {
+      font-size: 1.7rem;
     }
   }
 
@@ -290,6 +294,7 @@
 }
 // 390px
 @media (max-width: calc($mobileSmall - 35px)) {
+  // About Me
   .aboutMe {
     .imageContainer {
       margin: 30px auto 0;
@@ -301,6 +306,12 @@
       position: initial;
       text-align: center;
       width: 100%;
+    }
+  }
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    li {
+      width: calc(50% - 20px);
     }
   }
 }
