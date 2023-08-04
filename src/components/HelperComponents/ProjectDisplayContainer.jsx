@@ -6,6 +6,7 @@ const ProjectDisplayContainer = ({ data, handleShowProjectModal }) => {
     <ul className="projectDisplayContainer">
       {data.map((project) => {
         const { title, projectImage } = project;
+
         return (
           <li
             className="projectItem"
@@ -15,9 +16,12 @@ const ProjectDisplayContainer = ({ data, handleShowProjectModal }) => {
             onKeyDown={(e) => {
               handleShowProjectModal(e, project);
             }}
-            style={{ backgroundImage: `url(${projectImage})` }}
-            tabIndex={0}
             key={uuidv4()}
+            style={{
+              backgroundImage: `url(${projectImage})`,
+              backgroundPosition: "center",
+            }}
+            tabIndex={0}
           >
             <div className="projectTitleContainer">
               <h3>{title}</h3>
