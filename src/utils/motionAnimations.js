@@ -39,24 +39,3 @@ export const dropOver = {
     },
   },
 };
-
-export const carouselSlideOver = {
-  exit: {
-    x: "-100vw",
-    opacity: 0,
-  },
-  hidden: {
-    x: "100vw",
-    opacity: 0,
-  },
-  visible: {
-    x: "0",
-    opacity: 1,
-    transition: {
-      duration: 0.3,
-      type: "string",
-      damping: 25,
-      stiffness: 500,
-    },
-  },
-};
