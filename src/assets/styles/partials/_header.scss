@@ -1,0 +1,76 @@
+@use "./variables" as *;
+
+header {
+  align-items: center;
+  // background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+  h1,
+  h2 {
+    font-family: $headingFont;
+  }
+
+  h1 {
+    font-size: calc(13rem + 5vw);
+    text-transform: uppercase;
+  }
+
+  h2 {
+    transform: skew(-20deg);
+
+    a {
+      background: linear-gradient(
+        to right,
+        transparent 50%,
+        $primaryColorDark 50%
+      );
+      background-size: 200% 100%;
+      background-position: left bottom;
+      font-size: 5rem;
+      letter-spacing: 2px;
+      padding: 15px 25px 5px;
+      transition: all 0.5s ease;
+      text-transform: uppercase;
+
+      &:focus,
+      &:hover {
+        background-color: $primaryColorDark;
+        background-position: right bottom;
+        cursor: pointer;
+      }
+    }
+  }
+
+  span {
+    background-color: $primaryColorDark;
+    display: inline-block;
+    height: 15px;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .backgroundBlend {
+    background: linear-gradient(180deg, transparent 0%, $cream 100%);
+    bottom: 0;
+    height: 20%;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .wrapper {
+    align-items: center;
+    color: $cream;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: space-evenly;
+    margin: auto 0;
+  }
+}

@@ -1,0 +1,319 @@
+@use "./variables" as *;
+
+// 1024px
+@media (max-width: calc($displaySmallLaptop + 124px)) {
+  .selectedProject .selectedProjectImage a {
+    width: 90%;
+  }
+}
+// 945px
+@media (max-width: calc($displaySmallLaptop + 45px)) {
+  .buttonContainer a {
+    text-align: center;
+  }
+}
+// 900px
+@media (max-width: $displaySmallLaptop) {
+  nav {
+    ul {
+      a {
+        font-size: 2rem;
+      }
+    }
+  }
+  // About Me
+  .experience {
+    .wrapper {
+      min-height: 100vh;
+    }
+  }
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    margin-bottom: 20px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    li {
+      width: calc(25% - 20px);
+    }
+  }
+}
+// 800px
+@media (max-width: calc($displaySmallLaptop - 100px)) {
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    li {
+      min-height: 160px;
+      width: calc(25% - 20px);
+    }
+  }
+
+  .projects .projectDisplayContainer .projectItem {
+    width: 100%;
+  }
+}
+// 768px
+@media (max-width: $tablet) {
+  // Navigation Section
+  nav {
+    ul {
+      a {
+        font-size: 2rem;
+        padding: 10px 5px;
+      }
+    }
+  }
+  // About Me Section
+  .aboutMe {
+    .aboutMeContainer {
+      flex-direction: column;
+    }
+
+    .imageContainer {
+      margin: 30px auto 0;
+      min-height: 50px;
+      width: 80%;
+    }
+
+    .textContainer {
+      margin: 30px auto 0;
+      width: 90%;
+
+      .buttonContainer {
+        margin: 30px auto;
+      }
+    }
+  }
+  // Contact Me
+  .contactForm .buttonContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 65%;
+
+    a {
+      margin-bottom: 20px;
+      width: 100%;
+    }
+  }
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    li {
+      min-height: 145px;
+    }
+  }
+}
+// 700px
+@media (max-width: calc($mobileLarge + 100px)) {
+  .selectedProject .selectedProjectContent .linkContainer {
+    width: 70%;
+  }
+}
+// 650px
+@media (max-width: calc($mobileLarge + 50px)) {
+  nav {
+    ul {
+      flex-wrap: wrap;
+      li {
+        width: 50%;
+      }
+    }
+  }
+  // About Me
+  .aboutMe {
+    .skillsContainer {
+      ul {
+        justify-content: center;
+      }
+      li {
+        width: calc(25% - 20px);
+      }
+    }
+  }
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    li {
+      width: calc((100% / 3) - 20px);
+    }
+  }
+}
+// 600px
+@media (max-width: $mobileLarge) {
+  // Header
+  header h1 {
+    font-size: calc(10rem + 5vw);
+  }
+  // Experience
+  .experience {
+    .wrapper {
+      min-height: 130vh;
+    }
+
+    .jobContainer {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .jobTitleContainer {
+      margin: 20px 0;
+      width: 100%;
+
+      h3 {
+        display: none;
+      }
+    }
+
+    .jobTitleDescription {
+      margin: 0;
+      padding: 10px 40px;
+      text-align: left;
+      width: 100%;
+
+      span {
+        display: block;
+      }
+    }
+
+    .jobTitleList span {
+      display: block;
+    }
+  }
+  // Projects
+  .projects {
+    .projectsContainer {
+      p {
+        font-size: 2.5rem;
+        font-family: $primaryFontBold;
+      }
+    }
+    .projectTitleContainer {
+      p {
+        font-family: $primaryFont;
+      }
+    }
+  }
+  // Contact Form
+  .contactForm {
+    .buttonContainer {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 30px auto;
+      width: 95%;
+    }
+    .formContainer {
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 30px auto 0;
+        width: 95%;
+      }
+
+      .textContainer {
+        text-align: left;
+        width: 95%;
+        margin: 20px auto 50px;
+        padding: 0 20px;
+      }
+    }
+  }
+}
+// 500px
+@media (max-width: $mobile) {
+  // Header
+  header {
+    h1 {
+      font-size: calc(8rem + 5vw);
+    }
+
+    h2 a {
+      font-size: 3.5rem;
+    }
+  }
+  // About Me
+  .aboutMe {
+    .textContainer {
+      p {
+        margin: 10px;
+        font-size: 2rem;
+      }
+    }
+    .skillsContainer {
+      li {
+        width: calc((100% / 3) - 20px);
+      }
+    }
+  }
+  // Contact Form
+  .contactForm {
+    .firstName {
+      margin-bottom: 20px;
+    }
+
+    & .firstName,
+    & .lastName {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .formContainer {
+      .textContainer {
+        p {
+          font-size: 2rem;
+          margin: 10px 50px;
+        }
+      }
+    }
+
+    .nameContainer {
+      flex-direction: column;
+    }
+  }
+  // Project Modal
+  .selectedProject .selectedProjectContent .techContainer {
+    li {
+      min-height: 135px;
+      width: calc(25% - 20px);
+    }
+  }
+
+  .selectedProject .selectedProjectContent .linkContainer {
+    width: 100%;
+  }
+}
+// 390px
+@media (max-width: calc($mobileSmall - 35px)) {
+  .aboutMe {
+    .imageContainer {
+      margin: 30px auto 0;
+      min-height: 50px;
+    }
+    .flipImgContainerFront p {
+      font-size: 2rem;
+      padding: 20px;
+      position: initial;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+// 360px
+@media (max-width: calc($mobileSmall - 65px)) {
+  // Header
+  header {
+    h1 {
+      font-size: calc(8rem);
+    }
+
+    h2 a {
+      font-size: 3rem;
+    }
+  }
+}
