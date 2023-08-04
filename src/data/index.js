@@ -9,9 +9,18 @@ import omnifood from "../assets/images/projectPhotos/omnifood.png";
 import spaceX from "../assets/images/projectPhotos/space-x.png";
 import travelLog from "../assets/images/projectPhotos/travel-log.png";
 import trillo from "../assets/images/projectPhotos/trillo.png";
+import weddingLandingPage from "../assets/images/projectPhotos/wedding-landing-page.png";
 import ventours from "../assets/images/projectPhotos/ventours.png";
 
 export const projectData = [
+  {
+    stack: ["HTML5", "SCSS", "JavaScript", "Node"],
+    title: "Wedding Landing Page",
+    projectImage: weddingLandingPage,
+    overview: "",
+    liveLink: "https://www.thepearmanwedding.com/",
+    repoLink: "https://github.com/adrianpearman/wedding-landing-page",
+  },
   {
     stack: ["HTML5", "SCSS", "React", "Gatsby", "Google Analytics"],
     title: "Juno College",
@@ -21,7 +30,7 @@ export const projectData = [
     repoLink: "",
   },
   {
-    stack: ["HTML5", "SASS", "React", "Redux", "Cypress"],
+    stack: ["HTML5", "SASS", "React", "Redux"],
     title: "BMO Personal Services",
     projectImage: bmo2,
     overview: "",
@@ -29,7 +38,7 @@ export const projectData = [
     repoLink: "",
   },
   {
-    stack: ["HTML5", "JavaScript", "SCSS", "Vue.js", "Nuxt", "Node"],
+    stack: ["HTML5", "JavaScript", "SCSS", "Vue.js", "Node"],
     title: "New Seaton Landing Page",
     projectImage: newSeaton,
     overview: "",
@@ -42,11 +51,9 @@ export const projectData = [
       "Materialize",
       "JavaScript",
       "React",
-      "React-Hook-Form",
       "Node",
       "Express",
       "MongoDB",
-      "Helmet",
     ],
     title: "Travel Log App",
     projectImage: travelLog,
@@ -74,15 +81,7 @@ export const projectData = [
   // },
 
   {
-    stack: [
-      "HTML5",
-      "Bootstrap",
-      "JavaScript",
-      "React",
-      "React-Router",
-      "GraphQL",
-      "Node",
-    ],
+    stack: ["HTML5", "Bootstrap", "JavaScript", "React", "GraphQL", "Node"],
     title: "SpaceX Rocket Tracker",
     projectImage: spaceX,
     overview: "",
