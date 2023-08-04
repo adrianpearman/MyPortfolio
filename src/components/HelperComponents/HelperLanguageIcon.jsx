@@ -1,13 +1,16 @@
 // Icons
 import BootstrapLogo from "../../assets/images/languageIcons/bootstrap.svg";
 import CSSLogo from "../../assets/images/languageIcons/css3.svg";
+import ExpressJS from "../../assets/images/languageIcons/expressjs.svg";
 import FirebaseLogo from "../../assets/images/languageIcons/firebase.svg";
+import GatsbyLogo from "../../assets/images/languageIcons/gatsbyjs-icon.svg";
 import GithubLogo from "../../assets/images/languageIcons/github.svg";
 import GoogleLogo from "../../assets/images/languageIcons/google.svg";
 import GraphQLLogo from "../../assets/images/languageIcons/graphql.svg";
 import HTMLLogo from "../../assets/images/languageIcons/html.svg";
 import JavaScriptLogo from "../../assets/images/languageIcons/javascript.svg";
 import JQueryLogo from "../../assets/images/languageIcons/jquery.svg";
+import Materialize from "../../assets/images/languageIcons/materialize.svg";
 import MongoDBLogo from "../../assets/images/languageIcons/mongodb-icon.svg";
 import NodeLogo from "../../assets/images/languageIcons/nodejs-icon.svg";
 import ReactLogo from "../../assets/images/languageIcons/react.svg";
@@ -65,6 +68,16 @@ const HelperLanguageIcon = ({ langugage }) => {
           <img
             src={JQueryLogo}
             alt={"jQuery SVG icon from Icon Scout"}
+            className="languageIcon"
+          />
+        </>
+      );
+    } else if (lang.toLowerCase() === "gatsby") {
+      return (
+        <>
+          <img
+            src={GatsbyLogo}
+            alt={"Gatsby SVG icon from Icon Scout"}
             className="languageIcon"
           />
         </>
@@ -168,7 +181,10 @@ const HelperLanguageIcon = ({ langugage }) => {
           />
         </>
       );
-    } else if (lang.toLowerCase() === "google") {
+    } else if (
+      lang.toLowerCase() === "google" ||
+      lang.toLowerCase() === "google analytics"
+    ) {
       return (
         <>
           <img
@@ -194,6 +210,26 @@ const HelperLanguageIcon = ({ langugage }) => {
           <img
             src={BootstrapLogo}
             alt={"Bootstrap SVG icon from Icon Scout"}
+            className="languageIcon"
+          />
+        </>
+      );
+    } else if (lang.toLowerCase() === "materialize") {
+      return (
+        <>
+          <img
+            src={Materialize}
+            alt={"Materialize SVG icon from Icon Scout"}
+            className="languageIcon"
+          />
+        </>
+      );
+    } else if (lang.toLowerCase() === "express") {
+      return (
+        <>
+          <img
+            src={ExpressJS}
+            alt={"Express JS SVG icon from Icon Scout"}
             className="languageIcon"
           />
         </>
