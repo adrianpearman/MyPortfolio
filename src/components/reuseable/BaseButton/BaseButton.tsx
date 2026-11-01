@@ -3,6 +3,7 @@ import { cn } from "@/utils/";
 type TButtonProps = {
   className?: string;
   children?: React.ReactNode;
+  onClick?: () => void;
   variant?: "primary" | "secondary" | "tertiary";
 };
 
@@ -19,6 +20,7 @@ const variantClasses = {
 export const BaseButton = ({
   className = "",
   children,
+  onClick,
   variant = "primary",
 }: TButtonProps) => {
   return (
@@ -28,6 +30,7 @@ export const BaseButton = ({
         variantClasses[variant],
         className,
       )}
+      onClick={onClick}
     >
       {children}
     </button>

@@ -49,6 +49,7 @@
   --button-tertiary-text: var(--color-button-tertiary-text);
   /* Miscellaneous */
   --color-green-status-icon: #2ec4b6;
+  --color-purple-cell-background: #9b5de5;
 }
 
 @layer base {
