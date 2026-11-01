@@ -16,7 +16,7 @@ export const ProjectsCarousel = () => {
             <ProjectCarouselPill content="asd" />
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             <div className="flex gap-2">
               <ProjectCarouselButton
                 direction="previous"
@@ -27,7 +27,9 @@ export const ProjectsCarousel = () => {
                 onClick={() => console.log("adsasdasd")}
               />
             </div>
-            <p>1 of 12</p>
+            <p className="text-secondary-paragraph text-text-secondary-on-dark">
+              1 of 12
+            </p>
           </div>
         </div>
       </div>
