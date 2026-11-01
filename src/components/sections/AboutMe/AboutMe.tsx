@@ -12,7 +12,7 @@ export const AboutMe = () => {
       <BaseCell className="w-1/2">
         <AboutMeContent />
       </BaseCell>
-      <BaseCell className="w-1/4">
+      <BaseCell className="w-1/4 bg-transparent">
         <ProfileFlipCard />
       </BaseCell>
       <BaseCell className="w-1/4">
