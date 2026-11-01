@@ -1,1 +1,79 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("./fonts/Bricolage_Grotesque_Open_Sans/Bricolage_Grotesque/static/BricolageGrotesque-ExtraBold.ttf")
+    format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "Instrumental Sans";
+  src: url("./fonts/Instrument_Sans/InstrumentSans-VariableFont_wdth,wght.ttf")
+    format("truetype-variations");
+}
+
+@theme {
+  /* Colors */
+  --color-background-landing: #1b1f3b;
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f5f5f5;
+  --color-background-tertiary: #d9dce3;
+  --color-text-primary: #1b1f3b;
+  --color-text-primary-on-dark: #ffffff;
+  --color-text-secondary: #5b6075;
+  --color-text-secondary-on-dark: #c9cbdb;
+  --color-button-primary-background: #1b1f3b;
+  --color-button-primary-text: #ffffff;
+  --color-button-secondary-background: #ffffff;
+  --color-button-secondary-text: #1b1f3b;
+  --color-button-tertiary-background: transparent;
+  --color-button-tertiary-text: #ffffff;
+  /* Fonts */
+  --font-heading: "Bricolage Grotesque", sans-serif;
+  --font-body: "Instrumental Sans", sans-serif;
+  /* Font Sizes */
+  --text-hero-heading: 11rem;
+  --text-heading-1: 7rem;
+  --text-heading-2: 6rem;
+  --text-heading-3: 2.75rem;
+  --text-heading-4: 1.75rem;
+  --text-paragraph: 1rem;
+  --text-secondary-paragraph: 0.875rem;
+  /* Buttons */
+  --button-primary-background: var(--color-button-primary-background);
+  --button-primary-text: var(--color-button-primary-text);
+  --button-secondary-background: var(--color-button-secondary-background);
+  --button-secondary-text: var(--color-button-secondary-text);
+  --button-tertiary-background: var(--color-button-tertiary-background);
+  --button-tertiary-text: var(--color-button-tertiary-text);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+  }
+
+  p,
+  span,
+  a,
+  li,
+  button {
+    font-family: var(--font-body);
+  }
+
+  h1 {
+    letter-spacing: -1rem;
+    line-height: 1;
+  }
+
+  h2 {
+    letter-spacing: -0.5rem;
+    line-height: 0.7;
+  }
+}
