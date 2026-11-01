@@ -18,7 +18,7 @@ export const AboutMe = () => {
         <div className="flex flex-col justify-between h-full w-full p-4">
           <div>
             <div className="flex gap-3 items-center">
-              <div className="size-3 rounded-full bg-green-400"></div>
+              <div className="size-3 rounded-full bg-green-status-icon"></div>
               <p>
                 <strong>Open to senior roles</strong>
               </p>
