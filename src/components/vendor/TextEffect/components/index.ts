@@ -1,0 +1,1 @@
+export { AnimationComponent } from "./AnimationComponent";

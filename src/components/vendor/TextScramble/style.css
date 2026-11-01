@@ -1,0 +1,49 @@
+[data-anm-dual-scramble] {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.dual_scramble_sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.dual_scramble_spacer {
+  visibility: hidden;
+  white-space: nowrap;
+  display: inline;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dual_scramble_layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  display: inline;
+  pointer-events: none;
+}
+
+/* Phase 1 - Kinetic Athletics primary orange */
+.dual-scramble-color-1 {
+  color: #ff642e;
+}
+
+/* Phase 2 - final resolved color (Kinetic Athletics text) */
+.dual-scramble-color-2 {
+  color: inherit;
+}
+
+.dual_scramble_headline {
+  cursor: default;
+  margin: 0;
+}

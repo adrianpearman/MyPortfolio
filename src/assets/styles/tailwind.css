@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Garet Book";
+  src: url("./fonts/Garet_Font/Garet-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Garet Bold";
+  src: url("./fonts/Garet_Font/Garet-Heavy.otf") format("opentype");
+}
+@font-face {
+  font-family: "Recia Serif";
+  src: url("./fonts/Recia_Font/ReciaSerifDisplay-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Fugaz One";
+  src: url("./fonts/Fugaz_One/FugazOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Sanchez Regular";
+  src: url("./fonts/Sanchez/Sanchez-Regular.ttf") format("truetype");
+}
+
+@theme {
+  /* Background Coloring */
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #dbdee5;
+  --color-background-tertiary: #a9adb6;
+  --color-background-quaternary: #111827;
+  /* Font Sizing */
+  --text-main-landing: calc(7rem + 5vw);
+  --text-main-landing-secondary: 4rem;
+  --text-section-header: 3rem;
+  --text-section-sub-header: 2rem;
+  --text-section-tertiary-header: 1.5rem;
+  --text-body-emphasis: 2rem;
+  --text-body-primary: 1rem;
+  /* Font Families */
+  --font-main-heading: "Fugaz One", serif;
+  --font-base-font: "Sanchez Regular", sans-serif;
+  /* shadcn semantic tokens (used by vendor components) */
+  --color-background: var(--color-cream);
+  --color-foreground: var(--color-onyx-900);
+  --color-primary: var(--color-majorelle-blue-500);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--color-platinum-100);
+  --color-secondary-foreground: var(--color-onyx-900);
+  --color-muted: var(--color-platinum-100);
+  --color-muted-foreground: var(--color-onyx-500);
+  --color-destructive: var(--color-email);
+  --color-border: var(--color-platinum-200);
+  --color-input: var(--color-platinum-200);
+  --color-ring: var(--color-majorelle-blue-400);
+  --radius-md: 0.375rem;
+  /* Colors */
+  /* Old Palette */
+  --color-black: #242424;
+  /* --color-cream: #FCFAF2; */
+  --color-cream: #fffaf1;
+  --color-email: #bd2c00;
+  --color-emailDark: #721b00;
+  --color-experienceActive: #368f8b;
+  --color-experienceBase: #246a73;
+  --color-github: #6e5494;
+  --color-githubDark: #39156f;
+  --color-linkedin: #0077b5;
+  --color-linkedinDark: #004367;
+  --color-neon: #4823e1;
+  --color-neonDark: #2400b6;
+  --color-primaryColorDark: #047f67;
+  --color-primaryColorLight: #52b19a;
+  --color-secondaryColorDark: #3084b8;
+  --color-secondaryColorLight: #9db3c1;
+
+  /*  */
+  --color-onyx-50: #f0f3f4;
+  --color-onyx-100: #e2e6e9;
+  --color-onyx-200: #c4ced4;
+  --color-onyx-300: #a7b5be;
+  --color-onyx-400: #8a9ca8;
+  --color-onyx-500: #6c8393;
+  --color-onyx-600: #576975;
+  --color-onyx-700: #414f58;
+  --color-onyx-800: #2b353b;
+  --color-onyx-900: #161a1d;
+  --color-onyx-950: #0f1215;
+
+  --color-majorelle-blue-50: #eee9fc;
+  --color-majorelle-blue-100: #ddd3f8;
+  --color-majorelle-blue-200: #bca7f1;
+  --color-majorelle-blue-300: #9a7bea;
+  --color-majorelle-blue-400: #794fe3;
+  --color-majorelle-blue-500: #5722dd;
+  --color-majorelle-blue-600: #461cb0;
+  --color-majorelle-blue-700: #341584;
+  --color-majorelle-blue-800: #230e58;
+  --color-majorelle-blue-900: #11072c;
+  --color-majorelle-blue-950: #0c051f;
+
+  --color-amber-honey-50: #fef6e7;
+  --color-amber-honey-100: #fceecf;
+  --color-amber-honey-200: #f9dd9f;
+  --color-amber-honey-300: #f7cb6e;
+  --color-amber-honey-400: #f4ba3e;
+  --color-amber-honey-500: #f1a90e;
+  --color-amber-honey-600: #c1870b;
+  --color-amber-honey-700: #916508;
+  --color-amber-honey-800: #604406;
+  --color-amber-honey-900: #302203;
+  --color-amber-honey-950: #221802;
+
+  --color-black-forest-50: #ebfaef;
+  --color-black-forest-100: #d6f5df;
+  --color-black-forest-200: #aeeac0;
+  --color-black-forest-300: #85e0a0;
+  --color-black-forest-400: #5dd581;
+  --color-black-forest-500: #34cb61;
+  --color-black-forest-600: #2aa24e;
+  --color-black-forest-700: #1f7a3a;
+  --color-black-forest-800: #155127;
+  --color-black-forest-900: #0a2913;
+  --color-black-forest-950: #071c0e;
+
+  --color-bright-lemon-50: #ffffe5;
+  --color-bright-lemon-100: #ffffcc;
+  --color-bright-lemon-200: #ffff99;
+  --color-bright-lemon-300: #ffff66;
+  --color-bright-lemon-400: #ffff33;
+  --color-bright-lemon-500: #ffff00;
+  --color-bright-lemon-600: #cccc00;
+  --color-bright-lemon-700: #999900;
+  --color-bright-lemon-800: #666600;
+  --color-bright-lemon-900: #333300;
+  --color-bright-lemon-950: #242400;
+
+  --color-platinum-50: #f0f2f4;
+  --color-platinum-100: #e1e4ea;
+  --color-platinum-200: #c4c9d4;
+  --color-platinum-300: #a6aebf;
+  --color-platinum-400: #8994a9;
+  --color-platinum-500: #6b7994;
+  --color-platinum-600: #566176;
+  --color-platinum-700: #404859;
+  --color-platinum-800: #2b303b;
+  --color-platinum-900: #15181e;
+  --color-platinum-950: #0f1115;
+}

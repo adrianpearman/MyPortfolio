@@ -1,0 +1,1 @@
+export { ProfileTextReveal } from "./ProfileTextReveal";

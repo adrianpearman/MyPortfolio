@@ -1,0 +1,18 @@
+export const LANGUAGE_LIST = [
+  "html",
+  "css",
+  "sass",
+  "tailwind",
+  "javascript",
+  "typescript",
+  "react",
+  "vue",
+  "redux",
+  "zustand",
+  "node",
+  "python",
+  "django",
+  "git",
+  "claude",
+  "postgresql",
+] as const;
