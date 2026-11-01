@@ -8,11 +8,11 @@ export const MainLanding = () => {
   };
 
   return (
-    <div
-      className="flex flex-col min-h-screen bg-cover bg-center text-text-primary-on-dark align-bottom justify-end"
+    <header
+      className="flex min-h-screen bg-cover bg-center text-text-primary-on-dark items-end justify-center"
       style={style}
     >
-      <div className="flex flex-col min-h-88 justify-around p-5 mb-5">
+      <div className="flex flex-col min-h-88 w-full max-w-350 justify-around p-5 mb-5">
         <p>
           <strong>Adrian Pearman</strong> - Frontend Developer
         </p>
@@ -22,6 +22,6 @@ export const MainLanding = () => {
           <BaseButton variant="tertiary">See my work</BaseButton>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
