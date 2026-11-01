@@ -8,7 +8,9 @@ export const TechStack = () => {
       <ul className="flex flex-wrap gap-2">
         {STACK_LIST.map((stack, index) => (
           <li key={`stack-list-item${index}`}>
-            <BasePill className="">{stack}</BasePill>
+            <BasePill className="">
+              <p>{stack}</p>
+            </BasePill>
           </li>
         ))}
       </ul>

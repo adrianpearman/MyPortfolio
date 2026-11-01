@@ -13,7 +13,7 @@ export const BasePill = ({ children, className }: TBasePillProps) => {
         className,
       )}
     >
-      <p>{children}</p>
+      {children}
     </div>
   );
 };
