@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useInView } from "motion/react";
 
 import { TextRevealEffect } from "@/components/reuseable";
+import { TEXT_REVEAL_VARIANT_CONFIG } from "@/utils/consts";
 import { generateDisplayOptions } from "@/utils/functions";
 
 const DELAY_OPTIONS = generateDisplayOptions({ n: 6 });
@@ -9,34 +10,6 @@ const DELAY_OPTIONS = generateDisplayOptions({ n: 6 });
 export const FooterContentReveal = () => {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.5 });
-  const variantConfig = {
-    container: {
-      hidden: {
-        opacity: 0,
-      },
-      visible: {
-        opacity: 1,
-        transition: {
-          staggerChildren: 0.05,
-        },
-      },
-    },
-    item: {
-      hidden: {
-        opacity: 0,
-        rotateX: 90,
-        y: 10,
-      },
-      visible: {
-        opacity: 1,
-        rotateX: 0,
-        y: 0,
-        transition: {
-          duration: 0.5,
-        },
-      },
-    },
-  };
 
   return (
     <div ref={ref} className="flex flex-col p-4">
@@ -48,7 +21,7 @@ export const FooterContentReveal = () => {
           per="line"
           preset="blur"
           trigger={inView}
-          variants={variantConfig}
+          variants={TEXT_REVEAL_VARIANT_CONFIG}
         >
           Let's work together
         </TextRevealEffect>

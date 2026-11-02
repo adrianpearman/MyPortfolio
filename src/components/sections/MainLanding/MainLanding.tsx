@@ -9,6 +9,7 @@ export const MainLanding = () => {
 
   return (
     <header
+      id="main-landing"
       className="flex min-h-screen bg-cover bg-center text-text-primary-on-dark items-end justify-center"
       style={style}
     >

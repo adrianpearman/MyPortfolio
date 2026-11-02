@@ -6,7 +6,7 @@ export const ProjectsCarousel = () => {
     <div className="flex p-4 gap-2 text-text-primary-on-dark h-full">
       <div className="w-1/3 flex flex-col justify-between">
         <div className="flex flex-col gap-4">
-          <h3>Featured Project:</h3>
+          <h3>Title:</h3>
           <h2 className="text-heading-3 tracking-normal">Projects</h2>
         </div>
         <div className="flex flex-col gap-4">
