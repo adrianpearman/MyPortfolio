@@ -10,15 +10,24 @@ import spaceX from "../assets/images/projectPhotos/space-x.png";
 import travelLog from "../assets/images/projectPhotos/travel-log.png";
 import trillo from "../assets/images/projectPhotos/trillo.png";
 import weddingLandingPage from "../assets/images/projectPhotos/wedding-landing-page.png";
+import wisedocs from "../assets/images/projectPhotos/wisedocs.png";
 import ventours from "../assets/images/projectPhotos/ventours.png";
 
 export const PROJECTS_DATA = [
+  {
+    stack: ["React", "Zustand", "Tailwind"],
+    title: "Wisedocs",
+    projectImage: wisedocs,
+    overview: "",
+    liveLink: "https://www.wisedocs.ai/",
+    repoLink: "",
+  },
   {
     stack: ["HTML5", "SCSS", "JavaScript", "Node"],
     title: "Wedding Landing Page",
     projectImage: weddingLandingPage,
     overview: "",
-    liveLink: "https://www.thepearmanwedding.com/",
+    liveLink: "https://taupe-smakager-fa0105.netlify.app/",
     repoLink: "https://github.com/adrianpearman/wedding-landing-page",
   },
   {
