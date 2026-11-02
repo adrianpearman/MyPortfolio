@@ -7,16 +7,28 @@ import {
 import { ProjectDialog } from "@/components/sections/Projects/components";
 import { PROJECTS_DATA } from "@/data";
 
-export const Projects = () => {
+type TProjects = {
+  isDialogOpen: boolean;
+  onDialogOpenChange: (open: boolean) => void;
+};
+
+export const Projects = ({ isDialogOpen, onDialogOpenChange }: TProjects) => {
   return (
-    <section className="w-full flex gap-2">
+    <section className="w-full flex gap-2 scroll-mt-12.5" id="projects">
       <BaseCell className="min-h-100 w-1/4 bg-linear-135 from-purple-cell-background to-purple-cell-background-2 text-text-primary-on-dark">
         <ProjectHeroContent />
       </BaseCell>
       <BaseCell className="min-h-100 w-3/4 bg-background-landing">
-        <ProjectsCarousel projects={PROJECTS_DATA} />
+        <ProjectsCarousel
+          onShowAllProjects={() => onDialogOpenChange(true)}
+          projects={PROJECTS_DATA}
+        />
       </BaseCell>
-      <ProjectDialog projects={PROJECTS_DATA} />
+      <ProjectDialog
+        onOpenChange={onDialogOpenChange}
+        open={isDialogOpen}
+        projects={PROJECTS_DATA}
+      />
     </section>
   );
 };

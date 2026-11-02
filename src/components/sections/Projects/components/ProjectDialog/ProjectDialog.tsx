@@ -1,23 +1,27 @@
 import {
-  BaseButton,
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/reuseable";
 import { ProjectListContainer } from "./components";
 
 import type { TProjectsData } from "@/utils/types";
 
 type TProjectDialog = {
+  onOpenChange: (open: boolean) => void;
+  open: boolean;
   projects: TProjectsData[];
 };
 
-export const ProjectDialog = ({ projects }: TProjectDialog) => {
+export const ProjectDialog = ({
+  onOpenChange,
+  open,
+  projects,
+}: TProjectDialog) => {
   return (
-    <Dialog>
-      <DialogTrigger render={<BaseButton>Scrollable Content</BaseButton>} />
+    // "trap-focus" skips the scroll lock, which would cancel the smooth scroll from "See my work"
+    <Dialog modal="trap-focus" onOpenChange={onOpenChange} open={open}>
       <DialogContent className="max-w-[95%] h-8/10 bg-background-tertiary">
         <DialogHeader>
           <DialogTitle className="text-heading-1 tracking-[-0.5rem]">

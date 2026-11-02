@@ -2,7 +2,12 @@ import { BaseButton } from "@/components/reuseable";
 
 import LandingImage from "@/assets/images/HeaderBackground2.jpg";
 
-export const MainLanding = () => {
+type TMainLanding = {
+  onCollaborate: () => void;
+  onSeeMyWork: () => void;
+};
+
+export const MainLanding = ({ onCollaborate, onSeeMyWork }: TMainLanding) => {
   const style = {
     backgroundImage: `linear-gradient(color-mix(in srgb, var(--color-background-landing) 60%, transparent), color-mix(in srgb, var(--color-background-landing) 60%, transparent)), url(${LandingImage})`,
   };
@@ -19,8 +24,12 @@ export const MainLanding = () => {
         </p>
         <h1 className="text-hero-heading test">Welcome</h1>
         <div className="flex flex-row gap-3">
-          <BaseButton variant="secondary">Let's collaborate</BaseButton>
-          <BaseButton variant="tertiary">See my work</BaseButton>
+          <BaseButton onClick={onCollaborate} variant="secondary">
+            Let's collaborate
+          </BaseButton>
+          <BaseButton onClick={onSeeMyWork} variant="tertiary">
+            See my work
+          </BaseButton>
         </div>
       </div>
     </header>
