@@ -31,7 +31,10 @@ export const DialogContent = ({
           <DialogPrimitive.Close
             data-slot="dialog-close"
             render={
-              <BaseButton className="absolute top-2 right-2" variant="primary">
+              <BaseButton
+                className="absolute top-4 right-4 py-2 px-2 rounded-lg"
+                variant="primary"
+              >
                 X<span className="sr-only">Close</span>
               </BaseButton>
             }

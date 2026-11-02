@@ -14,3 +14,4 @@ export {
 } from "@/components/reuseable/Dialog";
 export { LinkScroller } from "@/components/reuseable/LinkScroller";
 export { TextRevealEffect } from "@/components/reuseable/TextRevealEffect";
+export { Tooltip } from "@/components/reuseable/Tooltip";
