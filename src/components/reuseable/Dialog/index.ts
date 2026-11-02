@@ -1,7 +1,6 @@
 import { Dialog } from "@/components/reuseable/Dialog/components/Dialog";
 import { DialogClose } from "@/components/reuseable/Dialog/components/DialogClose";
 import { DialogContent } from "@/components/reuseable/Dialog/components/DialogContent";
-import { DialogDescription } from "@/components/reuseable/Dialog/components/DialogDescription";
 import { DialogFooter } from "@/components/reuseable/Dialog/components/DialogFooter";
 import { DialogHeader } from "@/components/reuseable/Dialog/components/DialogHeader";
 import { DialogOverlay } from "@/components/reuseable/Dialog/components/DialogOverlay";
@@ -13,7 +12,6 @@ export {
   Dialog,
   DialogClose,
   DialogContent,
-  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogOverlay,
