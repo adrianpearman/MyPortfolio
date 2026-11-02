@@ -1,5 +1,5 @@
+import { BaseButton, BaseCell, Tooltip } from "@/components/reuseable";
 import { ProjectCarouselPill } from "@/components/sections/Projects/components";
-import { BaseCell, Tooltip } from "@/components/reuseable";
 import { cn } from "@/utils/functions";
 import type { TProjectsData } from "@/utils/types";
 
@@ -45,7 +45,14 @@ export const ProjectListItem = ({
             </h3>
           </Tooltip>
           {rowItemData.liveLink !== "" && (
-            <ProjectCarouselPill content="Live Link" />
+            <BaseButton
+              ariaLabel={`A link to the ${rowItemData.title} webpage`}
+              className="text-secondary-paragraph border-transparent py-1 px-2 w-10"
+              href={rowItemData.liveLink}
+              variant="tertiary"
+            >
+              Open
+            </BaseButton>
           )}
         </div>
         <div className="w-38">
