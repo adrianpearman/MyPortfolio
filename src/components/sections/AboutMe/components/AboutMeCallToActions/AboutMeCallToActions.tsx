@@ -1,5 +1,7 @@
 import { BaseButton } from "@/components/reuseable";
 
+import pdf from "@/assets/pdfs/Adrian_Pearman_Senior_Frontend_Developer.pdf";
+
 export const AboutMeCallToActions = () => {
   return (
     <div className="flex flex-col justify-between h-full w-full p-4">
@@ -14,7 +16,12 @@ export const AboutMeCallToActions = () => {
         <p>Remote or hybrid</p>
       </div>
       <div className="flex flex-col gap-2">
-        <BaseButton className="w-full" variant="primary">
+        <BaseButton
+          ariaLabel="Link to Adrian Pearman's resume, opens in new tab"
+          className="w-full"
+          href={pdf}
+          variant="primary"
+        >
           Download Resume
         </BaseButton>
         <BaseButton
