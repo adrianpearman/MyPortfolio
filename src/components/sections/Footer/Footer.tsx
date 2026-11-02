@@ -7,7 +7,7 @@ import {
 export const Footer = () => {
   const year = new Date();
   return (
-    <footer className="flex flex-col gap-2 w-full max-w-350 px-10 pb-6">
+    <footer className="flex flex-col gap-2 w-full max-w-350 px-10 pb-6" id="footer">
       <div className="flex gap-2 min-h-72">
         <BaseCell className="w-2/3 min-h-48">
           <FooterContentReveal />

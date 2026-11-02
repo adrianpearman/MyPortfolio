@@ -8,7 +8,7 @@ import {
 
 export const AboutMe = () => {
   return (
-    <section className="w-full flex gap-2">
+    <section className="w-full flex gap-2" id="about-me">
       <BaseCell className="w-1/2">
         <AboutMeContent />
       </BaseCell>

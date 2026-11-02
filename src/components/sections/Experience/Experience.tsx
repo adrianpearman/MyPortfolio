@@ -6,7 +6,7 @@ import {
 
 export const Experience = () => {
   return (
-    <section className="w-full flex gap-2">
+    <section className="w-full flex gap-2" id="experience">
       <BaseCell className="w-3/4">
         <ExperienceList />
       </BaseCell>
