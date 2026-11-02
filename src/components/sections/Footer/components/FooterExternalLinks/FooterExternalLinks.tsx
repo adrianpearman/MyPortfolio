@@ -14,17 +14,12 @@ export const FooterExternalLinks = () => {
             >
               <h3>{c.source}</h3>
               <BaseButton
+                ariaLabel={c.alt}
                 className="text-secondary-paragraph border-transparent py-1 px-2"
+                href={c.href}
                 variant="tertiary"
               >
-                <a
-                  aria-label={c.alt}
-                  href={c.href}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Open
-                </a>
+                Open
               </BaseButton>
             </div>
           );

@@ -1,8 +1,10 @@
 import { cn } from "@/utils/functions";
 
 type TButtonProps = {
+  ariaLabel?: string;
   className?: string;
   children?: React.ReactNode;
+  href?: string;
   onClick?: () => void;
   variant?: "primary" | "secondary" | "tertiary";
 };
@@ -18,20 +20,35 @@ const variantClasses = {
 };
 
 export const BaseButton = ({
+  ariaLabel,
   className = "",
   children,
+  href,
   onClick,
   variant = "primary",
 }: TButtonProps) => {
+  const classes = cn(
+    "rounded-2xl py-3.5 px-5 cursor-pointer border-2",
+    variantClasses[variant],
+    className,
+  );
+
+  if (href) {
+    return (
+      <a
+        aria-label={ariaLabel}
+        className={cn("block text-center", classes)}
+        href={href}
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <button
-      className={cn(
-        "rounded-2xl py-3.5 px-5 cursor-pointer border-2",
-        variantClasses[variant],
-        className,
-      )}
-      onClick={onClick}
-    >
+    <button aria-label={ariaLabel} className={classes} onClick={onClick}>
       {children}
     </button>
   );

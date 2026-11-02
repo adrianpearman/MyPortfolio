@@ -7,7 +7,7 @@ import {
 export const Projects = () => {
   return (
     <section className="w-full flex gap-2">
-      <BaseCell className="min-h-100 w-1/4 bg-linear-135 from-purple-cell-background to-background-landing text-text-primary-on-dark">
+      <BaseCell className="min-h-100 w-1/4 bg-linear-135 from-purple-cell-background to-purple-cell-background-2 text-text-primary-on-dark">
         <ProjectHeroContent />
       </BaseCell>
       <BaseCell className="min-h-100 w-3/4 bg-background-landing">

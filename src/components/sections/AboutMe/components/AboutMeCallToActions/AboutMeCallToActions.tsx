@@ -17,7 +17,11 @@ export const AboutMeCallToActions = () => {
         <BaseButton className="w-full" variant="primary">
           Download Resume
         </BaseButton>
-        <BaseButton className="w-full" variant="secondary">
+        <BaseButton
+          className="w-full"
+          href="https://www.calendly.com/adrianpearman/30min"
+          variant="secondary"
+        >
           Book a Call
         </BaseButton>
       </div>
