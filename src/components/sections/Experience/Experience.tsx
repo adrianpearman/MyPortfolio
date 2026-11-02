@@ -1,4 +1,4 @@
-import { BaseCell } from "@/components/reuseable";
+import { BaseCell, FadeInView } from "@/components/reuseable";
 import {
   ExperienceList,
   TechStack,
@@ -6,13 +6,15 @@ import {
 
 export const Experience = () => {
   return (
-    <section className="w-full flex gap-2" id="experience">
-      <BaseCell className="w-3/4">
-        <ExperienceList />
-      </BaseCell>
-      <BaseCell className="w-1/4">
-        <TechStack />
-      </BaseCell>
+    <section className="w-full" id="experience">
+      <FadeInView className="flex gap-2">
+        <BaseCell className="w-3/4">
+          <ExperienceList />
+        </BaseCell>
+        <BaseCell className="w-1/4">
+          <TechStack />
+        </BaseCell>
+      </FadeInView>
     </section>
   );
 };

@@ -1,4 +1,4 @@
-import { BaseButton } from "@/components/reuseable";
+import { BaseButton, FadeInView } from "@/components/reuseable";
 
 import LandingImage from "@/assets/images/HeaderBackground2.jpg";
 
@@ -18,7 +18,7 @@ export const MainLanding = ({ onCollaborate, onSeeMyWork }: TMainLanding) => {
       className="flex min-h-screen bg-cover bg-center text-text-primary-on-dark items-end justify-center"
       style={style}
     >
-      <div className="flex flex-col min-h-88 w-full max-w-350 justify-around py-5 px-10 mb-5">
+      <FadeInView className="flex flex-col min-h-88 w-full max-w-350 justify-around py-5 px-10 mb-5">
         <p>
           <strong>Adrian Pearman</strong> - Frontend Developer
         </p>
@@ -31,7 +31,7 @@ export const MainLanding = ({ onCollaborate, onSeeMyWork }: TMainLanding) => {
             See my work
           </BaseButton>
         </div>
-      </div>
+      </FadeInView>
     </header>
   );
 };

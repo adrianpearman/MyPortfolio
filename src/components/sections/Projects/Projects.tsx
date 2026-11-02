@@ -1,4 +1,4 @@
-import { BaseCell } from "@/components/reuseable";
+import { BaseCell, FadeInView } from "@/components/reuseable";
 import {
   ProjectsCarousel,
   ProjectHeroContent,
@@ -14,16 +14,18 @@ type TProjects = {
 
 export const Projects = ({ isDialogOpen, onDialogOpenChange }: TProjects) => {
   return (
-    <section className="w-full flex gap-2 scroll-mt-12.5" id="projects">
-      <BaseCell className="min-h-100 w-1/4 bg-linear-135 from-purple-cell-background to-purple-cell-background-2 text-text-primary-on-dark">
-        <ProjectHeroContent />
-      </BaseCell>
-      <BaseCell className="min-h-100 w-3/4 bg-background-landing">
-        <ProjectsCarousel
-          onShowAllProjects={() => onDialogOpenChange(true)}
-          projects={PROJECTS_DATA}
-        />
-      </BaseCell>
+    <section className="w-full scroll-mt-12.5" id="projects">
+      <FadeInView className="flex gap-2">
+        <BaseCell className="min-h-100 w-1/4 bg-linear-135 from-purple-cell-background to-purple-cell-background-2 text-text-primary-on-dark">
+          <ProjectHeroContent />
+        </BaseCell>
+        <BaseCell className="min-h-100 w-3/4 bg-background-landing">
+          <ProjectsCarousel
+            onShowAllProjects={() => onDialogOpenChange(true)}
+            projects={PROJECTS_DATA}
+          />
+        </BaseCell>
+      </FadeInView>
       <ProjectDialog
         onOpenChange={onDialogOpenChange}
         open={isDialogOpen}
