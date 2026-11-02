@@ -12,7 +12,7 @@ export const MainLanding = () => {
       className="flex min-h-screen bg-cover bg-center text-text-primary-on-dark items-end justify-center"
       style={style}
     >
-      <div className="flex flex-col min-h-88 w-full max-w-350 justify-around p-5 mb-5">
+      <div className="flex flex-col min-h-88 w-full max-w-350 justify-around py-5 px-10 mb-5">
         <p>
           <strong>Adrian Pearman</strong> - Frontend Developer
         </p>

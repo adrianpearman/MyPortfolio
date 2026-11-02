@@ -6,3 +6,9 @@ export type TTimelineEntry = {
   responsibilities: string[];
   title: string;
 };
+
+export type TContactData = {
+  alt: string;
+  href: string;
+  source: string;
+};
