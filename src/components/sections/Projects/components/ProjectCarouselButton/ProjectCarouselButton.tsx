@@ -11,7 +11,7 @@ export const ProjectCarouselButton = ({
 }: TProjectCarouselButton) => {
   return (
     <BaseButton
-      className="flex items-center justify-center p-0 size-7.5 border border-background-tertiary/20"
+      className="flex items-center justify-center p-0 size-7.5 border border-background-tertiary/30"
       onClick={onClick}
       variant="tertiary"
     >

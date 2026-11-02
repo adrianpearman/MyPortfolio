@@ -6,7 +6,7 @@ type TProjectCarouselPill = {
 
 export const ProjectCarouselPill = ({ content }: TProjectCarouselPill) => {
   return (
-    <BasePill className="bg-transparent border-background-tertiary/20">
+    <BasePill className="bg-transparent border-background-tertiary/30">
       <p>{content}</p>
     </BasePill>
   );
