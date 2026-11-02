@@ -12,7 +12,7 @@ export const FooterContentReveal = () => {
   const inView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
-    <div ref={ref} className="flex flex-col p-4">
+    <div ref={ref} className="flex flex-col p-4 pt-6">
       <div className="flex flex-col gap-4">
         <TextRevealEffect
           as="h2"

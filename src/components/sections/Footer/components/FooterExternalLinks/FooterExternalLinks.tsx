@@ -27,10 +27,12 @@ export const FooterExternalLinks = () => {
         <div className="flex justify-between w-full border-b border-b-transparent p-1 items-center">
           <h3>Email</h3>
           <BaseButton
-            className="text-text-primary text-secondary-paragraph p-1"
+            ariaLabel={`Opens your email to message Adrian regarding any opportunities`}
+            className="text-secondary-paragraph border-transparent py-1 px-2"
+            href={"mailto:adrianpearman12@gmail.com"}
             variant="tertiary"
           >
-            <p>Copy</p>
+            <p>adrianpearman12@gmail.com</p>
           </BaseButton>
         </div>
       </div>
