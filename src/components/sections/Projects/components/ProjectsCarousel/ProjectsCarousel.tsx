@@ -1,7 +1,15 @@
-import { ProjectCarouselButton } from "@/components/sections/Projects/components/ProjectCarouselButton";
-import { ProjectCarouselPill } from "@/components/sections/Projects/components/ProjectCarouselPill";
+import {
+  ProjectCarouselButton,
+  ProjectCarouselPill,
+} from "@/components/sections/Projects/components";
 
-export const ProjectsCarousel = () => {
+import type { TProjectsData } from "@/utils/types";
+
+type TProjectCarousel = {
+  projects: TProjectsData[];
+};
+
+export const ProjectsCarousel = ({ projects }: TProjectCarousel) => {
   return (
     <div className="flex p-4 gap-2 text-text-primary-on-dark h-full">
       <div className="w-1/3 flex flex-col justify-between">
@@ -15,7 +23,6 @@ export const ProjectsCarousel = () => {
             <ProjectCarouselPill content="asd" />
             <ProjectCarouselPill content="asd" />
           </div>
-
           <div className="flex gap-2 items-center">
             <div className="flex gap-2">
               <ProjectCarouselButton
