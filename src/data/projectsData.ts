@@ -13,7 +13,9 @@ import weddingLandingPage from "../assets/images/projectPhotos/wedding-landing-p
 import wisedocs from "../assets/images/projectPhotos/wisedocs.png";
 import ventours from "../assets/images/projectPhotos/ventours.png";
 
-export const PROJECTS_DATA = [
+import type { TProjectsData } from "@/utils/types";
+
+export const PROJECTS_DATA: TProjectsData[] = [
   {
     stack: ["React", "Zustand", "Tailwind"],
     title: "Wisedocs",
@@ -31,7 +33,7 @@ export const PROJECTS_DATA = [
     repoLink: "https://github.com/adrianpearman/wedding-landing-page",
   },
   {
-    stack: ["HTML5", "SCSS", "React", "Gatsby", "Google Analytics"],
+    stack: ["React", "Gatsby", "HTML5", "SCSS", "Google Analytics"],
     title: "Juno College",
     projectImage: junoCollege,
     overview: "",
@@ -39,7 +41,7 @@ export const PROJECTS_DATA = [
     repoLink: "",
   },
   {
-    stack: ["HTML5", "SASS", "React", "Redux"],
+    stack: ["React", "Redux", "HTML5", "SASS"],
     title: "BMO Personal Services",
     projectImage: bmo2,
     overview: "",
@@ -47,7 +49,7 @@ export const PROJECTS_DATA = [
     repoLink: "",
   },
   {
-    stack: ["HTML5", "JavaScript", "SCSS", "Vue.js", "Node"],
+    stack: ["Vue.js", "Node", "HTML5", "JavaScript", "SCSS"],
     title: "New Seaton Landing Page",
     projectImage: newSeaton,
     overview: "",
@@ -56,12 +58,12 @@ export const PROJECTS_DATA = [
   },
   {
     stack: [
+      "React",
+      "Express",
       "HTML5",
       "Materialize",
       "JavaScript",
-      "React",
       "Node",
-      "Express",
       "MongoDB",
     ],
     title: "Travel Log App",
@@ -90,7 +92,7 @@ export const PROJECTS_DATA = [
   // },
 
   {
-    stack: ["HTML5", "Bootstrap", "JavaScript", "React", "GraphQL", "Node"],
+    stack: ["React", "GraphQL", "HTML5", "Bootstrap", "JavaScript", "Node"],
     title: "SpaceX Rocket Tracker",
     projectImage: spaceX,
     overview: "",
@@ -115,7 +117,7 @@ export const PROJECTS_DATA = [
   //   repoLink: "https://github.com/adrianpearman/React-Expense-App"
   // },
   {
-    stack: ["HTML5", "CSS3", "SCSS"],
+    stack: ["HTML5", "SCSS"],
     title: "Ventours",
     projectImage: ventours,
     overview: "",
@@ -123,7 +125,7 @@ export const PROJECTS_DATA = [
     repoLink: "https://github.com/adrianpearman/Ventours",
   },
   {
-    stack: ["HTML5", "SCSS", "JavaScript", "React"],
+    stack: ["JavaScript", "React", "HTML5", "SCSS"],
     title: "Indecision App",
     projectImage: indecision,
     overview: "",
