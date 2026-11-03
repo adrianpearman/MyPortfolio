@@ -1,6 +1,6 @@
-import type { TTimelineEntry } from "@/utils/types";
-
+import { Tooltip } from "@/components/reuseable";
 import { cn } from "@/utils/functions";
+import type { TTimelineEntry } from "@/utils/types";
 
 type TExperienceListItemProps = {
   experience: TTimelineEntry;
@@ -12,20 +12,22 @@ export const ExperienceListItem = ({
 }: TExperienceListItemProps) => {
   return (
     <li className="flex justify-between items-center gap-2 p-2 ">
-      <div className="flex gap-4">
+      <div className="flex gap-4 w-1/2">
         <div className="pt-2">
           <div
             className={cn("size-3 rounded-full", experience.iconColor)}
           ></div>
         </div>
-        <div>
-          <p>
-            <strong>{experience.title}</strong>
-          </p>
+        <div className="min-w-0">
+          <Tooltip content={experience.title}>
+            <p className="truncate">
+              <strong>{experience.title}</strong>
+            </p>
+          </Tooltip>
           <p>{experience.employer}</p>
         </div>
       </div>
-      <p>{experience.dates}</p>
+      <p className="w-1/2">{experience.dates}</p>
     </li>
   );
 };

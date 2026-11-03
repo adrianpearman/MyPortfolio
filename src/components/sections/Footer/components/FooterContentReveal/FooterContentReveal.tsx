@@ -16,7 +16,7 @@ export const FooterContentReveal = () => {
       <div className="flex flex-col gap-4">
         <TextRevealEffect
           as="h2"
-          className="font-heading text-heading-2 tracking-normal mb-2"
+          className="font-heading text-heading-3 tracking-[-0.3rem] mb-2 max-xs:text-heading-4 max-xs:tracking-[-0.2rem]"
           delay={DELAY_OPTIONS[0]}
           per="line"
           preset="blur"
@@ -25,24 +25,26 @@ export const FooterContentReveal = () => {
         >
           Let's work together
         </TextRevealEffect>
-        <TextRevealEffect
-          as="p"
-          className="text-heading-6"
-          delay={DELAY_OPTIONS[1]}
-          per="line"
-          trigger={inView}
-        >
-          Starting a project or growing your team?
-        </TextRevealEffect>
-        <TextRevealEffect
-          as="p"
-          className="text-heading-6"
-          delay={DELAY_OPTIONS[2]}
-          per="line"
-          trigger={inView}
-        >
-          Reach out, let's collaborate.
-        </TextRevealEffect>
+        <div className="flex flex-col gap-2">
+          <TextRevealEffect
+            as="p"
+            className="text-heading-6 max-md:text-paragraph"
+            delay={DELAY_OPTIONS[1]}
+            per="line"
+            trigger={inView}
+          >
+            Starting a project or growing your team?
+          </TextRevealEffect>
+          <TextRevealEffect
+            as="p"
+            className="text-heading-6 max-md:text-paragraph"
+            delay={DELAY_OPTIONS[2]}
+            per="line"
+            trigger={inView}
+          >
+            Reach out, let's collaborate.
+          </TextRevealEffect>
+        </div>
       </div>
     </div>
   );

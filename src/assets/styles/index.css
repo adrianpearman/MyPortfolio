@@ -14,7 +14,11 @@
 }
 
 @theme {
-  --breakpoint-xs: 34rem;
+  /* Custom Media Queries */
+  --breakpoint-md: 50rem; /* 800px */
+  --breakpoint-xs: 34rem; /* 544px */
+  --breakpoint-2xs: 28.5rem; /* 456px */
+  --breakpoint-3xs: 25rem; /* 400px */
   /* Colors */
   --color-background-landing: #1b1f3b;
   --color-background-primary: #ffffff;

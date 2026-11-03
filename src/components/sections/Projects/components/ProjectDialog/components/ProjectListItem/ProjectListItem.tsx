@@ -19,15 +19,21 @@ export const ProjectListItem = ({
   rowItemIndex,
 }: TProjectListItem) => {
   const itemFlexBasis = () => {
-    if (isLargeRowItemIndex === rowItemIndex || overRideFlex) return "flex-1";
-    return isOddRow ? "basis-1/3" : "basis-1/4";
+    let style = "";
+    if (isLargeRowItemIndex === rowItemIndex || overRideFlex) {
+      style = "flex-1";
+    } else {
+      style = isOddRow ? "basis-1/3" : "basis-1/4";
+    }
+
+    return `${style}  max-md:basis-full`;
   };
 
   return (
     <BaseCell
       className={cn(
-        "min-h-88 min-w-0 flex flex-col p-2 gap-2",
         itemFlexBasis(),
+        "min-h-96 min-w-0 flex flex-col p-2 gap-2",
       )}
     >
       <div className="basis-7/10 relative">
@@ -37,13 +43,20 @@ export const ProjectListItem = ({
           src={rowItemData.projectImage}
         />
       </div>
-      <div className="flex-1 flex justify-between align-middle">
+      <div className="flex-1 flex flex-col justify-between align-middle">
         <div className="flex-1 min-w-0">
           <Tooltip content={rowItemData.title}>
             <h3 className="text-heading-5 w-full truncate">
               {rowItemData.title}
             </h3>
           </Tooltip>
+        </div>
+        <div className="flex gap-2">
+          {rowItemData.stack.slice(0, 2).map((stack) => (
+            <ProjectCarouselPill content={stack} />
+          ))}
+        </div>
+        <>
           {rowItemData.liveLink !== "" && (
             <BaseButton
               ariaLabel={`A link to the ${rowItemData.title} webpage`}
@@ -54,14 +67,7 @@ export const ProjectListItem = ({
               Open
             </BaseButton>
           )}
-        </div>
-        <div className="w-38">
-          <div className="flex gap-2 justify-end">
-            {rowItemData.stack.slice(0, 2).map((stack) => (
-              <ProjectCarouselPill content={stack} />
-            ))}
-          </div>
-        </div>
+        </>
       </div>
     </BaseCell>
   );

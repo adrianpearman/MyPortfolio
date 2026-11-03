@@ -47,6 +47,7 @@ export const ExperienceList = () => {
       </motion.div>
       <div className="flex justify-center">
         <BaseButton
+          className="max-2xs:py-2"
           onClick={() => setShowAllExperience(!showAllExperience)}
           variant="primary"
         >

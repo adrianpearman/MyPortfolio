@@ -18,14 +18,14 @@ export const AboutMeCallToActions = () => {
       <div className="flex flex-col gap-2">
         <BaseButton
           ariaLabel="Link to Adrian Pearman's resume, opens in new tab"
-          className="w-full"
+          className="w-full max-3xs:py-2"
           href={pdf}
           variant="primary"
         >
           Resume
         </BaseButton>
         <BaseButton
-          className="w-full"
+          className="w-full max-3xs:py-2"
           href="https://www.calendly.com/adrianpearman/30min"
           variant="secondary"
         >

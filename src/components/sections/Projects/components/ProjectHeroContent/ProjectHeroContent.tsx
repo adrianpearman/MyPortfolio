@@ -13,10 +13,13 @@ export const ProjectHeroContent = () => {
   const inView = useInView(ref, { once: true, amount: 0.5 });
 
   return (
-    <div ref={ref} className="px-4 py-8 py- flex flex-col h-full gap-8">
+    <div
+      ref={ref}
+      className="px-4 py-8 py- flex flex-col h-full gap-8 max-lg:px-3"
+    >
       <TextRevealEffect
         as="h2"
-        className="text-heading-4 tracking-normal"
+        className="text-heading-4 tracking-[-0.2rem]"
         delay={DELAY_OPTIONS[0]}
         per="line"
         preset="blur"

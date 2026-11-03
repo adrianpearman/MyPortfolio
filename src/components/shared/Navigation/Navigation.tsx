@@ -26,11 +26,11 @@ export const Navigation = () => {
       ref={navRef}
       className={`flex w-full fixed top-0 z-50 text-text-primary-on-dark ${isOverLanding ? "bg-transparent" : "bg-background-landing"}`}
     >
-      <div className="flex justify-between px-8 py-4 max-w-350 w-full">
+      <div className="flex justify-between px-8 py-4 max-w-350 w-full  max-xs:px-2">
         <div>
           <p className="font-heading">AP</p>
         </div>
-        <ul className="flex gap-4">
+        <ul className="flex gap-4 max-xs:text-secondary-paragraph">
           <li className="cursor-pointer">
             {/* Default offset (50) plus the pt-10 (40px) above this section in App */}
             <LinkScroller

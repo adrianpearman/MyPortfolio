@@ -50,15 +50,15 @@ export const ProjectsCarousel = ({
   }, [activeProjectIndex, subsetOfProjects]);
 
   return (
-    <div className="flex p-4 gap-2 text-text-primary-on-dark h-full">
-      <div className="w-1/3 flex flex-col justify-between pt-4">
+    <div className="flex p-4 gap-2 text-text-primary-on-dark h-full max-md:flex-col-reverse">
+      <div className="w-1/3 flex flex-col justify-between pt-4 max-lg:w-1/2 max-md:w-full max-md:gap-4">
         <div className="flex flex-col gap-4">
-          <h2 className="text-heading-4 tracking-normal">
+          <h2 className="text-heading-4 tracking-[-0.2rem]">
             {currentProject.title}
           </h2>
         </div>
-        <div className="flex flex-col gap-4">
-          <div className="flex gap-2">
+        <div className="flex flex-col gap-4 max-md:flex-row max-md:justify-end">
+          <div className="flex gap-2 max-sm:hidden">
             {currentProject.stack.slice(0, 2).map((s, i) => (
               <ProjectCarouselPill
                 content={s}
@@ -68,10 +68,10 @@ export const ProjectsCarousel = ({
           </div>
           <>
             {currentProject.liveLink !== "" && (
-              <div className="flex gap-2">
+              <div className="flex gap-2 items-center">
                 <BaseButton
                   ariaLabel={`A link to the ${currentProject.title} webpage`}
-                  className="text-secondary-paragraph border-background-tertiary/30 py-1 px-2 w-fit"
+                  className="text-secondary-paragraph border-background-tertiary/30 p-2 w-fit rounded-2xl"
                   href={currentProject.liveLink}
                   variant="tertiary"
                 >
@@ -97,8 +97,8 @@ export const ProjectsCarousel = ({
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-3 w-2/3">
-        <div className="flex-1 h-fit w-full relative">
+      <div className="flex flex-col gap-3 w-2/3 max-lg:w-1/2 max-md:w-full">
+        <div className="flex-1 h-fit w-full relative max-md:flex-none max-md:aspect-video">
           <img
             alt={`A image for project: ${currentProject.title}`}
             className="absolute inset-0 size-full rounded-xl object-cover backface-hidden"

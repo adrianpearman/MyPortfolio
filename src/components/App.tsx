@@ -37,7 +37,7 @@ const App = () => {
           onCollaborate={handleCollaborate}
           onSeeMyWork={handleSeeMyWork}
         />
-        <div className="flex flex-col gap-2 w-full max-w-350 items-center justify-center mx-auto px-10 pt-10 pb-3">
+        <div className="flex flex-col gap-2 w-full max-w-350 items-center justify-center mx-auto px-10 pt-10 pb-3 max-sm:px-5">
           <AboutMe />
           <Projects
             isDialogOpen={isProjectDialogOpen}

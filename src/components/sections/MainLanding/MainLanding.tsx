@@ -18,18 +18,26 @@ export const MainLanding = ({ onCollaborate, onSeeMyWork }: TMainLanding) => {
       className="flex min-h-screen bg-cover bg-center text-text-primary-on-dark items-end justify-center"
       style={style}
     >
-      <FadeInView className="flex flex-col min-h-88 w-full max-w-350 justify-around py-5 px-10 mb-5">
+      <FadeInView className="flex flex-col min-h-88 w-full max-w-350 justify-around pt-5 px-10 mb-5 max-2xs:px-5">
         <p>
           <strong>Adrian Pearman</strong> - Frontend Developer
         </p>
-        <h1 className="text-hero-heading max-md:text-heading-1 max-md:tracking-[-0.5rem] max-sm:text-heading-2">
+        <h1 className="text-hero-heading max-md:text-heading-1 max-md:tracking-[-0.5rem] max-sm:text-heading-2 max-2xs:text-heading-3">
           Welcome
         </h1>
         <div className="flex flex-row gap-3">
-          <BaseButton onClick={onCollaborate} variant="secondary">
+          <BaseButton
+            className="max-3xl:px-3 py-2"
+            onClick={onCollaborate}
+            variant="secondary"
+          >
             Let's get started
           </BaseButton>
-          <BaseButton onClick={onSeeMyWork} variant="tertiary">
+          <BaseButton
+            className="max-3xl:px-3 py-2"
+            onClick={onSeeMyWork}
+            variant="tertiary"
+          >
             See my work
           </BaseButton>
         </div>
