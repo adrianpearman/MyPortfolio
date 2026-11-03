@@ -1,6 +1,5 @@
 import { Dialog as DialogPrimitive } from "@base-ui/react/dialog";
 import { BaseButton } from "@/components/reuseable/BaseButton";
-BaseButton;
 import { DialogOverlay } from "./DialogOverlay";
 import { DialogPortal } from "./DialogPortal";
 import { cn } from "@/utils/functions";

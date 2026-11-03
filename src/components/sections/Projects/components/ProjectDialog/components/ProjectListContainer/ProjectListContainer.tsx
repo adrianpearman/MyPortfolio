@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { ProjectListItem } from "../ProjectListItem";
 
 import type { TProjectsData } from "@/utils/types";
@@ -10,6 +10,8 @@ type TProjectListContainer = {
 export const ProjectListContainer = ({ projects }: TProjectListContainer) => {
   const ODD_ROW_MAX_LENGTH = 2;
   const EVEN_ROW_MAX_LENGTH = 3;
+  // Rolled once so the large item doesn't move on re-render
+  const [rowRolls] = useState(() => projects.map(() => Math.random()));
 
   const projectsBaseData = useMemo(() => {
     if (!projects) return [];
@@ -35,12 +37,16 @@ export const ProjectListContainer = ({ projects }: TProjectListContainer) => {
       } else {
         const currentMatrixItem = matrixArr[matrixArrLength - 1];
 
-        hasReachedLimit({
-          index: currentMatrixItem.length,
-          limit: isOddMatrixIndex ? ODD_ROW_MAX_LENGTH : EVEN_ROW_MAX_LENGTH,
-        })
-          ? currentMatrixItem.push(el)
-          : matrixArr.push([el]);
+        if (
+          hasReachedLimit({
+            index: currentMatrixItem.length,
+            limit: isOddMatrixIndex ? ODD_ROW_MAX_LENGTH : EVEN_ROW_MAX_LENGTH,
+          })
+        ) {
+          currentMatrixItem.push(el);
+        } else {
+          matrixArr.push([el]);
+        }
       }
     }
 
@@ -52,7 +58,7 @@ export const ProjectListContainer = ({ projects }: TProjectListContainer) => {
       {projectsBaseData.map((row, i) => {
         const ODD_ROW = i % 2 === 0;
         const VALUES_PER_ROW = ODD_ROW ? 2 : 3;
-        const SET_LARGE_ROW_ITEM = Math.floor(Math.random() * VALUES_PER_ROW);
+        const SET_LARGE_ROW_ITEM = Math.floor(rowRolls[i] * VALUES_PER_ROW);
 
         const overRideFlexValue =
           (ODD_ROW && row.length < ODD_ROW_MAX_LENGTH) ||
