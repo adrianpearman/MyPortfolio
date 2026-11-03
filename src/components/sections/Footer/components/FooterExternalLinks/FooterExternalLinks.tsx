@@ -4,7 +4,7 @@ import { CONTACT_DATA } from "@/data";
 export const FooterExternalLinks = () => {
   return (
     <div className="flex flex-col justify-between h-full p-4">
-      <h2 className="text-heading-4 tracking-normal">Elsewhere</h2>
+      <h2 className="text-heading-4 tracking-normal">Where you can reach me</h2>
       <div className="flex flex-col gap-2 w-full">
         {CONTACT_DATA.map((c, i) => {
           return (
