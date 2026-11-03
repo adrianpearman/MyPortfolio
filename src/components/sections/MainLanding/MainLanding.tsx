@@ -25,7 +25,7 @@ export const MainLanding = ({ onCollaborate, onSeeMyWork }: TMainLanding) => {
         <h1 className="text-hero-heading test">Welcome</h1>
         <div className="flex flex-row gap-3">
           <BaseButton onClick={onCollaborate} variant="secondary">
-            Let's collaborate
+            Let's get started
           </BaseButton>
           <BaseButton onClick={onSeeMyWork} variant="tertiary">
             See my work

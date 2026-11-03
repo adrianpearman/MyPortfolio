@@ -26,7 +26,7 @@ export const ProjectListItem = ({
   return (
     <BaseCell
       className={cn(
-        "min-h-80 min-w-0 flex flex-col p-2 gap-2",
+        "min-h-88 min-w-0 flex flex-col p-2 gap-2",
         itemFlexBasis(),
       )}
     >
@@ -47,7 +47,7 @@ export const ProjectListItem = ({
           {rowItemData.liveLink !== "" && (
             <BaseButton
               ariaLabel={`A link to the ${rowItemData.title} webpage`}
-              className="text-secondary-paragraph border-transparent py-1 px-2 w-10"
+              className="text-secondary-paragraph border-transparent py-1 px-2 w-fit"
               href={rowItemData.liveLink}
               variant="tertiary"
             >

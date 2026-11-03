@@ -41,7 +41,7 @@ export const FooterContentReveal = () => {
           per="line"
           trigger={inView}
         >
-          Let's collaborate
+          Reach out, let's collaborate.
         </TextRevealEffect>
       </div>
     </div>

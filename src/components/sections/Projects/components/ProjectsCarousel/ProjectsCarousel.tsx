@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { BaseButton } from "@/components/reuseable";
 import {
   ProjectCarouselButton,
   ProjectCarouselPill,
@@ -65,6 +66,20 @@ export const ProjectsCarousel = ({
               />
             ))}
           </div>
+          <>
+            {currentProject.liveLink !== "" && (
+              <div className="flex gap-2">
+                <BaseButton
+                  ariaLabel={`A link to the ${currentProject.title} webpage`}
+                  className="text-secondary-paragraph border-background-tertiary/30 py-1 px-2 w-fit"
+                  href={currentProject.liveLink}
+                  variant="tertiary"
+                >
+                  Open
+                </BaseButton>
+              </div>
+            )}
+          </>
           <div className="flex gap-2 items-center">
             <div className="flex gap-2">
               <ProjectCarouselButton

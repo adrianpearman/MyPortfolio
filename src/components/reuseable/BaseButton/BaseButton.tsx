@@ -12,11 +12,11 @@ type TButtonProps = {
 // Full class names so Tailwind's scanner can find them (no string interpolation).
 const variantClasses = {
   primary:
-    "bg-button-primary-background text-button-primary-text border-button-primary-background",
+    "bg-button-primary-background hover:bg-background-quinary  text-button-primary-text border-button-primary-background",
   secondary:
-    "bg-button-secondary-background text-button-secondary-text border-button-primary-background",
+    "bg-button-secondary-background hover:bg-background-quinary text-button-secondary-text hover:text-button-primary-text  border-button-primary-background hover:border-button-primary-text",
   tertiary:
-    "bg-button-tertiary-background text-button-tertiary-text border-button-secondary-background",
+    "bg-button-tertiary-background hover:bg-background-quinary  text-button-tertiary-text hover:text-button-primary-text border-button-secondary-background hover:border-button-primary-text",
 };
 
 export const BaseButton = ({
@@ -28,8 +28,9 @@ export const BaseButton = ({
   variant = "primary",
 }: TButtonProps) => {
   const classes = cn(
-    "rounded-2xl py-3.5 px-5 cursor-pointer border-2",
+    "rounded-xl py-3.5 px-5 cursor-pointer border-1",
     variantClasses[variant],
+    "transition duration-200 ease-in",
     className,
   );
 
@@ -37,7 +38,7 @@ export const BaseButton = ({
     return (
       <a
         aria-label={ariaLabel}
-        className={cn("block text-center", classes)}
+        className={cn("block text-center ", classes)}
         href={href}
         rel="noopener noreferrer"
         target="_blank"
