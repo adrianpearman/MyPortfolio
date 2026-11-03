@@ -22,7 +22,6 @@
   --color-background-quinary: #2a2f52;
   --color-text-primary: #1b1f3b;
   --color-text-primary-on-dark: #ffffff;
-  --color-text-secondary: #5b6075;
   --color-text-secondary-on-dark: #c9cbdb;
   --color-button-primary-background: #1b1f3b;
   --color-button-primary-text: #ffffff;
@@ -42,13 +41,6 @@
   --text-heading-5: 1.25rem;
   --text-paragraph: 1rem;
   --text-secondary-paragraph: 0.875rem;
-  /* Buttons */
-  --button-primary-background: var(--color-button-primary-background);
-  --button-primary-text: var(--color-button-primary-text);
-  --button-secondary-background: var(--color-button-secondary-background);
-  --button-secondary-text: var(--color-button-secondary-text);
-  --button-tertiary-background: var(--color-button-tertiary-background);
-  --button-tertiary-text: var(--color-button-tertiary-text);
   /* Miscellaneous */
   --color-green-status-icon: #2ec4b6;
   --color-purple-cell-background: #9b5de5;

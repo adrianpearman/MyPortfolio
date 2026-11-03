@@ -2,17 +2,13 @@ import { useContext, type KeyboardEvent, type MouseEvent } from "react";
 import { PortfolioContext } from "@/components/context/PortfolioContext/PortfolioContext";
 
 type TLinkScrollProps = {
-  className?: string;
   height?: number;
-  id?: string;
   linkName: string;
   scrollToElement: string;
 };
 
 export const LinkScroller = ({
-  className,
   height = 50,
-  id,
   linkName,
   scrollToElement,
 }: TLinkScrollProps) => {
@@ -33,8 +29,6 @@ export const LinkScroller = ({
 
   return (
     <a
-      className={className}
-      id={id}
       onClick={handleMove}
       onKeyDown={handleMove}
       role="button"
