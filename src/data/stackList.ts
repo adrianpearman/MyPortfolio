@@ -1,0 +1,18 @@
+export const STACK_LIST = [
+  "HTML",
+  "CSS",
+  "SASS",
+  "Tailwind",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Vue",
+  "Redux",
+  "Zustand",
+  "Node.js",
+  "Python",
+  "Django",
+  "Git",
+  "Claude",
+  "PostgreSQL",
+];
