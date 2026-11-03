@@ -53,7 +53,7 @@ export const ProjectsCarousel = ({
     <div className="flex p-4 gap-2 text-text-primary-on-dark h-full">
       <div className="w-1/3 flex flex-col justify-between pt-4">
         <div className="flex flex-col gap-4">
-          <h2 className="text-heading-3 tracking-normal">
+          <h2 className="text-heading-4 tracking-normal">
             {currentProject.title}
           </h2>
         </div>
@@ -130,7 +130,7 @@ export const ProjectsCarousel = ({
           })}
           <button
             aria-label={`Show all ${projects.length} projects`}
-            className="h-full flex-1 bg-background-quinary text-text-primary-on-dark rounded-2xl flex font-heading text-heading-4 items-center justify-center cursor-pointer"
+            className="h-full flex-1 bg-background-quinary text-text-primary-on-dark rounded-2xl flex font-heading text-heading-5 items-center justify-center cursor-pointer"
             onClick={onShowAllProjects}
             type="button"
           >

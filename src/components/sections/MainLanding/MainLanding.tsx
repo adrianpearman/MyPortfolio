@@ -22,7 +22,9 @@ export const MainLanding = ({ onCollaborate, onSeeMyWork }: TMainLanding) => {
         <p>
           <strong>Adrian Pearman</strong> - Frontend Developer
         </p>
-        <h1 className="text-hero-heading test">Welcome</h1>
+        <h1 className="text-hero-heading max-md:text-heading-1 max-md:tracking-[-0.5rem] max-sm:text-heading-2">
+          Welcome
+        </h1>
         <div className="flex flex-row gap-3">
           <BaseButton onClick={onCollaborate} variant="secondary">
             Let's get started

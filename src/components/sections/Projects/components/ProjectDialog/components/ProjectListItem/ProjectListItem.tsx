@@ -40,7 +40,7 @@ export const ProjectListItem = ({
       <div className="flex-1 flex justify-between align-middle">
         <div className="flex-1 min-w-0">
           <Tooltip content={rowItemData.title}>
-            <h3 className="text-heading-4 w-full truncate">
+            <h3 className="text-heading-5 w-full truncate">
               {rowItemData.title}
             </h3>
           </Tooltip>

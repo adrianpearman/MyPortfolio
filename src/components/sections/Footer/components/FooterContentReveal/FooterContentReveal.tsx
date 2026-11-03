@@ -27,7 +27,7 @@ export const FooterContentReveal = () => {
         </TextRevealEffect>
         <TextRevealEffect
           as="p"
-          className="text-heading-5"
+          className="text-heading-6"
           delay={DELAY_OPTIONS[1]}
           per="line"
           trigger={inView}
@@ -36,7 +36,7 @@ export const FooterContentReveal = () => {
         </TextRevealEffect>
         <TextRevealEffect
           as="p"
-          className="text-heading-5"
+          className="text-heading-6"
           delay={DELAY_OPTIONS[2]}
           per="line"
           trigger={inView}

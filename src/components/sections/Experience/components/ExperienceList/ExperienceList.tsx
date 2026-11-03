@@ -28,7 +28,7 @@ export const ExperienceList = () => {
 
   return (
     <div className="flex flex-col gap-4 w-full p-4">
-      <h2 className="text-heading-4 tracking-normal">Experience</h2>
+      <h2 className="text-heading-5 tracking-normal">Experience</h2>
       <motion.div
         animate={{ height: height || "auto" }}
         className="overflow-clip"

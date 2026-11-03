@@ -16,7 +16,7 @@ export const ProjectHeroContent = () => {
     <div ref={ref} className="px-4 py-8 py- flex flex-col h-full gap-8">
       <TextRevealEffect
         as="h2"
-        className="text-heading-3 tracking-normal"
+        className="text-heading-4 tracking-normal"
         delay={DELAY_OPTIONS[0]}
         per="line"
         preset="blur"

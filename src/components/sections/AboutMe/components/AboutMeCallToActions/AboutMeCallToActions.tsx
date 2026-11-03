@@ -22,7 +22,7 @@ export const AboutMeCallToActions = () => {
           href={pdf}
           variant="primary"
         >
-          Download Resume
+          Resume
         </BaseButton>
         <BaseButton
           className="w-full"
