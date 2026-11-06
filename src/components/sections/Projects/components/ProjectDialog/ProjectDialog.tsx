@@ -41,7 +41,7 @@ export const ProjectDialog = ({
         }
       >
         <DialogHeader>
-          <DialogTitle className="text-heading-1 tracking-[-0.5rem]">
+          <DialogTitle className="text-heading-1 tracking-[-0.5rem] max-md:text-heading-3 max-md:tracking-[-0.2rem]">
             Projects
           </DialogTitle>
         </DialogHeader>
